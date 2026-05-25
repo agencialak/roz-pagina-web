@@ -1,0 +1,295 @@
+import { motion } from 'framer-motion'
+import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
+import { Mail, Linkedin, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState } from 'react'
+
+const Team = () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const teamMembers = [
+    {
+      id: 1,
+      name: 'Santiago Rosales C.',
+      role: 'CEO - Estrategia y Productor',
+      image: '/team/rosa.png',
+      bio: 'Fundador y líder estratégico de ROZ Social Media',
+      social: {
+        email: 'santiago@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 2,
+      name: 'Laura Rosales C.',
+      role: 'Administradora & Directora de Producción Audiovisual',
+      image: '/team/Laura rosales c.png',
+      bio: 'Experta en gestión operativa y creación de contenido visual de alto impacto',
+      social: {
+        email: 'laura@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 3,
+      name: 'Nikolas Garcia',
+      role: 'Co-Fundador & Estratega Digital de Campañas Publicitarias',
+      image: '/team/NIko.png',
+      bio: 'Especialista en estrategia digital y ejecución de campañas publicitarias de alto rendimiento',
+      social: {
+        email: 'nikolas@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+  ]
+
+  return (
+    <section id="equipo" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          animate={{
+            y: [0, -50, 0],
+            x: [0, 30, 0],
+          }}
+          transition={{ duration: 15, repeat: Infinity }}
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-600/10 to-primary-900/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            y: [0, 50, 0],
+            x: [0, -30, 0],
+          }}
+          transition={{ duration: 20, repeat: Infinity }}
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-primary-700/10 to-primary-950/10 rounded-full blur-3xl"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={containerVariants}
+          className="text-center mb-20"
+        >
+          <motion.h2
+            variants={fadeUpVariants}
+            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
+          >
+            <span className="text-white">NUESTRO</span>
+            <span className="block gradient-text-purple">EQUIPO</span>
+          </motion.h2>
+          <motion.p
+            variants={fadeUpVariants}
+            className="text-lg text-gray-300 max-w-2xl mx-auto"
+          >
+            Estrategas, creativos y especialistas dedicados a escalar tu marca. Cada miembro aporta expertise de nivel internacional.
+          </motion.p>
+        </motion.div>
+
+        {/* Team Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={containerVariants}
+          className="w-full"
+        >
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-3 gap-12 w-full">
+            {teamMembers.map((member, idx) => (
+              <motion.div
+                key={member.id}
+                variants={itemVariants}
+                className="group"
+              >
+              {/* Card Container - Vertical Layout */}
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="flex flex-col items-center gap-6"
+              >
+                {/* Image Container - Outside Card */}
+                <motion.div
+                  whileHover={{
+                    boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
+                  }}
+                  className="relative w-full overflow-hidden rounded-2xl"
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-64 overflow-hidden">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        e.currentTarget.src = ''
+                        e.currentTarget.style.display = 'none'
+                      }}
+                    />
+                    {/* Fallback placeholder */}
+                    <div
+                      className="absolute inset-0 flex items-center justify-center bg-gray-800"
+                      style={{ display: 'none' }}
+                    >
+                      <span className="text-lg font-bold text-primary-400 opacity-30">
+                        {member.name.split(' ')[0].charAt(0)}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Info Container - Inside Card */}
+                <motion.div
+                  className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
+                >
+                  {/* Name */}
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    {member.name}
+                  </h3>
+
+                  {/* Role */}
+                  <p className="text-primary-400 font-semibold mb-4 text-lg">
+                    {member.role}
+                  </p>
+
+                  {/* Bio */}
+                  <p className="text-gray-400 leading-relaxed">
+                    {member.bio}
+                  </p>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+              ))}
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden flex flex-col items-center gap-8">
+            <motion.div
+              key={teamMembers[currentIndex].id}
+              variants={itemVariants}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="group w-full max-w-sm"
+            >
+              {/* Card Container - Vertical Layout */}
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="flex flex-col items-center gap-6"
+              >
+                {/* Image Container - Outside Card */}
+                <motion.div
+                  whileHover={{
+                    boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
+                  }}
+                  className="relative w-full overflow-hidden rounded-2xl"
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-64 overflow-hidden">
+                    <img
+                      src={teamMembers[currentIndex].image}
+                      alt={teamMembers[currentIndex].name}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        e.currentTarget.src = ''
+                        e.currentTarget.style.display = 'none'
+                      }}
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Info Container - Inside Card */}
+                <motion.div
+                  className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
+                >
+                  {/* Name */}
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    {teamMembers[currentIndex].name}
+                  </h3>
+
+                  {/* Role */}
+                  <p className="text-primary-400 font-semibold mb-4 text-lg">
+                    {teamMembers[currentIndex].role}
+                  </p>
+
+                  {/* Bio */}
+                  <p className="text-gray-400 leading-relaxed">
+                    {teamMembers[currentIndex].bio}
+                  </p>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+
+            {/* Navigation Arrows */}
+            <div className="flex items-center gap-6 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))}
+                className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
+              >
+                <ChevronLeft size={24} className="text-primary-400" />
+              </motion.button>
+
+              <div className="flex gap-2">
+                {teamMembers.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))}
+                className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
+              >
+                <ChevronRight size={24} className="text-primary-400" />
+              </motion.button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Stats Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={containerVariants}
+          className="mt-20 pt-20 border-t border-white/10"
+        >
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl">
+            {[
+              { value: '+5', label: 'Años de experiencia con la agencia' },
+              { value: '+8', label: 'Países' },
+              { value: '7 dias', label: 'a la semana soporte a clientes' },
+            ].map((stat, idx) => (
+              <motion.div
+                key={idx}
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                className="glass rounded-lg p-6 text-center border border-white/10 hover:border-primary-600/30 transition-colors"
+              >
+                <div className="text-2xl sm:text-3xl font-bold gradient-text-purple mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-xs sm:text-sm text-gray-400">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+export default Team

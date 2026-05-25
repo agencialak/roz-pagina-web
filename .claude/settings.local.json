@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "PowerShell(npm --version)",
+      "Bash(ls -lh \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\LANDING_1.mp4\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\" && cp \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\LANDING_1.mp4\" \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\\\\project-1.mp4\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(Copy-Item \"C:\\\\Users\\\\Usuario\\\\Downloads\\\\JKW_N_Z_F_X_XW_V_X_mp_.mp4\" \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\\\\hero-background.mp4\" -Force)",
+      "Bash(Expand-Archive -Path \"drive-download-20260525T210038Z-3-001.zip\" -DestinationPath \"roz-assets\" -Force)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "PowerShell(\\(Get-ChildItem \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\\\\¡Colombia está en la final.mp4\"\\).Length)"
+    ]
+  }
+}
