@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { fadeUpVariants, containerVariants, itemVariants, hoverScaleVariants } from '../utils/animations'
+import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
 import { Smartphone, Zap, TrendingUp, Palette, Lightbulb, Crown } from 'lucide-react'
 
 const Services = () => {

@@ -83,7 +83,7 @@ const Testimonials = () => {
 
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {testimonials.map((testimonial, idx) => (
+          {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.id}
               initial="hidden"

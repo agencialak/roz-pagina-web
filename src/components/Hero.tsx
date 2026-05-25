@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { fadeUpVariants, blurInVariants, containerVariants, itemVariants } from '../utils/animations'
+import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
 import { ArrowRight } from 'lucide-react'
 
 const Hero = () => {

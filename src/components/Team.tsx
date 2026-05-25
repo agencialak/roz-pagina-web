@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
-import { Mail, Linkedin, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 
 const Team = () => {
@@ -97,7 +97,7 @@ const Team = () => {
         >
           {/* Desktop Grid */}
           <div className="hidden md:grid grid-cols-3 gap-12 w-full">
-            {teamMembers.map((member, idx) => (
+            {teamMembers.map((member) => (
               <motion.div
                 key={member.id}
                 variants={itemVariants}
