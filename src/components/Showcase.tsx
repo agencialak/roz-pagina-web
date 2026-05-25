@@ -49,7 +49,7 @@ const Showcase = () => {
   ]
 
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-16 sm:py-24 px-3 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -57,7 +57,7 @@ const Showcase = () => {
             rotate: [0, 360],
           }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-primary-600/20 rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-96 h-48 sm:h-96 border border-primary-600/20 rounded-full"
         />
       </div>
 
@@ -68,18 +68,18 @@ const Showcase = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
           >
             <span className="text-white">GALERÍA DE</span>
             <span className="block gradient-text-purple">PROYECTOS</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
+            className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
           >
             Casos de éxito que demuestran nuestra capacidad de transformar marcas.
           </motion.p>
@@ -91,7 +91,7 @@ const Showcase = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {projects.map((project) => (
             <motion.div

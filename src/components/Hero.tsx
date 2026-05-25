@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 const Hero = () => {
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-16 sm:pt-20 px-3 sm:px-0">
       {/* Background Elements */}
       <motion.div
         animate={{
@@ -13,7 +13,7 @@ const Hero = () => {
           y: [0, 50, -30, 0],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-        className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-primary-600 to-primary-900 rounded-full blur-3xl opacity-10"
+        className="absolute -top-40 -left-40 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-br from-primary-600 to-primary-900 rounded-full blur-3xl opacity-10"
       />
       <motion.div
         animate={{
@@ -21,7 +21,7 @@ const Hero = () => {
           y: [0, -50, 30, 0],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-        className="absolute -bottom-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-700 to-primary-950 rounded-full blur-3xl opacity-10"
+        className="absolute -bottom-40 -right-40 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-br from-primary-700 to-primary-950 rounded-full blur-3xl opacity-10"
       />
 
       {/* Content */}
@@ -29,7 +29,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        className="relative z-10 max-w-5xl mx-auto w-full text-center"
       >
         {/* Subtitle */}
         <motion.div
@@ -46,7 +46,7 @@ const Hero = () => {
         {/* Main Title */}
         <motion.h1
           variants={fadeUpVariants}
-          className="text-5xl sm:text-6xl lg:text-8xl font-black mb-6 tracking-tight"
+          className="text-3xl sm:text-5xl lg:text-8xl font-black mb-4 sm:mb-6 tracking-tight"
         >
           <span className="block text-white">
             CONSTRUIMOS
@@ -67,7 +67,7 @@ const Hero = () => {
         {/* Description */}
         <motion.p
           variants={fadeUpVariants}
-          className="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-sm sm:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2"
         >
           Estrategia digital que convierte atención en crecimiento real. Posicionamiento, autoridad y resultados medibles para tu marca.
         </motion.p>
@@ -75,7 +75,7 @@ const Hero = () => {
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full px-2 sm:px-0"
         >
           <motion.a
             href="https://wa.me/573218515587"
@@ -83,11 +83,11 @@ const Hero = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-800 text-white font-bold rounded-lg flex items-center gap-2 hover:shadow-lg transition-shadow group"
+            className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-4 bg-gradient-to-r from-primary-600 to-primary-800 text-white font-bold text-sm sm:text-base rounded-lg flex items-center justify-center gap-2 hover:shadow-lg transition-shadow group min-h-[48px]"
           >
             AGENDA UNA REUNIÓN
             <motion.span
-              className="inline-block"
+              className="inline-block hidden sm:inline-block"
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
@@ -98,7 +98,7 @@ const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 glass rounded-lg text-white font-bold hover:bg-white/10 transition-all border border-primary-600/30 hover:border-primary-600/60"
+            className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-4 glass rounded-lg text-white font-bold text-sm sm:text-base hover:bg-white/10 transition-all border border-primary-600/30 hover:border-primary-600/60 min-h-[48px]"
           >
             VER PROYECTOS
           </motion.button>
@@ -109,7 +109,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          className="mt-12 sm:mt-20 grid grid-cols-3 gap-3 sm:gap-8 max-w-2xl mx-auto px-2"
         >
           {[
             { number: '120M+', label: 'Visualizaciones' },
@@ -119,12 +119,12 @@ const Hero = () => {
             <motion.div
               key={idx}
               whileHover={{ y: -5 }}
-              className="glass px-6 py-4 rounded-lg border border-white/10"
+              className="glass px-3 sm:px-6 py-3 sm:py-4 rounded-lg border border-white/10"
             >
-              <div className="text-2xl sm:text-3xl font-bold gradient-text-purple">
+              <div className="text-lg sm:text-3xl font-bold gradient-text-purple">
                 {stat.number}
               </div>
-              <div className="text-xs sm:text-sm text-gray-400 mt-2">
+              <div className="text-xs text-gray-400 mt-1 sm:mt-2">
                 {stat.label}
               </div>
             </motion.div>

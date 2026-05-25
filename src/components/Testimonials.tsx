@@ -45,7 +45,7 @@ const Testimonials = () => {
   ]
 
   return (
-    <section id="testimonios" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="testimonios" className="relative py-16 sm:py-24 px-3 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -53,7 +53,7 @@ const Testimonials = () => {
             rotate: [0, 360],
           }}
           transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-          className="absolute bottom-0 right-0 w-96 h-96 border border-primary-600/20 rounded-full"
+          className="absolute bottom-0 right-0 w-48 sm:w-96 h-48 sm:h-96 border border-primary-600/20 rounded-full"
         />
       </div>
 
@@ -64,18 +64,18 @@ const Testimonials = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
           >
             <span className="text-white">LO QUE DICEN</span>
             <span className="block gradient-text-purple">NUESTROS CLIENTES</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
+            className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
           >
             Marcas que escalaron con ROZ comparten su experiencia.
           </motion.p>
