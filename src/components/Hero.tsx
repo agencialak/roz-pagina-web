@@ -12,28 +12,10 @@ const Hero = () => {
         muted
         loop
         className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ opacity: 0.15 }}
+        style={{ opacity: 0.2 }}
       >
         <source src="/hero-background.mp4" type="video/mp4" />
       </video>
-
-      {/* Background Elements */}
-      <motion.div
-        animate={{
-          x: [0, 50, -50, 0],
-          y: [0, 50, -30, 0],
-        }}
-        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-        className="absolute -top-40 -left-40 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-br from-primary-600 to-primary-900 rounded-full blur-3xl opacity-10"
-      />
-      <motion.div
-        animate={{
-          x: [0, -50, 50, 0],
-          y: [0, -50, 30, 0],
-        }}
-        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-        className="absolute -bottom-40 -right-40 w-48 h-48 sm:w-80 sm:h-80 bg-gradient-to-br from-primary-700 to-primary-950 rounded-full blur-3xl opacity-10"
-      />
 
       {/* Content */}
       <motion.div
