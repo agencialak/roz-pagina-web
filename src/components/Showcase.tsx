@@ -9,42 +9,42 @@ const Showcase = () => {
       title: 'Velandia capital',
       category: 'Finanzas',
       views: '',
-      video: '/project-1.mp4',
+      vimeoId: '1195441879',
     },
     {
       id: 2,
       title: 'Curso Smile Pro Final',
       category: 'Educación',
       views: '',
-      video: '/Curso-Smile-Pro-Final_1.mp4',
+      vimeoId: '1195441911',
     },
     {
       id: 3,
       title: 'Fuego Burger',
       category: 'F&B Marketing',
       views: '',
-      video: '/fuego burguer.mp4',
+      vimeoId: '1195441742',
     },
     {
       id: 4,
       title: 'Testimonio',
       category: 'sector salud',
       views: '',
-      video: '/el cielo testimonio.mp4',
+      vimeoId: '1195441973',
     },
     {
       id: 5,
       title: 'casos reales',
       category: 'distribuidor',
       views: '',
-      video: '/testimonio odento.mp4',
+      vimeoId: '1195441972',
     },
     {
       id: 6,
       title: 'startup',
       category: 'personalizables',
       views: '',
-      video: '/¡Colombia está en la final.mp4',
+      vimeoId: '1195441743',
     },
   ]
 
@@ -107,15 +107,14 @@ const Showcase = () => {
                 className="relative overflow-hidden rounded-2xl border border-primary-600/30 aspect-square"
               >
                 {/* Video or Image */}
-                {project.video ? (
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    className="w-full h-full object-cover"
-                  >
-                    <source src={project.video} type="video/mp4" />
-                  </video>
+                {project.vimeoId ? (
+                  <iframe
+                    src={`https://player.vimeo.com/video/${project.vimeoId}?autoplay=1&muted=1&loop=1&background=1`}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  />
                 ) : (
                   <motion.div
                     className="w-full h-full bg-gradient-to-br from-primary-600/20 to-primary-900/20 flex items-center justify-center"
