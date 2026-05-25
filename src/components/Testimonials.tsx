@@ -120,7 +120,7 @@ const Testimonials = () => {
                     {testimonial.name}
                   </h4>
                   <p className="text-primary-400 text-sm">
-                    {testimonial.role} — {testimonial.company}
+                    {testimonial.role}
                   </p>
                 </div>
               </motion.div>
@@ -165,7 +165,7 @@ const Testimonials = () => {
                   {testimonials[currentIndex].name}
                 </h4>
                 <p className="text-primary-400 text-sm">
-                  {testimonials[currentIndex].role} — {testimonials[currentIndex].company}
+                  {testimonials[currentIndex].role}
                 </p>
               </div>
             </motion.div>

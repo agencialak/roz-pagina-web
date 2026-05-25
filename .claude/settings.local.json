@@ -11,7 +11,9 @@
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "mcp__Claude_in_Chrome__navigate",
       "mcp__Claude_in_Chrome__computer",
-      "PowerShell(\\(Get-ChildItem \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\\\\¡Colombia está en la final.mp4\"\\).Length)"
+      "PowerShell(\\(Get-ChildItem \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\\\\¡Colombia está en la final.mp4\"\\).Length)",
+      "mcp__Claude_in_Chrome__tabs_create_mcp",
+      "mcp__Claude_in_Chrome__browser_batch"
     ]
   }
 }
