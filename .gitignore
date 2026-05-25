@@ -27,6 +27,3 @@ dist-ssr
 .env
 .env.local
 .env.*.local
-
-# Videos (served directly by Vercel)
-public/*.mp4
