@@ -7,16 +7,15 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-16 sm:pt-20 px-3 sm:px-0">
       {/* Background Video */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        <iframe
-          src="https://player.vimeo.com/video/1195442067?autoplay=1&muted=1&loop=1&background=1&controls=0"
-          className="absolute inset-0 w-full h-full"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          style={{ opacity: 0.15 }}
-        />
-      </div>
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ opacity: 0.15 }}
+      >
+        <source src="/hero-background.mp4" type="video/mp4" />
+      </video>
 
       {/* Background Elements */}
       <motion.div
