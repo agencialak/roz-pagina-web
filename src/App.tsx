@@ -5,6 +5,7 @@ import Philosophy from './components/Philosophy'
 import Team from './components/Team'
 import Results from './components/Results'
 import Testimonials from './components/Testimonials'
+import TestimonialForm from './components/TestimonialForm'
 import Showcase from './components/Showcase'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
@@ -34,6 +35,7 @@ function App() {
       <Team />
       <Results />
       <Testimonials />
+      <TestimonialForm />
       <Showcase />
       <FinalCTA />
       <Footer />

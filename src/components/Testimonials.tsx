@@ -1,48 +1,84 @@
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { database } from '../config/firebase'
+import { ref, onValue } from 'firebase/database'
+
+interface Testimonial {
+  id: string
+  name: string
+  role?: string
+  business?: string
+  content: string
+  message?: string
+  rating: number
+  createdAt?: string
+}
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [firebaseTestimonials, setFirebaseTestimonials] = useState<Testimonial[]>([])
 
-  const testimonials = [
+  const staticTestimonials: Testimonial[] = [
     {
-      id: 1,
+      id: '1',
       name: 'Brian Lopez',
       role: '@troncos05',
       content: 'Gracias por el acompañamiento y crecimiento que hemos tenido juntos 👏🔥👏 Cracks',
       rating: 5,
     },
     {
-      id: 2,
+      id: '2',
       name: 'Paula Posada',
       role: '@odentoco',
       content: '¡Ellos son mi agencia favorita! Estuve mucho tiempo buscándolos, pero ahora que los encontré, no los suelto. Los recomiendo al 100%. ¡Gracias por tanto, team!',
       rating: 5,
     },
     {
-      id: 3,
+      id: '3',
       name: 'Camilo Arango',
       role: '@dr.camiloarango',
       content: 'Excelente equipo, producciones impecables con ellos 🎬😍😍',
       rating: 5,
     },
     {
-      id: 4,
+      id: '4',
       name: 'Sara Alzate',
       role: '@anamorapereira',
       content: 'Triplicando en ventas gracias al acompañamiento de todo el equipo 👌🏼🔥',
       rating: 5,
     },
     {
-      id: 5,
+      id: '5',
       name: 'Katherine Muñoz',
       role: '@opticalet18perreira',
       content: 'Son los mejores 😍💛😍 súper recomendados 😍😍😍 Muchas gracias 💙❤️',
       rating: 5,
     },
   ]
+
+  useEffect(() => {
+    const testimonialsRef = ref(database, 'testimonials')
+    const unsubscribe = onValue(testimonialsRef, (snapshot) => {
+      const data = snapshot.val()
+      if (data) {
+        const newTestimonials: Testimonial[] = Object.entries(data).map(([key, value]: [string, any]) => ({
+          id: key,
+          name: value.name,
+          business: value.business,
+          content: value.message,
+          rating: value.rating,
+          createdAt: value.createdAt,
+        }))
+        setFirebaseTestimonials(newTestimonials)
+      }
+    })
+
+    return () => unsubscribe()
+  }, [])
+
+  const testimonials = [...staticTestimonials, ...firebaseTestimonials]
 
   return (
     <section id="testimonios" className="relative py-16 sm:py-24 px-3 sm:px-6 lg:px-8 overflow-hidden">
@@ -120,7 +156,7 @@ const Testimonials = () => {
                     {testimonial.name}
                   </h4>
                   <p className="text-primary-400 text-sm">
-                    {testimonial.role}
+                    {testimonial.role || testimonial.business}
                   </p>
                 </div>
               </motion.div>
@@ -165,7 +201,7 @@ const Testimonials = () => {
                   {testimonials[currentIndex].name}
                 </h4>
                 <p className="text-primary-400 text-sm">
-                  {testimonials[currentIndex].role}
+                  {testimonials[currentIndex].role || testimonials[currentIndex].business}
                 </p>
               </div>
             </motion.div>
