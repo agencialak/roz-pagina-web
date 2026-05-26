@@ -104,17 +104,22 @@ const Showcase = () => {
                 whileHover={{
                   boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
                 }}
-                className="relative overflow-hidden rounded-2xl border border-primary-600/30 aspect-square"
+                className="relative overflow-hidden rounded-2xl border border-primary-600/30"
+                style={{ aspectRatio: '1 / 1' }}
               >
                 {/* Video or Image */}
                 {project.vimeoId ? (
-                  <iframe
-                    src={`https://player.vimeo.com/video/${project.vimeoId}?autoplay=1&muted=1&loop=1&background=1`}
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+                    <iframe
+                      src={`https://player.vimeo.com/video/${project.vimeoId}?autoplay=1&muted=1&loop=1&background=1&responsive=1`}
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; accelerometer; gyroscope; clipboard-write"
+                      allowFullScreen
+                      loading="lazy"
+                      title={project.title}
+                    />
+                  </div>
                 ) : (
                   <motion.div
                     className="w-full h-full bg-gradient-to-br from-primary-600/20 to-primary-900/20 flex items-center justify-center"
