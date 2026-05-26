@@ -85,16 +85,6 @@ const FinalCTA = () => {
               </motion.span>
             </motion.a>
 
-            <motion.a
-              href="https://wa.me/573218515587"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 glass rounded-lg text-white font-bold text-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
-            >
-              AGENDAR REUNIÓN
-            </motion.a>
           </motion.div>
 
           {/* Trust Elements */}
