@@ -6,6 +6,7 @@ import { database } from '../config/firebase'
 import { ref, push } from 'firebase/database'
 
 const TestimonialForm = () => {
+  const [isExpanded, setIsExpanded] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     business: '',
@@ -60,7 +61,7 @@ const TestimonialForm = () => {
   }
 
   return (
-    <section className="relative py-16 sm:py-24 px-3 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-8 sm:py-12 px-3 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -73,30 +74,55 @@ const TestimonialForm = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          variants={containerVariants}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
+        {/* Collapsed Button */}
+        {!isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center"
           >
-            <span className="text-white">COMPARTE TU</span>
-            <span className="block gradient-text-purple">TESTIMONIO</span>
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
-          >
-            Tu experiencia nos ayuda a crecer. Cuéntanos cómo fue trabajar con ROZ.
-          </motion.p>
-        </motion.div>
+            <motion.button
+              onClick={() => setIsExpanded(true)}
+              whileHover={{ scale: 1.05, boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)' }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-800 text-white font-bold rounded-lg hover:shadow-lg transition-shadow min-h-[48px]"
+            >
+              ✍️ COMPARTIR TU TESTIMONIO
+            </motion.button>
+          </motion.div>
+        )}
 
-        {/* Form */}
+        {/* Expanded Form */}
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Header */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="text-center mb-12 sm:mb-16"
+            >
+              <motion.h2
+                variants={itemVariants}
+                className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
+              >
+                <span className="text-white">COMPARTE TU</span>
+                <span className="block gradient-text-purple">TESTIMONIO</span>
+              </motion.h2>
+              <motion.p
+                variants={itemVariants}
+                className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
+              >
+                Tu experiencia nos ayuda a crecer. Cuéntanos cómo fue trabajar con ROZ.
+              </motion.p>
+            </motion.div>
+
+            {/* Form */}
         <motion.form
           initial="hidden"
           whileInView="visible"
@@ -243,7 +269,25 @@ const TestimonialForm = () => {
               Hubo un error al enviar el testimonio. Intenta de nuevo.
             </motion.div>
           )}
+
+          {/* Close Button */}
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 text-center"
+          >
+            <motion.button
+              type="button"
+              onClick={() => setIsExpanded(false)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 text-gray-400 hover:text-white transition-colors font-semibold"
+            >
+              ← Cerrar formulario
+            </motion.button>
+          </motion.div>
         </motion.form>
+          </motion.div>
+        )}
       </div>
     </section>
   )
