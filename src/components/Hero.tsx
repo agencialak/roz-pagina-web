@@ -97,7 +97,7 @@ const Hero = () => {
           {[
             { number: '120M+', label: 'Visualizaciones' },
             { number: '300+', label: 'Proyectos' },
-            { number: '7 cifras', label: 'Generadas' },
+            { number: '9 cifras', label: 'Generadas' },
           ].map((stat, idx) => (
             <motion.div
               key={idx}
