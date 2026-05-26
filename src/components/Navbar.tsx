@@ -21,6 +21,7 @@ const Navbar = () => {
     { label: 'Estrategia', href: '#filosofia' },
     { label: 'Equipo', href: '#equipo' },
     { label: 'Resultados', href: '#resultados' },
+    { label: 'Testimonios', href: '#testimonios' },
     { label: 'Contacto', href: '#contacto' },
   ]
 

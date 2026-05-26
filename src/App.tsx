@@ -9,6 +9,7 @@ import TestimonialForm from './components/TestimonialForm'
 import Showcase from './components/Showcase'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <Showcase />
       <FinalCTA />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   )
 }
