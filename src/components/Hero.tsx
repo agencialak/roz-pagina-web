@@ -6,17 +6,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-16 sm:pt-20 px-3 sm:px-0">
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ opacity: 0.4 }}
-      >
-        <source src="/hero-background.mp4" type="video/mp4" />
-      </video>
-
       {/* Content */}
       <motion.div
         initial="hidden"
