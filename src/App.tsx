@@ -10,6 +10,7 @@ import Showcase from './components/Showcase'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
     </main>
   )
 }
