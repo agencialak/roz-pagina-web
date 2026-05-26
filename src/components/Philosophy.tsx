@@ -139,13 +139,23 @@ const Philosophy = () => {
                 whileHover={{ x: 10 }}
                 className="glass rounded-2xl p-8 border border-primary-600/30 hover:border-primary-600/60 transition-colors group"
               >
-                <div>
-                  <h4 className="text-xl font-bold text-white mb-2">
-                    {pillar.title}
-                  </h4>
-                  <p className="text-gray-400">
-                    {pillar.description}
-                  </p>
+                <div className="flex items-start gap-4">
+                  <motion.div
+                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center flex-shrink-0"
+                    whileHover={{ rotate: 20, scale: 1.1 }}
+                  >
+                    <span className="text-xl font-bold text-white">
+                      {idx + 1}
+                    </span>
+                  </motion.div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-2">
+                      {pillar.title}
+                    </h4>
+                    <p className="text-gray-400">
+                      {pillar.description}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
