@@ -49,7 +49,7 @@ const Showcase = () => {
   ]
 
   return (
-    <section className="relative py-16 sm:py-24 px-3 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="proyectos" className="relative py-16 sm:py-24 px-3 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

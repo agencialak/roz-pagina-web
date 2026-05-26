@@ -77,13 +77,14 @@ const Hero = () => {
             </motion.span>
           </motion.a>
 
-          <motion.button
+          <motion.a
+            href="#proyectos"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-4 glass rounded-lg text-white font-bold text-sm sm:text-base hover:bg-white/10 transition-all border border-primary-600/30 hover:border-primary-600/60 min-h-[48px]"
+            className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-4 glass rounded-lg text-white font-bold text-sm sm:text-base hover:bg-white/10 transition-all border border-primary-600/30 hover:border-primary-600/60 min-h-[48px] flex items-center justify-center"
           >
             VER PROYECTOS
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Floating Elements */}
