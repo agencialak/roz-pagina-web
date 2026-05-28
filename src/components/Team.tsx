@@ -43,7 +43,7 @@ const Team = () => {
       id: 4,
       name: 'Kevin Ríos',
       role: 'Camarógrafo / Filmmaker',
-      image: '/team/Kevin.png',
+      image: '/team/Kevin.jpeg',
       bio: 'Especialista en captura de contenido audiovisual de alta calidad con visión cinematográfica',
       social: {
         email: 'kevin@rozsocial.com',
@@ -54,7 +54,7 @@ const Team = () => {
       id: 5,
       name: 'Paulina Villegas',
       role: 'Especialista en Edición de Video',
-      image: '/team/Paulina.png',
+      image: '/team/Paulina.jpeg',
       bio: 'Experta en postproducción y edición de video con narrativa visual impactante',
       social: {
         email: 'paulina@rozsocial.com',
@@ -65,7 +65,7 @@ const Team = () => {
       id: 6,
       name: 'Erika Valencia',
       role: 'Diseñadora Gráfica - Especialista en Redes Sociales',
-      image: '/team/Erika.png',
+      image: '/team/Erika.jpeg',
       bio: 'Creadora de diseños visuales estratégicos que conectan con audiencias en redes sociales',
       social: {
         email: 'erika@rozsocial.com',
@@ -76,7 +76,7 @@ const Team = () => {
       id: 7,
       name: 'Juan Herrera',
       role: 'Asistente de Producción',
-      image: '/team/Herrera.png',
+      image: '/team/Herrera.jpeg',
       bio: 'Profesional en logística y coordinación de procesos de producción audiovisual',
       social: {
         email: 'juan@rozsocial.com',
@@ -87,7 +87,7 @@ const Team = () => {
       id: 8,
       name: 'Camila Echeverri',
       role: 'Directora Creativa & Gestora de Negocio',
-      image: '/team/Camila.png',
+      image: '/team/Camila.jpeg',
       bio: 'Líder creativa que impulsa la estrategia comercial y establece relaciones clave',
       social: {
         email: 'camila@rozsocial.com',
@@ -98,7 +98,7 @@ const Team = () => {
       id: 9,
       name: 'Lina Gómez',
       role: 'Socia Co-Fundadora - Operaciones USA',
-      image: '/team/Lina.png',
+      image: '/team/Lina.jpeg',
       bio: 'Líder estratégica en expansión internacional y operaciones de la agencia en Estados Unidos',
       social: {
         email: 'lina@rozsocial.com',
@@ -109,7 +109,7 @@ const Team = () => {
       id: 10,
       name: 'Valentina Correa',
       role: 'Asistente Administrativo',
-      image: '/team/Valentina.png',
+      image: '/team/Valentina.jpeg',
       bio: 'Coordinadora de procesos administrativos que garantiza eficiencia operativa',
       social: {
         email: 'valentina@rozsocial.com',
