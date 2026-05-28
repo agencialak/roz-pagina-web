@@ -109,7 +109,7 @@ const Team = () => {
       id: 10,
       name: 'Valentina Correa',
       role: 'Asistente Administrativo',
-      image: '/team/Valentina.png',
+      image: '/team/Valen.png',
       bio: 'Coordinadora de procesos administrativos que garantiza eficiencia operativa',
       social: {
         email: 'valentina@rozsocial.com',
