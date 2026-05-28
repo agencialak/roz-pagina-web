@@ -164,7 +164,7 @@ const Team = () => {
           </motion.p>
         </motion.div>
 
-        {/* Team Grid */}
+        {/* Team Carousel */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -172,132 +172,78 @@ const Team = () => {
           variants={containerVariants}
           className="w-full"
         >
-          {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-3 gap-12 w-full">
-            {teamMembers.map((member) => (
+          {/* Team Carousel - Shows 3 members at a time */}
+          <div className="w-full flex flex-col items-center gap-8">
+            {/* Carousel Container */}
+            <div className="w-full max-w-7xl">
               <motion.div
-                key={member.id}
-                variants={itemVariants}
-                className="group"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6"
               >
-              {/* Card Container - Vertical Layout */}
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="flex flex-col items-center gap-6"
-              >
-                {/* Image Container - Outside Card */}
-                <motion.div
-                  whileHover={{
-                    boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
-                  }}
-                  className="relative w-full overflow-hidden rounded-2xl"
-                >
-                  {/* Image */}
-                  <div className="relative w-full h-64 overflow-hidden">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.currentTarget.src = ''
-                        e.currentTarget.style.display = 'none'
-                      }}
-                    />
-                    {/* Fallback placeholder */}
-                    <div
-                      className="absolute inset-0 flex items-center justify-center bg-gray-800"
-                      style={{ display: 'none' }}
+                {[0, 1, 2].map((offset) => {
+                  const memberIndex = (currentIndex + offset) % teamMembers.length
+                  const member = teamMembers[memberIndex]
+                  return (
+                    <motion.div
+                      key={memberIndex}
+                      variants={itemVariants}
+                      className="group"
                     >
-                      <span className="text-lg font-bold text-primary-400 opacity-30">
-                        {member.name.split(' ')[0].charAt(0)}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
+                      {/* Card Container - Vertical Layout */}
+                      <motion.div
+                        whileHover={{ y: -5 }}
+                        className="flex flex-col items-center gap-6"
+                      >
+                        {/* Image Container - Outside Card */}
+                        <motion.div
+                          whileHover={{
+                            boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
+                          }}
+                          className="relative w-full overflow-hidden rounded-2xl"
+                        >
+                          {/* Image */}
+                          <div className="relative w-full h-64 overflow-hidden">
+                            <img
+                              src={member.image}
+                              alt={member.name}
+                              className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                              onError={(e) => {
+                                e.currentTarget.src = ''
+                                e.currentTarget.style.display = 'none'
+                              }}
+                            />
+                          </div>
+                        </motion.div>
 
-                {/* Info Container - Inside Card */}
-                <motion.div
-                  className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
-                >
-                  {/* Name */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    {member.name}
-                  </h3>
+                        {/* Info Container - Inside Card */}
+                        <motion.div
+                          className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
+                        >
+                          {/* Name */}
+                          <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                            {member.name}
+                          </h3>
 
-                  {/* Role */}
-                  <p className="text-primary-400 font-semibold mb-4 text-lg">
-                    {member.role}
-                  </p>
+                          {/* Role */}
+                          <p className="text-primary-400 font-semibold mb-3 text-sm md:text-base">
+                            {member.role}
+                          </p>
 
-                  {/* Bio */}
-                  <p className="text-gray-400 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </motion.div>
+                          {/* Bio */}
+                          <p className="text-gray-400 leading-relaxed text-sm">
+                            {member.bio}
+                          </p>
+                        </motion.div>
+                      </motion.div>
+                    </motion.div>
+                  )
+                })}
               </motion.div>
-            </motion.div>
-              ))}
-          </div>
+            </div>
 
-          {/* Mobile Carousel */}
-          <div className="md:hidden flex flex-col items-center gap-8">
-            <motion.div
-              key={teamMembers[currentIndex].id}
-              variants={itemVariants}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="group w-full max-w-sm"
-            >
-              {/* Card Container - Vertical Layout */}
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="flex flex-col items-center gap-6"
-              >
-                {/* Image Container - Outside Card */}
-                <motion.div
-                  whileHover={{
-                    boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
-                  }}
-                  className="relative w-full overflow-hidden rounded-2xl"
-                >
-                  {/* Image */}
-                  <div className="relative w-full h-64 overflow-hidden">
-                    <img
-                      src={teamMembers[currentIndex].image}
-                      alt={teamMembers[currentIndex].name}
-                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.currentTarget.src = ''
-                        e.currentTarget.style.display = 'none'
-                      }}
-                    />
-                  </div>
-                </motion.div>
-
-                {/* Info Container - Inside Card */}
-                <motion.div
-                  className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
-                >
-                  {/* Name */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    {teamMembers[currentIndex].name}
-                  </h3>
-
-                  {/* Role */}
-                  <p className="text-primary-400 font-semibold mb-4 text-lg">
-                    {teamMembers[currentIndex].role}
-                  </p>
-
-                  {/* Bio */}
-                  <p className="text-gray-400 leading-relaxed">
-                    {teamMembers[currentIndex].bio}
-                  </p>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows and Dots */}
             <div className="flex items-center gap-6 justify-center">
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -309,12 +255,12 @@ const Team = () => {
               </motion.button>
 
               <div className="flex gap-2">
-                {teamMembers.map((_, idx) => (
+                {Array.from({ length: Math.ceil(teamMembers.length / 3) }).map((_, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setCurrentIndex(idx)}
+                    onClick={() => setCurrentIndex(idx * 3)}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
+                      Math.floor(currentIndex / 3) === idx ? 'bg-primary-600 w-8' : 'bg-gray-600'
                     }`}
                   />
                 ))}
@@ -323,7 +269,7 @@ const Team = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))}
+                onClick={() => setCurrentIndex((prev) => (prev + 3 >= teamMembers.length ? 0 : prev + 3))}
                 className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
               >
                 <ChevronRight size={24} className="text-primary-400" />
