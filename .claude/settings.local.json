@@ -22,7 +22,8 @@
       "Bash(npm run *)",
       "Bash(Start-Sleep -Seconds 5)",
       "Bash(Write-Host \"Server should be ready\")",
-      "mcp__plugin_felipe-vergara-plugin_playwright__browser_navigate"
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_navigate",
+      "Bash(git revert *)"
     ]
   }
 }

@@ -39,6 +39,83 @@ const Team = () => {
         linkedin: 'https://linkedin.com',
       },
     },
+    {
+      id: 4,
+      name: 'Kevin Ríos',
+      role: 'Camarógrafo / Filmmaker',
+      image: '/team/Kevin.png',
+      bio: 'Especialista en captura de contenido audiovisual de alta calidad con visión cinematográfica',
+      social: {
+        email: 'kevin@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 5,
+      name: 'Paulina Villegas',
+      role: 'Especialista en Edición de Video',
+      image: '/team/Paulina.png',
+      bio: 'Experta en postproducción y edición de video con narrativa visual impactante',
+      social: {
+        email: 'paulina@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 6,
+      name: 'Erika Valencia',
+      role: 'Diseñadora Gráfica - Especialista en Redes Sociales',
+      image: '/team/Erika.png',
+      bio: 'Creadora de diseños visuales estratégicos que conectan con audiencias en redes sociales',
+      social: {
+        email: 'erika@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 7,
+      name: 'Juan Herrera',
+      role: 'Asistente de Producción',
+      image: '/team/Herrera.png',
+      bio: 'Profesional en logística y coordinación de procesos de producción audiovisual',
+      social: {
+        email: 'juan@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 8,
+      name: 'Camila Echeverri',
+      role: 'Directora Creativa & Gestora de Negocio',
+      image: '/team/Camila.png',
+      bio: 'Líder creativa que impulsa la estrategia comercial y establece relaciones clave',
+      social: {
+        email: 'camila@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 9,
+      name: 'Lina Gómez',
+      role: 'Socia Co-Fundadora - Operaciones USA',
+      image: '/team/Lina.png',
+      bio: 'Líder estratégica en expansión internacional y operaciones de la agencia en Estados Unidos',
+      social: {
+        email: 'lina@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      id: 10,
+      name: 'Valentina Correa',
+      role: 'Asistente Administrativo',
+      image: '/team/Valentina.png',
+      bio: 'Coordinadora de procesos administrativos que garantiza eficiencia operativa',
+      social: {
+        email: 'valentina@rozsocial.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
   ]
 
   return (
