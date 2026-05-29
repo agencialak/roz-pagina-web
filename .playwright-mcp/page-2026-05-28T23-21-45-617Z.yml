@@ -1,0 +1,425 @@
+- main [ref=e3]:
+  - navigation [ref=e7]:
+    - generic [ref=e9]:
+      - link "ROZ" [ref=e10] [cursor=pointer]:
+        - /url: "#"
+        - img "ROZ" [ref=e11]
+      - generic [ref=e12]:
+        - link "Inicio" [ref=e13] [cursor=pointer]:
+          - /url: "#"
+        - link "Servicios" [ref=e14] [cursor=pointer]:
+          - /url: "#servicios"
+        - link "Estrategia" [ref=e15] [cursor=pointer]:
+          - /url: "#filosofia"
+        - link "Equipo" [ref=e16] [cursor=pointer]:
+          - /url: "#equipo"
+        - link "Resultados" [ref=e17] [cursor=pointer]:
+          - /url: "#resultados"
+        - link "Testimonios" [ref=e18] [cursor=pointer]:
+          - /url: "#testimonios"
+        - link "Contacto" [ref=e19] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e20]:
+        - link "Instagram" [ref=e21] [cursor=pointer]:
+          - /url: https://www.instagram.com/agenciaroz/
+          - img "Instagram" [ref=e22]
+        - link "WhatsApp" [ref=e23] [cursor=pointer]:
+          - /url: https://wa.me/573218515587
+          - img "WhatsApp" [ref=e24]
+  - generic [ref=e26]:
+    - generic [ref=e28]: Bienvenido a ROZ Social Media
+    - heading "CONSTRUIMOS MARCAS QUE VENDEN" [level=1] [ref=e29]:
+      - generic [ref=e30]: CONSTRUIMOS
+      - generic [ref=e31]: MARCAS
+      - generic [ref=e32]: QUE VENDEN
+    - paragraph [ref=e33]: Estrategia digital que convierte atención en crecimiento real. Posicionamiento, autoridad y resultados medibles para tu marca.
+    - generic [ref=e34]:
+      - link "AGENDA UNA REUNIÓN" [ref=e35] [cursor=pointer]:
+        - /url: https://wa.me/573218515587
+        - text: AGENDA UNA REUNIÓN
+        - img [ref=e37]
+      - link "VER PROYECTOS" [ref=e39] [cursor=pointer]:
+        - /url: "#proyectos"
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: 120M+
+        - generic [ref=e43]: Visualizaciones
+      - generic [ref=e44]:
+        - generic [ref=e45]: 300+
+        - generic [ref=e46]: Proyectos
+      - generic [ref=e47]:
+        - generic [ref=e48]: 9 cifras
+        - generic [ref=e49]: Generadas
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - heading "NUESTROS SERVICIOS" [level=2] [ref=e56]:
+        - text: NUESTROS
+        - generic [ref=e57]: SERVICIOS
+      - paragraph [ref=e58]: Soluciones integrales para posicionar, crecer y dominar digitalmente.
+    - generic [ref=e59]:
+      - generic [ref=e61]:
+        - img [ref=e63]
+        - heading "Redes Sociales" [level=3] [ref=e65]
+        - paragraph [ref=e66]: Gestión estratégica de presencia en todas las plataformas de Meta.
+        - link "Conocer más →" [ref=e67] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e69]:
+        - img [ref=e71]
+        - heading "Producción de Contenido" [level=3] [ref=e73]
+        - paragraph [ref=e74]: Contenido que genera engagement y convierte audiencia.
+        - link "Conocer más →" [ref=e75] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e77]:
+        - img [ref=e79]
+        - heading "Meta Ads" [level=3] [ref=e82]
+        - paragraph [ref=e83]: Campañas publicitarias estratégicas con ROI medible.
+        - link "Conocer más →" [ref=e84] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e86]:
+        - img [ref=e88]
+        - heading "Branding" [level=3] [ref=e94]
+        - paragraph [ref=e95]: Identidad visual coherente y memorable para tu marca.
+        - link "Conocer más →" [ref=e96] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e98]:
+        - img [ref=e100]
+        - heading "Estrategia Creativa" [level=3] [ref=e102]
+        - paragraph [ref=e103]: Conceptos innovadores que diferencian tu marca del mercado.
+        - link "Conocer más →" [ref=e104] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e106]:
+        - img [ref=e108]
+        - heading "Posicionamiento" [level=3] [ref=e110]
+        - paragraph [ref=e111]: Autoridad digital y liderazgo en tu nicho de mercado.
+        - link "Conocer más →" [ref=e112] [cursor=pointer]:
+          - /url: "#contacto"
+  - generic [ref=e116]:
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - heading "¿QUÉ ES ROZ?" [level=2] [ref=e119]:
+          - generic [ref=e120]: ¿QUÉ ES
+          - text: ROZ?
+        - paragraph [ref=e121]: Somos una agencia enfocada en construir marcas que dominan. No hacemos campañas genéricas ni tácticas de corto plazo.
+        - paragraph [ref=e122]: Trabajamos en estrategia profunda, posicionamiento sostenible y crecimiento escalable. Cada proyecto es una oportunidad para transformar una marca en lider de su industria.
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - generic [ref=e125]: "+5"
+            - generic [ref=e126]: Años de experiencia
+          - generic [ref=e127]:
+            - generic [ref=e128]: "+100"
+            - generic [ref=e129]: Marcas escaladas
+      - generic [ref=e131]:
+        - generic [ref=e133]: Estrategia
+        - generic [ref=e135]: Datos
+        - generic [ref=e137]: Crecimiento
+        - generic [ref=e139]: Autoridad
+        - generic [ref=e141]: Conversión
+        - generic [ref=e143]: Contenido
+        - generic [ref=e145]: Resultados
+    - generic [ref=e146]:
+      - heading "PILARES DE NUESTRA FILOSOFÍA" [level=3] [ref=e147]
+      - generic [ref=e148]:
+        - generic [ref=e150]:
+          - generic [ref=e152]: "1"
+          - generic [ref=e153]:
+            - heading "Estrategia" [level=4] [ref=e154]
+            - paragraph [ref=e155]: Cada decisión está fundamentada en data y análisis profundo del mercado.
+        - generic [ref=e157]:
+          - generic [ref=e159]: "2"
+          - generic [ref=e160]:
+            - heading "Posicionamiento" [level=4] [ref=e161]
+            - paragraph [ref=e162]: Construimos autoridad digital que diferencia tu marca en el mercado.
+        - generic [ref=e164]:
+          - generic [ref=e166]: "3"
+          - generic [ref=e167]:
+            - heading "Crecimiento" [level=4] [ref=e168]
+            - paragraph [ref=e169]: "Resultados medibles: más seguidores, más ventas, más impacto."
+        - generic [ref=e171]:
+          - generic [ref=e173]: "4"
+          - generic [ref=e174]:
+            - heading "Escalabilidad" [level=4] [ref=e175]
+            - paragraph [ref=e176]: Sistemas que funcionan hoy y mañana, a cualquier escala.
+        - generic [ref=e178]:
+          - generic [ref=e180]: "5"
+          - generic [ref=e181]:
+            - heading "Acompañamiento" [level=4] [ref=e182]
+            - paragraph [ref=e183]: Somos consejeros constantes de tu marca. Te asesoramos en cada decisión para que inviertas estratégicamente, no solo gastes presupuesto.
+  - generic [ref=e188]:
+    - generic [ref=e189]:
+      - heading "NUESTRO EQUIPO" [level=2] [ref=e190]:
+        - text: NUESTRO
+        - generic [ref=e191]: EQUIPO
+      - paragraph [ref=e192]: Estrategas, creativos y especialistas dedicados a escalar tu marca. Cada miembro aporta expertise de nivel internacional.
+    - generic [ref=e195]:
+      - generic [ref=e197]:
+        - generic [ref=e199]:
+          - img "Santiago Rosales C." [ref=e202]
+          - generic [ref=e203]:
+            - heading "Santiago Rosales C." [level=3] [ref=e204]
+            - paragraph [ref=e205]: CEO - Estrategia y Productor
+            - paragraph [ref=e206]: Fundador y líder estratégico de ROZ Social Media
+        - generic [ref=e208]:
+          - img "Laura Rosales C." [ref=e211]
+          - generic [ref=e212]:
+            - heading "Laura Rosales C." [level=3] [ref=e213]
+            - paragraph [ref=e214]: Administradora & Directora de Producción Audiovisual
+            - paragraph [ref=e215]: Experta en gestión operativa y creación de contenido visual de alto impacto
+        - generic [ref=e217]:
+          - img "Nikolas Garcia" [ref=e220]
+          - generic [ref=e221]:
+            - heading "Nikolas Garcia" [level=3] [ref=e222]
+            - paragraph [ref=e223]: Co-Fundador & Estratega Digital de Campañas Publicitarias
+            - paragraph [ref=e224]: Especialista en estrategia digital y ejecución de campañas publicitarias de alto rendimiento
+      - generic [ref=e225]:
+        - button [ref=e226] [cursor=pointer]:
+          - img [ref=e227]
+        - generic [ref=e229]:
+          - button [ref=e230] [cursor=pointer]
+          - button [ref=e231] [cursor=pointer]
+          - button [ref=e232] [cursor=pointer]
+          - button [ref=e233] [cursor=pointer]
+          - button [ref=e234] [cursor=pointer]
+          - button [ref=e235] [cursor=pointer]
+          - button [ref=e236] [cursor=pointer]
+          - button [ref=e237] [cursor=pointer]
+          - button [ref=e238] [cursor=pointer]
+          - button [ref=e239] [cursor=pointer]
+        - button [ref=e240] [cursor=pointer]:
+          - img [ref=e241]
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - generic [ref=e247]: "+5"
+        - generic [ref=e248]: Años de experiencia con la agencia
+      - generic [ref=e249]:
+        - generic [ref=e250]: "+8"
+        - generic [ref=e251]: Países
+      - generic [ref=e252]:
+        - generic [ref=e253]: 7 dias
+        - generic [ref=e254]: a la semana soporte a clientes
+  - generic [ref=e258]:
+    - generic [ref=e259]:
+      - heading "RESULTADOS QUE HABLAN POR SÍ SOLOS" [level=2] [ref=e260]:
+        - text: RESULTADOS QUE
+        - generic [ref=e261]: HABLAN POR SÍ SOLOS
+      - paragraph [ref=e262]: Números reales de proyectos reales. Cada métrica representa marcas que escalaron con ROZ.
+    - generic [ref=e263]:
+      - generic [ref=e265]:
+        - generic:
+          - generic: $10M+ COP
+        - heading "Invertidos en Meta Ads" [level=3] [ref=e266]
+        - paragraph [ref=e267]: Presupuesto total manejado
+      - generic [ref=e269]:
+        - generic:
+          - generic: 13+
+        - heading "Marcas Trabajadas" [level=3] [ref=e270]
+        - paragraph [ref=e271]: Empresas escaladas con ROZ
+      - generic [ref=e273]:
+        - generic:
+          - generic: "+8"
+        - heading "Países" [level=3] [ref=e274]
+        - paragraph [ref=e275]: Presencia global de alcance
+    - generic [ref=e276]:
+      - generic [ref=e277]:
+        - generic [ref=e278]: 4 meses
+        - generic [ref=e279]: Life time value promedio
+      - generic [ref=e280]:
+        - generic [ref=e281]: Mes 1
+        - generic [ref=e282]: Resultados desde el primer mes
+      - generic [ref=e283]:
+        - generic [ref=e284]: 7/7
+        - generic [ref=e285]: Soporte todos los días
+  - generic [ref=e289]:
+    - generic [ref=e290]:
+      - heading "LO QUE DICEN NUESTROS CLIENTES" [level=2] [ref=e291]:
+        - text: LO QUE DICEN
+        - generic [ref=e292]: NUESTROS CLIENTES
+      - paragraph [ref=e293]: Marcas que escalaron con ROZ comparten su experiencia.
+    - generic [ref=e294]:
+      - generic [ref=e296]:
+        - generic [ref=e297]:
+          - img [ref=e298]
+          - img [ref=e300]
+          - img [ref=e302]
+          - img [ref=e304]
+          - img [ref=e306]
+        - paragraph [ref=e308]: "\"Gracias por el acompañamiento y crecimiento que hemos tenido juntos 👏🔥👏 Cracks\""
+        - generic [ref=e309]:
+          - heading "Brian Lopez" [level=4] [ref=e310]
+          - paragraph [ref=e311]: "@troncos05"
+      - generic [ref=e313]:
+        - generic [ref=e314]:
+          - img [ref=e315]
+          - img [ref=e317]
+          - img [ref=e319]
+          - img [ref=e321]
+          - img [ref=e323]
+        - paragraph [ref=e325]: "\"¡Ellos son mi agencia favorita! Estuve mucho tiempo buscándolos, pero ahora que los encontré, no los suelto. Los recomiendo al 100%. ¡Gracias por tanto, team!\""
+        - generic [ref=e326]:
+          - heading "Paula Posada" [level=4] [ref=e327]
+          - paragraph [ref=e328]: "@odentoco"
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - img [ref=e332]
+          - img [ref=e334]
+          - img [ref=e336]
+          - img [ref=e338]
+          - img [ref=e340]
+        - paragraph [ref=e342]: "\"Excelente equipo, producciones impecables con ellos 🎬😍😍\""
+        - generic [ref=e343]:
+          - heading "Camilo Arango" [level=4] [ref=e344]
+          - paragraph [ref=e345]: "@dr.camiloarango"
+      - generic [ref=e347]:
+        - generic [ref=e348]:
+          - img [ref=e349]
+          - img [ref=e351]
+          - img [ref=e353]
+          - img [ref=e355]
+          - img [ref=e357]
+        - paragraph [ref=e359]: "\"Triplicando en ventas gracias al acompañamiento de todo el equipo 👌🏼🔥\""
+        - generic [ref=e360]:
+          - heading "Sara Alzate" [level=4] [ref=e361]
+          - paragraph [ref=e362]: "@anamorapereira"
+      - generic [ref=e364]:
+        - generic [ref=e365]:
+          - img [ref=e366]
+          - img [ref=e368]
+          - img [ref=e370]
+          - img [ref=e372]
+          - img [ref=e374]
+        - paragraph [ref=e376]: "\"Son los mejores 😍💛😍 súper recomendados 😍😍😍 Muchas gracias 💙❤️\""
+        - generic [ref=e377]:
+          - heading "Katherine Muñoz" [level=4] [ref=e378]
+          - paragraph [ref=e379]: "@opticalet18perreira"
+  - button "✍️ COMPARTIR TU TESTIMONIO" [ref=e385] [cursor=pointer]
+  - generic [ref=e389]:
+    - generic [ref=e390]:
+      - heading "GALERÍA DE PROYECTOS" [level=2] [ref=e391]:
+        - text: GALERÍA DE
+        - generic [ref=e392]: PROYECTOS
+      - paragraph [ref=e393]: Casos de éxito que demuestran nuestra capacidad de transformar marcas.
+    - generic [ref=e394]:
+      - generic [ref=e396] [cursor=pointer]:
+        - iframe [ref=e398]
+        - generic [ref=e399]:
+          - heading "Velandia capital" [level=3] [ref=e400]
+          - paragraph [ref=e401]: Finanzas
+      - generic [ref=e404] [cursor=pointer]:
+        - iframe [ref=e406]
+        - generic [ref=e407]:
+          - heading "Curso Smile Pro Final" [level=3] [ref=e408]
+          - paragraph [ref=e409]: Educación
+      - generic [ref=e412] [cursor=pointer]:
+        - iframe [ref=e414]
+        - generic [ref=e415]:
+          - heading "Fuego Burger" [level=3] [ref=e416]
+          - paragraph [ref=e417]: F&B Marketing
+      - generic [ref=e420] [cursor=pointer]:
+        - iframe [ref=e422]
+        - generic [ref=e423]:
+          - heading "Testimonio" [level=3] [ref=e424]
+          - paragraph [ref=e425]: sector salud
+      - generic [ref=e428] [cursor=pointer]:
+        - iframe [ref=e430]
+        - generic [ref=e431]:
+          - heading "casos reales" [level=3] [ref=e432]
+          - paragraph [ref=e433]: distribuidor
+      - generic [ref=e436] [cursor=pointer]:
+        - iframe [ref=e438]
+        - generic [ref=e439]:
+          - heading "startup" [level=3] [ref=e440]
+          - paragraph [ref=e441]: personalizables
+  - generic [ref=e448]:
+    - generic [ref=e450]: PRÓXIMO PASO
+    - heading "¿LISTO PARA ESCALAR TU MARCA?" [level=2] [ref=e451]:
+      - text: ¿LISTO PARA
+      - generic [ref=e452]: ESCALAR TU MARCA?
+    - paragraph [ref=e453]: No esperes más. Las marcas que escalan son las que actúan hoy. Déjanos mostrarte cómo podemos transformar tu estrategia digital.
+    - link "TRABAJEMOS JUNTOS" [ref=e455] [cursor=pointer]:
+      - /url: https://wa.me/573218515587
+      - text: TRABAJEMOS JUNTOS
+      - img [ref=e457]
+    - generic [ref=e459]:
+      - paragraph [ref=e460]: Confían en ROZ
+      - generic [ref=e461]:
+        - generic [ref=e462]: Startup
+        - generic [ref=e463]: E-Commerce
+        - generic [ref=e464]: Brand
+        - generic [ref=e465]: Sector Salud
+        - generic [ref=e466]: Restaurantes
+  - generic [ref=e468]:
+    - generic [ref=e469]:
+      - generic [ref=e470]:
+        - img "ROZ" [ref=e471]
+        - paragraph [ref=e472]: Estrategia digital para marcas que dominan.
+        - generic [ref=e473]:
+          - link "Instagram" [ref=e474] [cursor=pointer]:
+            - /url: https://www.instagram.com/agenciaroz/
+            - img "Instagram" [ref=e475]
+          - link "WhatsApp" [ref=e476] [cursor=pointer]:
+            - /url: https://wa.me/573218515587
+            - img "WhatsApp" [ref=e477]
+      - generic [ref=e478]:
+        - heading "Menú" [level=4] [ref=e479]
+        - list [ref=e480]:
+          - listitem [ref=e481]:
+            - link "Inicio" [ref=e482] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e483]:
+            - link "Servicios" [ref=e484] [cursor=pointer]:
+              - /url: "#servicios"
+          - listitem [ref=e485]:
+            - link "Proyectos" [ref=e486] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e487]:
+            - link "Blog" [ref=e488] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e489]:
+        - heading "Recursos" [level=4] [ref=e490]
+        - list [ref=e491]:
+          - listitem [ref=e492]:
+            - link "Documentación" [ref=e493] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e494]:
+            - link "Case Studies" [ref=e495] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e496]:
+            - link "Newsletter" [ref=e497] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e498]:
+            - link "Resources" [ref=e499] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e500]:
+        - heading "Legal" [level=4] [ref=e501]
+        - list [ref=e502]:
+          - listitem [ref=e503]:
+            - link "Privacidad" [ref=e504] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e505]:
+            - link "Términos" [ref=e506] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e507]:
+            - link "Cookies" [ref=e508] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e509]:
+            - link "Contacto" [ref=e510] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e511]:
+        - heading "Contacto" [level=4] [ref=e512]
+        - generic [ref=e513]:
+          - link "rozagencia23@gmail.com" [ref=e514] [cursor=pointer]:
+            - /url: mailto:rozagencia23@gmail.com
+            - img [ref=e515]
+            - generic [ref=e518]: rozagencia23@gmail.com
+          - link "+57 321 851 5587" [ref=e519] [cursor=pointer]:
+            - /url: https://wa.me/573218515587
+            - img [ref=e520]
+            - generic [ref=e522]: +57 321 851 5587
+          - generic [ref=e523]:
+            - img [ref=e524]
+            - generic [ref=e527]: Pereira, Risaralda
+    - generic [ref=e528]:
+      - paragraph [ref=e529]: © 2026 ROZ Social Media. Todos los derechos reservados.
+      - paragraph [ref=e530]: Construimos marcas que dominan. Estrategia, posicionamiento, resultados.
+  - link "Contacta con nosotros por WhatsApp" [ref=e531] [cursor=pointer]:
+    - /url: https://wa.me/573218515587
+    - img [ref=e532]

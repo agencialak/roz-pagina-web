@@ -31,7 +31,7 @@ const Hero = () => {
           className="text-3xl sm:text-5xl lg:text-8xl font-black mb-4 sm:mb-6 tracking-tight"
         >
           <span className="block text-white">
-            CONSTRUIMOS
+            CONSTRUIMOS MARCAS
           </span>
           <motion.span
             className="block gradient-text-purple"
@@ -39,11 +39,8 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            MARCAS
-          </motion.span>
-          <span className="block text-white">
             QUE VENDEN
-          </span>
+          </motion.span>
         </motion.h1>
 
         {/* Description */}

@@ -154,8 +154,8 @@ const Team = () => {
             variants={fadeUpVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
           >
-            <span className="text-white">NUESTRO</span>
-            <span className="block gradient-text-purple">EQUIPO</span>
+            <span className="text-white">NUESTRO EQUIPO</span>
+            <span className="block gradient-text-purple">Expertos en Estrategia Digital</span>
           </motion.h2>
           <motion.p
             variants={fadeUpVariants}
@@ -218,7 +218,7 @@ const Team = () => {
                             <div className="relative w-full h-64 overflow-hidden">
                               <img
                                 src={member.image}
-                                alt={member.name}
+                                alt={`${member.name} - ${member.role} en ROZ Social Media`}
                                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                                 onError={(e) => {
                                   e.currentTarget.src = ''
@@ -331,7 +331,7 @@ const Team = () => {
                     <div className="relative w-full h-64 overflow-hidden">
                       <img
                         src={teamMembers[currentIndex].image}
-                        alt={teamMembers[currentIndex].name}
+                        alt={`${teamMembers[currentIndex].name} - ${teamMembers[currentIndex].role} en ROZ Social Media`}
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                         onError={(e) => {
                           e.currentTarget.src = ''

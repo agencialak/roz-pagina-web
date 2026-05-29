@@ -23,7 +23,23 @@
       "Bash(Start-Sleep -Seconds 5)",
       "Bash(Write-Host \"Server should be ready\")",
       "mcp__plugin_felipe-vergara-plugin_playwright__browser_navigate",
-      "Bash(git revert *)"
+      "Bash(git revert *)",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_tabs",
+      "mcp__Claude_in_Chrome__read_console_messages",
+      "mcp__Claude_in_Chrome__resize_window",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_take_screenshot",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_resize",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_snapshot",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_click",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_evaluate",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_close",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_console_messages",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_network_requests",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(pkill -f \"vite\")",
+      "mcp__plugin_felipe-vergara-plugin_playwright__browser_press_key",
+      "Bash(cat /tmp/dev.log 2>/dev/null | tail -20)",
+      "Bash(git reset *)"
     ]
   }
 }
