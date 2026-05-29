@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [direction, setDirection] = useState<'left' | 'right'>('right')
   const teamMembers = [
     {
       id: 1,
@@ -179,9 +180,9 @@ const Team = () => {
               <div className="w-full max-w-7xl">
                 <motion.div
                   key={currentIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
+                  initial={{ opacity: 0, x: direction === 'right' ? -50 : 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, ease: 'easeInOut' }}
                   className="grid grid-cols-3 gap-6"
                 >
                   {[0, 1, 2].map((offset) => {
@@ -191,9 +192,9 @@ const Team = () => {
                       <motion.div
                         key={`${currentIndex}-${offset}`}
                         variants={itemVariants}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3 }}
+                        initial={{ opacity: 0, x: direction === 'right' ? -30 : 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: offset * 0.05 }}
                         className="group"
                       >
                         {/* Card Container - Vertical Layout */}
@@ -253,7 +254,10 @@ const Team = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))}
+                  onClick={() => {
+                    setDirection('left')
+                    setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))
+                  }}
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
                 >
                   <ChevronLeft size={24} className="text-primary-400" />
@@ -263,7 +267,10 @@ const Team = () => {
                   {teamMembers.map((_, idx) => (
                     <button
                       key={idx}
-                      onClick={() => setCurrentIndex(idx)}
+                      onClick={() => {
+                        setDirection(idx > currentIndex ? 'right' : 'left')
+                        setCurrentIndex(idx)
+                      }}
                       className={`w-2 h-2 rounded-full transition-all ${
                         idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
                       }`}
@@ -274,7 +281,10 @@ const Team = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))}
+                  onClick={() => {
+                    setDirection('right')
+                    setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))
+                  }}
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
                 >
                   <ChevronRight size={24} className="text-primary-400" />
@@ -287,9 +297,10 @@ const Team = () => {
               <motion.div
                 key={teamMembers[currentIndex].id}
                 variants={itemVariants}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: direction === 'right' ? -50 : 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
+                exit={{ opacity: 0, x: direction === 'right' ? 50 : -50 }}
+                transition={{ duration: 0.4 }}
                 className="group w-full max-w-sm"
               >
                 {/* Card Container - Vertical Layout */}
@@ -345,7 +356,10 @@ const Team = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))}
+                  onClick={() => {
+                    setDirection('left')
+                    setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))
+                  }}
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
                 >
                   <ChevronLeft size={24} className="text-primary-400" />
@@ -355,7 +369,10 @@ const Team = () => {
                   {teamMembers.map((_, idx) => (
                     <button
                       key={idx}
-                      onClick={() => setCurrentIndex(idx)}
+                      onClick={() => {
+                        setDirection(idx > currentIndex ? 'right' : 'left')
+                        setCurrentIndex(idx)
+                      }}
                       className={`w-2 h-2 rounded-full transition-all ${
                         idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
                       }`}
@@ -366,7 +383,10 @@ const Team = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))}
+                  onClick={() => {
+                    setDirection('right')
+                    setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))
+                  }}
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
                 >
                   <ChevronRight size={24} className="text-primary-400" />
