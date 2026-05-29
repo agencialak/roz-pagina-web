@@ -178,9 +178,10 @@ const Team = () => {
             <div className="hidden md:w-full md:flex md:flex-col md:items-center md:gap-8">
               <div className="w-full max-w-7xl">
                 <motion.div
+                  key={currentIndex}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                   className="grid grid-cols-3 gap-6"
                 >
                   {[0, 1, 2].map((offset) => {
@@ -188,8 +189,11 @@ const Team = () => {
                     const member = teamMembers[memberIndex]
                     return (
                       <motion.div
-                        key={memberIndex}
+                        key={`${currentIndex}-${offset}`}
                         variants={itemVariants}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
                         className="group"
                       >
                         {/* Card Container - Vertical Layout */}
