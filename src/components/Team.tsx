@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
@@ -178,25 +178,25 @@ const Team = () => {
             {/* Desktop Carousel - 3 members with 1-by-1 navigation */}
             <div className="hidden md:w-full md:flex md:flex-col md:items-center md:gap-8">
               <div className="w-full max-w-7xl">
-                <motion.div
-                  key={currentIndex}
-                  initial={{ opacity: 0, x: direction === 'right' ? -50 : 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, ease: 'easeInOut' }}
-                  className="grid grid-cols-3 gap-6"
-                >
-                  {[0, 1, 2].map((offset) => {
-                    const memberIndex = (currentIndex + offset) % teamMembers.length
-                    const member = teamMembers[memberIndex]
-                    return (
-                      <motion.div
-                        key={`${currentIndex}-${offset}`}
-                        variants={itemVariants}
-                        initial={{ opacity: 0, x: direction === 'right' ? -30 : 30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: offset * 0.05 }}
-                        className="group"
-                      >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    layout
+                    key={`carousel-${currentIndex}`}
+                    className="grid grid-cols-3 gap-6"
+                  >
+                    {[0, 1, 2].map((offset) => {
+                      const memberIndex = (currentIndex + offset) % teamMembers.length
+                      const member = teamMembers[memberIndex]
+                      return (
+                        <motion.div
+                          key={memberIndex}
+                          variants={itemVariants}
+                          initial={{ opacity: 0, x: direction === 'right' ? -40 : 40 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: direction === 'right' ? 40 : -40 }}
+                          transition={{ duration: 0.35 }}
+                          className="group"
+                        >
                         {/* Card Container - Vertical Layout */}
                         <motion.div
                           whileHover={{ y: -5 }}
@@ -246,7 +246,8 @@ const Team = () => {
                       </motion.div>
                     )
                   })}
-                </motion.div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
               {/* Desktop Navigation */}
@@ -294,15 +295,16 @@ const Team = () => {
 
             {/* Mobile Carousel - 1 member at a time */}
             <div className="md:hidden flex flex-col items-center gap-8 w-full">
-              <motion.div
-                key={teamMembers[currentIndex].id}
-                variants={itemVariants}
-                initial={{ opacity: 0, x: direction === 'right' ? -50 : 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: direction === 'right' ? 50 : -50 }}
-                transition={{ duration: 0.4 }}
-                className="group w-full max-w-sm"
-              >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={teamMembers[currentIndex].id}
+                  variants={itemVariants}
+                  initial={{ opacity: 0, x: direction === 'right' ? -50 : 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: direction === 'right' ? 50 : -50 }}
+                  transition={{ duration: 0.35 }}
+                  className="group w-full max-w-sm"
+                >
                 {/* Card Container - Vertical Layout */}
                 <motion.div
                   whileHover={{ y: -5 }}
@@ -349,7 +351,8 @@ const Team = () => {
                     </p>
                   </motion.div>
                 </motion.div>
-              </motion.div>
+              </AnimatePresence>
+            </div>
 
               {/* Mobile Navigation */}
               <div className="flex items-center gap-6 justify-center">
