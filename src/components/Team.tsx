@@ -178,12 +178,12 @@ const Team = () => {
             {/* Desktop Carousel - 3 members with 1-by-1 navigation */}
             <div className="hidden md:w-full md:flex md:flex-col md:items-center md:gap-8">
               <div className="w-full max-w-7xl">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    layout
-                    key={`carousel-${currentIndex}`}
-                    className="grid grid-cols-3 gap-6"
-                  >
+                <motion.div
+                  layout
+                  className="grid grid-cols-3 gap-6"
+                  transition={{ duration: 0.4, type: 'spring', stiffness: 300, damping: 30 }}
+                >
+                  <AnimatePresence mode="popLayout">
                     {[0, 1, 2].map((offset) => {
                       const memberIndex = (currentIndex + offset) % teamMembers.length
                       const member = teamMembers[memberIndex]
@@ -191,10 +191,15 @@ const Team = () => {
                         <motion.div
                           key={memberIndex}
                           variants={itemVariants}
-                          initial={{ opacity: 0, x: direction === 'right' ? -40 : 40 }}
+                          initial={{ opacity: 0, x: direction === 'right' ? -100 : 100 }}
                           animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: direction === 'right' ? 40 : -40 }}
-                          transition={{ duration: 0.35 }}
+                          exit={{ opacity: 0, x: direction === 'right' ? 100 : -100 }}
+                          transition={{
+                            duration: 0.4,
+                            type: 'spring',
+                            stiffness: 300,
+                            damping: 30
+                          }}
                           className="group"
                         >
                         {/* Card Container - Vertical Layout */}
@@ -246,8 +251,8 @@ const Team = () => {
                       </motion.div>
                     )
                   })}
-                  </motion.div>
-                </AnimatePresence>
+                  </AnimatePresence>
+                </motion.div>
               </div>
 
               {/* Desktop Navigation */}
@@ -295,14 +300,19 @@ const Team = () => {
 
             {/* Mobile Carousel - 1 member at a time */}
             <div className="md:hidden flex flex-col items-center gap-8 w-full">
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="popLayout">
                 <motion.div
                   key={teamMembers[currentIndex].id}
                   variants={itemVariants}
-                  initial={{ opacity: 0, x: direction === 'right' ? -50 : 50 }}
+                  initial={{ opacity: 0, x: direction === 'right' ? -150 : 150 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: direction === 'right' ? 50 : -50 }}
-                  transition={{ duration: 0.35 }}
+                  exit={{ opacity: 0, x: direction === 'right' ? 150 : -150 }}
+                  transition={{
+                    duration: 0.4,
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 30
+                  }}
                   className="group w-full max-w-sm"
                 >
                 {/* Card Container - Vertical Layout */}
