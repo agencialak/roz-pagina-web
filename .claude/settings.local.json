@@ -39,7 +39,8 @@
       "Bash(pkill -f \"vite\")",
       "mcp__plugin_felipe-vergara-plugin_playwright__browser_press_key",
       "Bash(cat /tmp/dev.log 2>/dev/null | tail -20)",
-      "Bash(git reset *)"
+      "Bash(git reset *)",
+      "mcp__Claude_in_Chrome__switch_browser"
     ]
   }
 }
