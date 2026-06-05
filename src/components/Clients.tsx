@@ -16,31 +16,31 @@ const Clients = () => {
       id: 2,
       name: 'Bariatric Care',
       logo: '/clients/Bariatric care.PNG',
-      instagram: 'https://www.instagram.com/bariatriccare/',
+      instagram: 'https://www.instagram.com/dra.anapimienta/',
     },
     {
       id: 3,
       name: 'Clínica San Rafael',
       logo: '/clients/Clinica san rafael.png',
-      instagram: 'https://www.instagram.com/clinicasanrafael/',
+      instagram: 'https://www.instagram.com/clinica.sanrafael/',
     },
     {
       id: 4,
       name: 'Dr Romero',
       logo: '/clients/Dr romero.png',
-      instagram: 'https://www.instagram.com/drromero/',
+      instagram: 'https://www.instagram.com/drfabianromero/',
     },
     {
       id: 5,
       name: 'Dr Steer',
       logo: '/clients/Dr steer.png',
-      instagram: 'https://www.instagram.com/drsteer/',
+      instagram: 'https://www.instagram.com/reconstruccionoseasteer/',
     },
     {
       id: 6,
       name: 'Latam Mobility',
       logo: '/clients/Latam Mobility.png',
-      instagram: 'https://www.instagram.com/latammobility/',
+      instagram: 'https://www.instagram.com/', // En espera de habilitación
     },
     {
       id: 7,
@@ -52,19 +52,19 @@ const Clients = () => {
       id: 8,
       name: 'Odento',
       logo: '/clients/Odento.png',
-      instagram: 'https://www.instagram.com/odento/',
+      instagram: 'https://www.instagram.com/odentoco/',
     },
     {
       id: 9,
       name: 'Sayonara',
       logo: '/clients/SAYONARA.png',
-      instagram: 'https://www.instagram.com/sayonara/',
+      instagram: 'https://www.instagram.com/sayonara_co/',
     },
     {
       id: 10,
       name: 'Troncos',
       logo: '/clients/troncos.png',
-      instagram: 'https://www.instagram.com/troncos/',
+      instagram: 'https://www.instagram.com/troncos05/',
     },
   ]
 
