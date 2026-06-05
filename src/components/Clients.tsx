@@ -5,23 +5,53 @@ const Clients = () => {
   const clients = [
     {
       id: 1,
-      name: 'Brand 1',
-      logo: '/clients/brand-1.png',
+      name: 'Anato Eje Cafetero',
+      logo: '/clients/Anato Eje Cafetero Blanco.png',
     },
     {
       id: 2,
-      name: 'Brand 2',
-      logo: '/clients/brand-2.png',
+      name: 'Bariatric Care',
+      logo: '/clients/Bariatric care.PNG',
     },
     {
       id: 3,
-      name: 'Brand 3',
-      logo: '/clients/brand-3.png',
+      name: 'Clínica San Rafael',
+      logo: '/clients/Clinica san rafael.png',
     },
     {
       id: 4,
-      name: 'Brand 4',
-      logo: '/clients/brand-4.png',
+      name: 'Dr Romero',
+      logo: '/clients/Dr romero.png',
+    },
+    {
+      id: 5,
+      name: 'Dr Steer',
+      logo: '/clients/Dr steer.png',
+    },
+    {
+      id: 6,
+      name: 'Latam Mobility',
+      logo: '/clients/Latam Mobility.png',
+    },
+    {
+      id: 7,
+      name: 'Media Maratón Pereira',
+      logo: '/clients/Media maraton pereira.png',
+    },
+    {
+      id: 8,
+      name: 'Odento',
+      logo: '/clients/Odento.png',
+    },
+    {
+      id: 9,
+      name: 'Sayonara',
+      logo: '/clients/SAYONARA.png',
+    },
+    {
+      id: 10,
+      name: 'Troncos',
+      logo: '/clients/troncos.png',
     },
   ]
 
@@ -56,7 +86,7 @@ const Clients = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
-          className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10"
         >
           {clients.map((client) => (
             <motion.div
@@ -67,7 +97,7 @@ const Clients = () => {
               <img
                 src={client.logo}
                 alt={`${client.name} - Cliente de ROZ Social Media`}
-                className="max-h-full max-w-xs object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none'
                 }}
