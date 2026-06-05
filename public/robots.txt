@@ -6,19 +6,45 @@ Disallow: /.vercel/
 
 Sitemap: https://rozagencia.com/sitemap.xml
 
-# Google specific
+# Google Search
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
-# Bing specific
+# Google AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Bing Search
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Other bots
+# Other Search Engines
 User-agent: Slurp
 Allow: /
 
 User-agent: DuckDuckBot
+Allow: /
+
+# AI Search & Language Models
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: facebookexternalhit
 Allow: /
