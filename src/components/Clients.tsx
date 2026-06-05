@@ -58,11 +58,11 @@ const Clients = () => {
     },
   ]
 
-  // Auto-rotate carousel every 5 seconds
+  // Auto-rotate carousel every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % clients.length)
-    }, 5000)
+    }, 3000)
     return () => clearInterval(interval)
   }, [clients.length])
 
@@ -129,14 +129,21 @@ const Clients = () => {
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
                 className="flex items-center justify-center h-24 lg:h-28 flex-1 min-w-0"
               >
-                <img
-                  src={client.logo}
-                  alt={`${client.name} - Cliente de ROZ Social Media`}
-                  className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
+                <a
+                  href="https://www.instagram.com/rozagencia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} - Cliente de ROZ Social Media`}
+                    className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                    }}
+                  />
+                </a>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -161,14 +168,21 @@ const Clients = () => {
                 transition={{ duration: 0.6, ease: 'easeInOut' }}
                 className="flex items-center justify-center h-20 sm:h-24 flex-1 min-w-0"
               >
-                <img
-                  src={client.logo}
-                  alt={`${client.name} - Cliente de ROZ Social Media`}
-                  className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
+                <a
+                  href="https://www.instagram.com/rozagencia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} - Cliente de ROZ Social Media`}
+                    className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                    }}
+                  />
+                </a>
               </motion.div>
             ))}
           </AnimatePresence>
