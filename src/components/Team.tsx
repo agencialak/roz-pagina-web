@@ -202,53 +202,53 @@ const Team = () => {
                           }}
                           className="group"
                         >
-                        {/* Card Container - Vertical Layout */}
-                        <motion.div
-                          whileHover={{ y: -5 }}
-                          className="flex flex-col items-center gap-6"
-                        >
-                          {/* Image Container - Outside Card */}
+                          {/* Card Container - Vertical Layout */}
                           <motion.div
-                            whileHover={{
-                              boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
-                            }}
-                            className="relative w-full overflow-hidden rounded-2xl"
+                            whileHover={{ y: -5 }}
+                            className="flex flex-col items-center gap-6"
                           >
-                            {/* Image */}
-                            <div className="relative w-full h-64 overflow-hidden">
-                              <img
-                                src={member.image}
-                                alt={`${member.name} - ${member.role} en ROZ Social Media`}
-                                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                                onError={(e) => {
-                                  e.currentTarget.src = ''
-                                  e.currentTarget.style.display = 'none'
-                                }}
-                              />
-                            </div>
-                          </motion.div>
+                            {/* Image Container - Outside Card */}
+                            <motion.div
+                              whileHover={{
+                                boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
+                              }}
+                              className="relative w-full overflow-hidden rounded-2xl"
+                            >
+                              {/* Image */}
+                              <div className="relative w-full h-64 overflow-hidden">
+                                <img
+                                  src={member.image}
+                                  alt={`${member.name} - ${member.role} en ROZ Social Media`}
+                                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                                  onError={(e) => {
+                                    e.currentTarget.src = ''
+                                    e.currentTarget.style.display = 'none'
+                                  }}
+                                />
+                              </div>
+                            </motion.div>
 
-                          {/* Info Container - Inside Card */}
-                          <motion.div
-                            className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
-                          >
-                            {/* Name */}
-                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                              {member.name}
-                            </h3>
+                            {/* Info Container - Inside Card */}
+                            <motion.div
+                              className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
+                            >
+                              {/* Name */}
+                              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                                {member.name}
+                              </h3>
 
-                            {/* Role */}
-                            <p className="text-primary-400 font-semibold mb-3 text-sm md:text-base">
-                              {member.role}
-                            </p>
+                              {/* Role */}
+                              <p className="text-primary-400 font-semibold mb-3 text-sm md:text-base">
+                                {member.role}
+                              </p>
 
-                            {/* Bio */}
-                            <p className="text-gray-400 leading-relaxed text-sm">
-                              {member.bio}
-                            </p>
+                              {/* Bio */}
+                              <p className="text-gray-400 leading-relaxed text-sm">
+                                {member.bio}
+                              </p>
+                            </motion.div>
                           </motion.div>
                         </motion.div>
-                      </motion.div>
                     )
                   })}
                   </AnimatePresence>
@@ -315,50 +315,51 @@ const Team = () => {
                   }}
                   className="group w-full max-w-sm"
                 >
-                {/* Card Container - Vertical Layout */}
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="flex flex-col items-center gap-6"
-                >
-                  {/* Image Container - Outside Card */}
+                  {/* Card Container - Vertical Layout */}
                   <motion.div
-                    whileHover={{
-                      boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
-                    }}
-                    className="relative w-full overflow-hidden rounded-2xl"
+                    whileHover={{ y: -5 }}
+                    className="flex flex-col items-center gap-6"
                   >
-                    {/* Image */}
-                    <div className="relative w-full h-64 overflow-hidden">
-                      <img
-                        src={teamMembers[currentIndex].image}
-                        alt={`${teamMembers[currentIndex].name} - ${teamMembers[currentIndex].role} en ROZ Social Media`}
-                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                        onError={(e) => {
-                          e.currentTarget.src = ''
-                          e.currentTarget.style.display = 'none'
-                        }}
-                      />
-                    </div>
-                  </motion.div>
+                    {/* Image Container - Outside Card */}
+                    <motion.div
+                      whileHover={{
+                        boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
+                      }}
+                      className="relative w-full overflow-hidden rounded-2xl"
+                    >
+                      {/* Image */}
+                      <div className="relative w-full h-64 overflow-hidden">
+                        <img
+                          src={teamMembers[currentIndex].image}
+                          alt={`${teamMembers[currentIndex].name} - ${teamMembers[currentIndex].role} en ROZ Social Media`}
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                          onError={(e) => {
+                            e.currentTarget.src = ''
+                            e.currentTarget.style.display = 'none'
+                          }}
+                        />
+                      </div>
+                    </motion.div>
 
-                  {/* Info Container - Inside Card */}
-                  <motion.div
-                    className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
-                  >
-                    {/* Name */}
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                      {teamMembers[currentIndex].name}
-                    </h3>
+                    {/* Info Container - Inside Card */}
+                    <motion.div
+                      className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
+                    >
+                      {/* Name */}
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                        {teamMembers[currentIndex].name}
+                      </h3>
 
-                    {/* Role */}
-                    <p className="text-primary-400 font-semibold mb-4 text-lg">
-                      {teamMembers[currentIndex].role}
-                    </p>
+                      {/* Role */}
+                      <p className="text-primary-400 font-semibold mb-4 text-lg">
+                        {teamMembers[currentIndex].role}
+                      </p>
 
-                    {/* Bio */}
-                    <p className="text-gray-400 leading-relaxed">
-                      {teamMembers[currentIndex].bio}
-                    </p>
+                      {/* Bio */}
+                      <p className="text-gray-400 leading-relaxed">
+                        {teamMembers[currentIndex].bio}
+                      </p>
+                    </motion.div>
                   </motion.div>
                 </motion.div>
               </AnimatePresence>
