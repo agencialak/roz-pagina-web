@@ -10,51 +10,61 @@ const Clients = () => {
       id: 1,
       name: 'Anato Eje Cafetero',
       logo: '/clients/Anato Eje Cafetero Blanco.png',
+      instagram: 'https://www.instagram.com/anatoejecafetero/',
     },
     {
       id: 2,
       name: 'Bariatric Care',
       logo: '/clients/Bariatric care.PNG',
+      instagram: 'https://www.instagram.com/bariatriccare/',
     },
     {
       id: 3,
       name: 'Clínica San Rafael',
       logo: '/clients/Clinica san rafael.png',
+      instagram: 'https://www.instagram.com/clinicasanrafael/',
     },
     {
       id: 4,
       name: 'Dr Romero',
       logo: '/clients/Dr romero.png',
+      instagram: 'https://www.instagram.com/drromero/',
     },
     {
       id: 5,
       name: 'Dr Steer',
       logo: '/clients/Dr steer.png',
+      instagram: 'https://www.instagram.com/drsteer/',
     },
     {
       id: 6,
       name: 'Latam Mobility',
       logo: '/clients/Latam Mobility.png',
+      instagram: 'https://www.instagram.com/latammobility/',
     },
     {
       id: 7,
       name: 'Media Maratón Pereira',
       logo: '/clients/Media maraton pereira.png',
+      instagram: 'https://www.instagram.com/mediamaratonpereira/',
     },
     {
       id: 8,
       name: 'Odento',
       logo: '/clients/Odento.png',
+      instagram: 'https://www.instagram.com/odento/',
     },
     {
       id: 9,
       name: 'Sayonara',
       logo: '/clients/SAYONARA.png',
+      instagram: 'https://www.instagram.com/sayonara/',
     },
     {
       id: 10,
       name: 'Troncos',
       logo: '/clients/troncos.png',
+      instagram: 'https://www.instagram.com/troncos/',
     },
   ]
 
@@ -98,16 +108,10 @@ const Clients = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white"
           >
-            Hemos trabajado con las mejores marcas
+            Marcas que han confíado en nuestra estrategia digital
           </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-gray-400 text-sm sm:text-base"
-          >
-            Marcas que confían en nuestra estrategia digital
-          </motion.p>
         </motion.div>
 
         {/* Desktop Carousel - 4 logos */}
@@ -130,7 +134,7 @@ const Clients = () => {
                 className="flex items-center justify-center h-24 lg:h-28 flex-1 min-w-0"
               >
                 <a
-                  href="https://www.instagram.com/rozagencia/"
+                  href={client.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer w-full h-full flex items-center justify-center"
@@ -169,7 +173,7 @@ const Clients = () => {
                 className="flex items-center justify-center h-20 sm:h-24 flex-1 min-w-0"
               >
                 <a
-                  href="https://www.instagram.com/rozagencia/"
+                  href={client.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer w-full h-full flex items-center justify-center"
