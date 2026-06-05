@@ -363,7 +363,6 @@ const Team = () => {
                   </motion.div>
                 </motion.div>
               </AnimatePresence>
-            </div>
 
               {/* Mobile Navigation */}
               <div className="flex items-center gap-6 justify-center">
