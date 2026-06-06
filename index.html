@@ -146,46 +146,76 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Meta Pixel Events -->
+    <!-- Meta Pixel Events - Solución Robusta -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1️⃣ EVENTO: ViewContent (cuando alguien visita la página)
-      fbq('track', 'ViewContent', {
-        content_name: 'ROZ Social Media - Agencia Digital',
-        content_type: 'website',
-        value: 0,
-        currency: 'COP'
-      });
+    (function() {
+      // Función para inicializar eventos (se ejecuta inmediatamente y también cuando el React App esté listo)
+      function initializeMetaPixelEvents() {
+        // 1️⃣ EVENTO: ViewContent (cuando alguien visita la página)
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'ViewContent', {
+            content_name: 'ROZ Social Media - Agencia Digital',
+            content_type: 'website',
+            value: 0,
+            currency: 'COP'
+          });
+          console.log('✅ ViewContent disparado');
+        }
 
-      // 2️⃣ EVENTO: Lead (cuando hace clic en WhatsApp)
-      const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+        // 2️⃣ EVENTO: Lead (cuando hace clic en WhatsApp)
+        const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+        whatsappLinks.forEach(link => {
+          // Remover listeners antiguos si existen
+          link.removeEventListener('click', whatsappClickHandler);
+          // Agregar nuevo listener
+          link.addEventListener('click', whatsappClickHandler);
+        });
 
-      whatsappLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          // Disparar evento Lead
+        // 3️⃣ EVENTO: Contacto (cuando hace clic en contacto)
+        const contactButtons = document.querySelectorAll('a[href*="#contacto"]');
+        contactButtons.forEach(btn => {
+          // Remover listeners antiguos si existen
+          btn.removeEventListener('click', contactClickHandler);
+          // Agregar nuevo listener
+          btn.addEventListener('click', contactClickHandler);
+        });
+      }
+
+      // Handler para WhatsApp
+      function whatsappClickHandler(e) {
+        if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', {
             content_name: 'Consulta - ROZ Social Media',
             currency: 'COP',
             value: 0
           });
+          console.log('✅ Evento Lead (WhatsApp) registrado');
+        }
+      }
 
-          console.log('✅ Evento Lead registrado');
-          // No prevenir el comportamiento del link para que abra WhatsApp
-        });
-      });
-
-      // 3️⃣ EVENTO: Contacto (opcionalmente para formularios)
-      const contactButtons = document.querySelectorAll('a[href*="#contacto"]');
-
-      contactButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
+      // Handler para Contacto
+      function contactClickHandler() {
+        if (typeof fbq !== 'undefined') {
           fbq('track', 'Contact', {
             content_name: 'Formulario de contacto',
             currency: 'COP'
           });
-        });
-      });
-    });
+          console.log('✅ Evento Contact registrado');
+        }
+      }
+
+      // Ejecutar inmediatamente si el DOM está listo
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeMetaPixelEvents);
+      } else {
+        // Si el DOM ya está listo, ejecutar inmediatamente
+        initializeMetaPixelEvents();
+      }
+
+      // También ejecutar después de un pequeño delay para capturar elementos cargados dinámicamente
+      setTimeout(initializeMetaPixelEvents, 500);
+      setTimeout(initializeMetaPixelEvents, 2000);
+    })();
     </script>
     <!-- End Meta Pixel Events -->
 
