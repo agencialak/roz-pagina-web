@@ -145,5 +145,49 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Meta Pixel Events -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1️⃣ EVENTO: ViewContent (cuando alguien visita la página)
+      fbq('track', 'ViewContent', {
+        content_name: 'ROZ Social Media - Agencia Digital',
+        content_type: 'website',
+        value: 0,
+        currency: 'COP'
+      });
+
+      // 2️⃣ EVENTO: Lead (cuando hace clic en WhatsApp)
+      const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+
+      whatsappLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Disparar evento Lead
+          fbq('track', 'Lead', {
+            content_name: 'Consulta - ROZ Social Media',
+            currency: 'COP',
+            value: 0
+          });
+
+          console.log('✅ Evento Lead registrado');
+          // No prevenir el comportamiento del link para que abra WhatsApp
+        });
+      });
+
+      // 3️⃣ EVENTO: Contacto (opcionalmente para formularios)
+      const contactButtons = document.querySelectorAll('a[href*="#contacto"]');
+
+      contactButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          fbq('track', 'Contact', {
+            content_name: 'Formulario de contacto',
+            currency: 'COP'
+          });
+        });
+      });
+    });
+    </script>
+    <!-- End Meta Pixel Events -->
+
   </body>
 </html>
