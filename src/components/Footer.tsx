@@ -148,9 +148,13 @@ const Footer = () => {
         >
           <p className="text-xs text-gray-400 text-center">
             Mejoramos nuestros productos y publicidad usando Microsoft Clarity para ver cómo usas nuestro sitio web.
-            Al usar nuestro sitio, aceptas que nosotros y Microsoft podemos recopilar y usar estos datos.
-            Nuestra{' '}
-            <a href="/privacy-policy" className="text-primary-400 hover:text-primary-300 underline">
+            Al usar nuestro sitio, aceptas que nosotros y Microsoft podemos recopilar y usar estos datos. Nuestra{' '}
+            <a
+              href="https://www.microsoft.com/es-mx/privacy/privacystatement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-400 hover:text-primary-300 underline"
+            >
               política de privacidad
             </a>
             {' '}tiene más detalles.
