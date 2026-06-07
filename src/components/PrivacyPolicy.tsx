@@ -66,7 +66,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
             <p className="text-sm">
               Para más información sobre cómo Microsoft recopila y utiliza tus datos, visita la{' '}
               <a
-                href="https://privacy.microsoft.com/"
+                href="https://www.microsoft.com/es-mx/privacy/privacystatement"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-400 hover:text-primary-300 underline"
