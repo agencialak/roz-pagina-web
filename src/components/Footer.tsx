@@ -139,6 +139,24 @@ const Footer = () => {
           </motion.div>
         </div>
 
+        {/* Clarity Disclosure */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="bg-white/5 border border-white/10 rounded-lg p-4 mb-8"
+        >
+          <p className="text-xs text-gray-400 text-center">
+            Mejoramos nuestros productos y publicidad usando Microsoft Clarity para ver cómo usas nuestro sitio web.
+            Al usar nuestro sitio, aceptas que nosotros y Microsoft podemos recopilar y usar estos datos.
+            Nuestra{' '}
+            <a href="/privacy-policy" className="text-primary-400 hover:text-primary-300 underline">
+              política de privacidad
+            </a>
+            {' '}tiene más detalles.
+          </p>
+        </motion.div>
+
         {/* Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
