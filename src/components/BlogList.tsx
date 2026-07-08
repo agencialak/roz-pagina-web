@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock, User } from 'lucide-react'
+import { ArrowRight, ArrowLeft, Clock, User } from 'lucide-react'
 import { blogPosts } from '../data/blogPosts'
 import { containerVariants, itemVariants } from '../utils/animations'
 
@@ -8,6 +8,21 @@ const BlogList = () => {
   return (
     <div className="min-h-screen bg-black pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Back to Home */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="mb-8"
+        >
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors group"
+          >
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+            Volver a la página principal
+          </Link>
+        </motion.div>
+
         {/* Header */}
         <motion.div
           initial="hidden"
@@ -119,6 +134,29 @@ const BlogList = () => {
             <p className="text-gray-400 text-lg">Próximamente más artículos...</p>
           </motion.div>
         )}
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 bg-gradient-to-r from-primary-600/20 to-purple-600/20 border border-primary-400/20 rounded-lg p-8 sm:p-12 text-center"
+        >
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            ¿Quieres resultados como estos para tu negocio?
+          </h3>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Llevamos más de 300 proyectos exitosos. Cuéntanos tu negocio y diseñamos una estrategia a medida con datos reales, no promesas.
+          </p>
+          <a
+            href="https://wa.me/573218515587"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors text-lg"
+          >
+            Hablemos por WhatsApp
+          </a>
+        </motion.div>
       </div>
     </div>
   )
