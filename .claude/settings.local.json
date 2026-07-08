@@ -40,7 +40,12 @@
       "mcp__plugin_felipe-vergara-plugin_playwright__browser_press_key",
       "Bash(cat /tmp/dev.log 2>/dev/null | tail -20)",
       "Bash(git reset *)",
-      "mcp__Claude_in_Chrome__switch_browser"
+      "mcp__Claude_in_Chrome__switch_browser",
+      "Bash(npm install *)",
+      "Bash(copy 'C:\\\\Users\\\\Usuario\\\\AppData\\\\Local\\\\Packages\\\\Claude_pzs8sxrjxfjjc\\\\LocalCache\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\1071a2e2-4fd3-4535-9afe-d7d245d549af\\\\d4bd45b5-dc17-41d7-9ef8-f8736566fb5d\\\\local_bffeb8b2-1b9a-4e1c-9f1e-93e25976c836\\\\outputs\\\\post_costo_por_conversacion.png' 'C:\\\\Users\\\\Usuario\\\\Desktop\\\\Agencia la K\\\\Claude code\\\\pagina web\\\\public\\\\blog\" *)",
+      "Bash(cp \"/c/Users/Usuario/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/1071a2e2-4fd3-4535-9afe-d7d245d549af/d4bd45b5-dc17-41d7-9ef8-f8736566fb5d/local_bffeb8b2-1b9a-4e1c-9f1e-93e25976c836/outputs/post_costo_por_conversacion.png\" \"/c/Users/Usuario/Desktop/Agencia la K/Claude code/pagina web/public/blog/\")",
+      "Bash(cp \"/c/Users/Usuario/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/1071a2e2-4fd3-4535-9afe-d7d245d549af/d4bd45b5-dc17-41d7-9ef8-f8736566fb5d/local_bffeb8b2-1b9a-4e1c-9f1e-93e25976c836/outputs/post_costo_por_seguidor.png\" \"/c/Users/Usuario/Desktop/Agencia la K/Claude code/pagina web/public/blog/\")",
+      "Bash(git commit -m ' *)"
     ]
   }
 }

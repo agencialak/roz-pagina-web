@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,14 +18,27 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { label: 'Inicio', href: '#' },
-    { label: 'Servicios', href: '#servicios' },
-    { label: 'Estrategia', href: '#filosofia' },
-    { label: 'Equipo', href: '#equipo' },
-    { label: 'Resultados', href: '#resultados' },
-    { label: 'Testimonios', href: '#testimonios' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Inicio', href: '/', type: 'route' },
+    { label: 'Servicios', href: '#servicios', type: 'anchor' },
+    { label: 'Estrategia', href: '#filosofia', type: 'anchor' },
+    { label: 'Equipo', href: '#equipo', type: 'anchor' },
+    { label: 'Resultados', href: '#resultados', type: 'anchor' },
+    { label: 'Testimonios', href: '#testimonios', type: 'anchor' },
+    { label: 'Blog', href: '/blog', type: 'route' },
+    { label: 'Contacto', href: '#contacto', type: 'anchor' },
   ]
+
+  const handleNavClick = (item: { label: string; href: string; type: string }) => {
+    setIsOpen(false)
+    if (item.type === 'route') {
+      navigate(item.href)
+    } else {
+      const element = document.querySelector(item.href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
 
   const socialIcons = [
     { icon: 'ig', href: 'https://www.instagram.com/agenciaroz/' },
@@ -44,29 +59,28 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault()
+          <motion.button
+            onClick={() => {
+              navigate('/')
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer bg-none border-none p-0"
           >
             <img src="/logo.png" alt="ROZ" className="h-10 w-auto" />
-          </motion.a>
+          </motion.button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.label}
-                href={item.href}
+                onClick={() => handleNavClick(item)}
                 whileHover={{ color: '#6D28FF' }}
-                className="text-sm font-medium text-gray-300 transition-colors"
+                className="text-sm font-medium text-gray-300 transition-colors bg-none border-none p-0 cursor-pointer"
               >
                 {item.label}
-              </motion.a>
+              </motion.button>
             ))}
           </div>
 
@@ -112,14 +126,13 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-4 pt-4">
               {navItems.map((item) => (
-                <motion.a
+                <motion.button
                   key={item.label}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm font-medium text-gray-300 hover:text-primary-600 transition-colors"
+                  onClick={() => handleNavClick(item)}
+                  className="text-sm font-medium text-gray-300 hover:text-primary-600 transition-colors text-left bg-none border-none p-0 cursor-pointer"
                 >
                   {item.label}
-                </motion.a>
+                </motion.button>
               ))}
             </div>
           </motion.div>

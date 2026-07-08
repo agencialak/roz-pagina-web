@@ -1,51 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Clients from './components/Clients'
-import Services from './components/Services'
-import Philosophy from './components/Philosophy'
-import Team from './components/Team'
-import Results from './components/Results'
-import Testimonials from './components/Testimonials'
-import TestimonialForm from './components/TestimonialForm'
-import Showcase from './components/Showcase'
-import FinalCTA from './components/FinalCTA'
+import HomePage from './components/HomePage'
+import BlogList from './components/BlogList'
+import BlogPostDetail from './components/BlogPostDetail'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
-
   return (
-    <main className="overflow-hidden relative">
-      {/* Video Background */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <video
-          className="w-full h-full object-cover opacity-25"
-          muted
-          playsInline
-          autoPlay
-          loop
-        >
-          <source src="/hero-background.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
-
+    <Router>
       <Navbar />
-      <Hero />
-      <Clients />
-      <Services />
-      <Philosophy />
-      <Team />
-      <Results />
-      <Testimonials />
-      <TestimonialForm />
-      <Showcase />
-      <FinalCTA />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPostDetail />} />
+      </Routes>
       <Footer />
       <FloatingWhatsApp />
       <ScrollToTop />
-    </main>
+    </Router>
   )
 }
 

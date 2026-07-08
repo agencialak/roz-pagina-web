@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 const Footer = () => {
@@ -8,31 +9,40 @@ const Footer = () => {
     {
       title: 'Menú',
       links: [
-        { label: 'Inicio', href: '#' },
-        { label: 'Servicios', href: '#servicios' },
-        { label: 'Proyectos', href: '#' },
-        { label: 'Blog', href: '#' },
+        { label: 'Inicio', href: '/', type: 'route' },
+        { label: 'Servicios', href: '#servicios', type: 'anchor' },
+        { label: 'Proyectos', href: '#', type: 'anchor' },
+        { label: 'Blog', href: '/blog', type: 'route' },
       ],
     },
     {
       title: 'Recursos',
       links: [
-        { label: 'Documentación', href: '#' },
-        { label: 'Case Studies', href: '#' },
-        { label: 'Newsletter', href: '#' },
-        { label: 'Resources', href: '#' },
+        { label: 'Documentación', href: '#', type: 'anchor' },
+        { label: 'Case Studies', href: '#', type: 'anchor' },
+        { label: 'Newsletter', href: '#', type: 'anchor' },
+        { label: 'Resources', href: '#', type: 'anchor' },
       ],
     },
     {
       title: 'Legal',
       links: [
-        { label: 'Privacidad', href: '#' },
-        { label: 'Términos', href: '#' },
-        { label: 'Cookies', href: '#' },
-        { label: 'Contacto', href: '#' },
+        { label: 'Privacidad', href: '#', type: 'anchor' },
+        { label: 'Términos', href: '#', type: 'anchor' },
+        { label: 'Cookies', href: '#', type: 'anchor' },
+        { label: 'Contacto', href: '#contacto', type: 'anchor' },
       ],
     },
   ]
+
+  const handleNavClick = (href: string, type: string) => {
+    if (type === 'anchor') {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
 
   const socialLinks = [
     { icon: 'ig', href: 'https://www.instagram.com/agenciaroz/' },
@@ -87,13 +97,31 @@ const Footer = () => {
               <ul className="space-y-3">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <motion.a
-                      href={link.href}
-                      whileHover={{ x: 5, color: '#6D28FF' }}
-                      className="text-sm text-gray-400 hover:text-primary-400 transition-colors inline-block"
-                    >
-                      {link.label}
-                    </motion.a>
+                    {link.type === 'route' ? (
+                      <motion.div
+                        whileHover={{ x: 5, color: '#6D28FF' }}
+                        className="inline-block"
+                      >
+                        <Link
+                          to={link.href}
+                          className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      </motion.div>
+                    ) : (
+                      <motion.a
+                        href={link.href}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          handleNavClick(link.href, link.type)
+                        }}
+                        whileHover={{ x: 5, color: '#6D28FF' }}
+                        className="text-sm text-gray-400 hover:text-primary-400 transition-colors inline-block cursor-pointer"
+                      >
+                        {link.label}
+                      </motion.a>
+                    )}
                   </li>
                 ))}
               </ul>
