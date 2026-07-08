@@ -27,3 +27,8 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Artefactos generados por tsc -b
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
