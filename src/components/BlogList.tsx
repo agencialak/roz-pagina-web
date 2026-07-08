@@ -1,10 +1,21 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowLeft, Clock, User } from 'lucide-react'
 import { blogPosts } from '../data/blogPosts'
 import { containerVariants, itemVariants } from '../utils/animations'
+import { setPageSeo } from '../utils/seo'
 
 const BlogList = () => {
+  useEffect(() => {
+    setPageSeo({
+      title: 'Blog & Insights | ROZ Social Media - Datos reales de Meta Ads',
+      description:
+        'Datos reales de campañas de Meta Ads, estrategias que funcionan y análisis de costos por seguidor y conversación. Aprendizajes de más de 300 proyectos en Colombia.',
+      path: '/blog',
+    })
+  }, [])
+
   return (
     <div className="min-h-screen bg-black pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

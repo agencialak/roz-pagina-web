@@ -1,13 +1,72 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react'
 import { blogPosts } from '../data/blogPosts'
+import { setPageSeo } from '../utils/seo'
+
+// Convierte **texto** en <strong> dentro de un párrafo o ítem de lista
+const renderInline = (text: string) => {
+  const parts = text.split(/\*\*(.+?)\*\*/g)
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <strong key={i} className="text-white font-semibold">
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  )
+}
 
 const BlogPostDetail = () => {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
 
   const post = blogPosts.find((p) => p.slug === slug)
+
+  useEffect(() => {
+    if (!post) return
+
+    setPageSeo({
+      title: `${post.title} | ROZ Social Media`,
+      description: post.excerpt,
+      path: `/blog/${post.slug}`,
+      image: post.image,
+    })
+
+    // Datos estructurados Article (schema.org) para Google y AI Overviews
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: post.title,
+      description: post.excerpt,
+      image: `https://rozagencia.com${post.image}`,
+      datePublished: post.date,
+      inLanguage: 'es',
+      author: {
+        '@type': 'Person',
+        name: post.author.split(' - ')[0],
+        worksFor: { '@type': 'Organization', name: 'ROZ Social Media' },
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'ROZ Social Media',
+        logo: { '@type': 'ImageObject', url: 'https://rozagencia.com/logo.png' },
+      },
+      mainEntityOfPage: `https://rozagencia.com/blog/${post.slug}`,
+    }
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.id = 'article-jsonld'
+    script.textContent = JSON.stringify(jsonLd)
+    document.head.appendChild(script)
+
+    return () => {
+      document.getElementById('article-jsonld')?.remove()
+    }
+  }, [post])
   const currentIndex = blogPosts.findIndex((p) => p.slug === slug)
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
@@ -127,7 +186,7 @@ const BlogPostDetail = () => {
                   <ul key={idx} className="space-y-2 ml-6">
                     {paragraph.split('\n').map((item, i) => (
                       <li key={i} className="list-disc list-inside">
-                        {item.replace('- ', '')}
+                        {renderInline(item.replace('- ', ''))}
                       </li>
                     ))}
                   </ul>
@@ -143,7 +202,7 @@ const BlogPostDetail = () => {
               }
               return (
                 <p key={idx} className="text-base">
-                  {paragraph}
+                  {renderInline(paragraph)}
                 </p>
               )
             })}

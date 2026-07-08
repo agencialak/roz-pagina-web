@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { setPageSeo } from '../utils/seo'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import Clients from './Clients'
@@ -14,6 +16,10 @@ import FloatingWhatsApp from './FloatingWhatsApp'
 import ScrollToTop from './ScrollToTop'
 
 function HomePage() {
+  useEffect(() => {
+    setPageSeo({ path: '/' })
+  }, [])
+
   return (
     <main className="overflow-hidden relative">
       {/* Video Background */}
