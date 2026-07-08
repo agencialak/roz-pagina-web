@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { setPageSeo } from '../utils/seo'
-import Navbar from './Navbar'
 import Hero from './Hero'
 import Clients from './Clients'
 import Services from './Services'
@@ -11,9 +10,6 @@ import Testimonials from './Testimonials'
 import TestimonialForm from './TestimonialForm'
 import Showcase from './Showcase'
 import FinalCTA from './FinalCTA'
-import Footer from './Footer'
-import FloatingWhatsApp from './FloatingWhatsApp'
-import ScrollToTop from './ScrollToTop'
 
 function HomePage() {
   useEffect(() => {
@@ -36,7 +32,6 @@ function HomePage() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <Navbar />
       <Hero />
       <Clients />
       <Services />
@@ -47,9 +42,6 @@ function HomePage() {
       <TestimonialForm />
       <Showcase />
       <FinalCTA />
-      <Footer />
-      <FloatingWhatsApp />
-      <ScrollToTop />
     </main>
   )
 }
