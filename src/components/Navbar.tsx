@@ -72,16 +72,28 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.label}
-                onClick={() => handleNavClick(item)}
-                whileHover={{ color: '#6D28FF' }}
-                className="text-sm font-medium text-gray-300 transition-colors bg-none border-none p-0 cursor-pointer"
-              >
-                {item.label}
-              </motion.button>
-            ))}
+            {navItems.map((item) =>
+              item.label === 'Blog' ? (
+                <motion.button
+                  key={item.label}
+                  onClick={() => handleNavClick(item)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-sm font-semibold text-primary-400 bg-primary-600/15 border border-primary-500/40 rounded-full px-4 py-1.5 cursor-pointer hover:bg-primary-600/30 hover:text-primary-300 transition-colors"
+                >
+                  {item.label}
+                </motion.button>
+              ) : (
+                <motion.button
+                  key={item.label}
+                  onClick={() => handleNavClick(item)}
+                  whileHover={{ color: '#6D28FF' }}
+                  className="text-sm font-medium text-gray-300 transition-colors bg-none border-none p-0 cursor-pointer"
+                >
+                  {item.label}
+                </motion.button>
+              )
+            )}
           </div>
 
           {/* Social Icons */}
@@ -125,15 +137,25 @@ const Navbar = () => {
             className="md:hidden pb-6 border-t border-white/10"
           >
             <div className="flex flex-col gap-4 pt-4">
-              {navItems.map((item) => (
-                <motion.button
-                  key={item.label}
-                  onClick={() => handleNavClick(item)}
-                  className="text-sm font-medium text-gray-300 hover:text-primary-600 transition-colors text-left bg-none border-none p-0 cursor-pointer"
-                >
-                  {item.label}
-                </motion.button>
-              ))}
+              {navItems.map((item) =>
+                item.label === 'Blog' ? (
+                  <motion.button
+                    key={item.label}
+                    onClick={() => handleNavClick(item)}
+                    className="text-sm font-semibold text-primary-400 bg-primary-600/15 border border-primary-500/40 rounded-full px-4 py-1.5 cursor-pointer hover:bg-primary-600/30 transition-colors self-start"
+                  >
+                    {item.label}
+                  </motion.button>
+                ) : (
+                  <motion.button
+                    key={item.label}
+                    onClick={() => handleNavClick(item)}
+                    className="text-sm font-medium text-gray-300 hover:text-primary-600 transition-colors text-left bg-none border-none p-0 cursor-pointer"
+                  >
+                    {item.label}
+                  </motion.button>
+                )
+              )}
             </div>
           </motion.div>
         )}
