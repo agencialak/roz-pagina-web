@@ -24,7 +24,9 @@ const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 const inline = (s: string) =>
-  escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+  escapeHtml(s)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
 
 // Convierte el contenido markdown-simple de los posts a HTML semántico
 function contentToHtml(content: string): string {

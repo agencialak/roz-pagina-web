@@ -5,7 +5,21 @@ import { ArrowLeft, Clock, User, Calendar } from 'lucide-react'
 import { blogPosts } from '../data/blogPosts'
 import { setPageSeo } from '../utils/seo'
 
-// Convierte **texto** en <strong> dentro de un párrafo o ítem de lista
+// Convierte *texto* en <em> dentro de un fragmento sin negrillas
+const renderItalics = (text: string, keyPrefix: number) => {
+  const parts = text.split(/\*(.+?)\*/g)
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <em key={`${keyPrefix}-${i}`} className="text-gray-400">
+        {part}
+      </em>
+    ) : (
+      part
+    )
+  )
+}
+
+// Convierte **texto** en <strong> y *texto* en <em> dentro de un párrafo o ítem de lista
 const renderInline = (text: string) => {
   const parts = text.split(/\*\*(.+?)\*\*/g)
   return parts.map((part, i) =>
@@ -14,7 +28,7 @@ const renderInline = (text: string) => {
         {part}
       </strong>
     ) : (
-      part
+      renderItalics(part, i)
     )
   )
 }

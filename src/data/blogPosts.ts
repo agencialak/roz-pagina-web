@@ -112,4 +112,45 @@ Si comparas el costo por conversación de tu negocio contra el de otro sin tener
     readTime: 5,
     author: 'Nikolas García - ROZ Social Media',
   },
+  {
+    id: 'investigacion-de-mercado',
+    slug: 'investigacion-de-mercado-antes-de-pautar',
+    title: 'Investigación de mercado: el paso que la mayoría de campañas se saltan',
+    excerpt: 'Antes de crear el primer anuncio, casi nunca hablamos de Meta Ads. Hablamos de quién es el cliente, qué le duele y qué objeciones tiene. Ese paso cambia todo lo que viene después.',
+    content: `
+# Investigación de mercado: el paso que la mayoría de campañas se saltan
+
+Antes de crear el primer anuncio, casi nunca hablamos de Meta Ads.
+
+Hablamos de quién es el cliente. Qué le duele. Qué objeciones tiene antes de comprar. Qué dice de la marca en internet, sin que nadie le esté vendiendo nada.
+
+Eso es investigación de mercado, y es el paso que la mayoría de campañas se saltan.
+
+## Por qué no armamos una campaña sin esa base
+
+En ROZ Social Media no armamos una campaña sin investigación previa. No porque sea un requisito bonito, sino porque cambia todo lo que viene después:
+
+- **El ángulo del anuncio** — a quién le hablas y con qué tono
+- **El nivel de consciencia del público** — si ya conoce el problema, la solución, o ni siquiera sabe que tiene un problema
+- **La oferta** — qué gancho realmente mueve a esa audiencia a actuar
+- **El destino** — si la conversación cierra mejor por WhatsApp, formulario o en la tienda
+
+## Lo que pasa cuando te saltas este paso
+
+Sin ese trabajo previo, terminas pautando con buen presupuesto pero hablándole a la persona equivocada, del modo equivocado.
+
+El anuncio es solo la punta del iceberg: es lo único que ve el cliente, pero debajo de la superficie está todo el trabajo que decide si esa campaña funciona o no.
+
+La pauta no arregla una estrategia mal pensada. **Solo la hace más cara.**
+
+---
+
+*Así trabajamos las campañas de nuestros clientes en ROZ Social Media: investigación primero, anuncios después.*
+    `,
+    image: '/blog/post_investigacion_mercado.png',
+    date: '2026-07-14',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
 ]
