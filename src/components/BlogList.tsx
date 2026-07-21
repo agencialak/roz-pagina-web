@@ -1,20 +1,56 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { ArrowRight, ArrowLeft, Clock, User } from 'lucide-react'
-import { blogPosts } from '../data/blogPosts'
+import { blogPosts, type BlogPost } from '../data/blogPosts'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { setPageSeo } from '../utils/seo'
 
+const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
+  educativo: 'Educativo',
+  casos: 'Casos',
+  estrategia: 'Estrategia',
+  tendencia: 'Tendencia',
+}
+
 const BlogList = () => {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const activeCategory = searchParams.get('categoria')
+
+  const categories = useMemo(
+    () => Array.from(new Set(blogPosts.map((p) => p.category))),
+    []
+  )
+
+  const filteredPosts = useMemo(
+    () =>
+      activeCategory
+        ? blogPosts.filter((p) => p.category === activeCategory)
+        : blogPosts,
+    [activeCategory]
+  )
+
+  const selectCategory = (category: string | null) => {
+    if (category) {
+      setSearchParams({ categoria: category })
+    } else {
+      setSearchParams({})
+    }
+  }
+
   useEffect(() => {
+    const label = activeCategory ? CATEGORY_LABELS[activeCategory as BlogPost['category']] : null
     setPageSeo({
-      title: 'Blog & Insights | ROZ Social Media - Datos reales de Meta Ads',
+      title: label
+        ? `${label} | Blog ROZ Social Media`
+        : 'Blog & Insights | ROZ Social Media - Datos reales de Meta Ads',
       description:
         'Datos reales de campañas de Meta Ads, estrategias que funcionan y análisis de costos por seguidor y conversación. Aprendizajes de más de 300 proyectos en Colombia.',
+      // Todas las vistas filtradas canonicalizan a /blog: es la misma lista,
+      // solo reordenada, para no crear contenido duplicado a ojos de Google.
       path: '/blog',
     })
-  }, [])
+  }, [activeCategory])
 
   return (
     <div className="min-h-screen bg-black pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -55,14 +91,46 @@ const BlogList = () => {
           </motion.p>
         </motion.div>
 
+        {/* Category Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex flex-wrap items-center justify-center gap-3 mb-12"
+        >
+          <button
+            onClick={() => selectCategory(null)}
+            className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide transition-colors border ${
+              !activeCategory
+                ? 'bg-primary-600 text-white border-primary-600'
+                : 'bg-white/5 text-gray-400 border-white/10 hover:border-primary-400/40 hover:text-primary-400'
+            }`}
+          >
+            Todos
+          </button>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => selectCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide transition-colors border ${
+                activeCategory === category
+                  ? 'bg-primary-600 text-white border-primary-600'
+                  : 'bg-white/5 text-gray-400 border-white/10 hover:border-primary-400/40 hover:text-primary-400'
+              }`}
+            >
+              {CATEGORY_LABELS[category]}
+            </button>
+          ))}
+        </motion.div>
+
         {/* Blog Posts Grid */}
         <motion.div
+          key={activeCategory ?? 'all'}
           initial="hidden"
           animate="visible"
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {blogPosts.map((post) => (
+          {filteredPosts.map((post) => (
             <motion.div
               key={post.id}
               variants={itemVariants}
@@ -136,13 +204,17 @@ const BlogList = () => {
         </motion.div>
 
         {/* Empty State */}
-        {blogPosts.length === 0 && (
+        {filteredPosts.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-gray-400 text-lg">Próximamente más artículos...</p>
+            <p className="text-gray-400 text-lg">
+              {blogPosts.length === 0
+                ? 'Próximamente más artículos...'
+                : 'Todavía no hay artículos en esta categoría.'}
+            </p>
           </motion.div>
         )}
 
