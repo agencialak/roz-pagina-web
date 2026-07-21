@@ -6,7 +6,7 @@ export interface BlogPost {
   content: string
   image: string
   date: string
-  category: 'educativo' | 'casos' | 'estrategia'
+  category: 'educativo' | 'casos' | 'estrategia' | 'tendencia'
   readTime: number
   author: string
 }
@@ -151,6 +151,161 @@ La pauta no arregla una estrategia mal pensada. **Solo la hace más cara.**
     date: '2026-07-14',
     category: 'estrategia',
     readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'trafico-vs-interaccion',
+    slug: 'trafico-vs-interaccion-costos-distintos',
+    title: 'Tráfico vs. interacción: por qué cuestan distinto (y está bien)',
+    excerpt: 'Una visita a Instagram me cuesta en promedio $143 COP. Una conversación de WhatsApp, $1.736 COP. Doce veces más cara. Y está bien que así sea.',
+    content: `
+# Tráfico vs. interacción: por qué cuestan distinto (y está bien)
+
+Una visita a Instagram me cuesta en promedio $143 COP. Una conversación de WhatsApp, $1.736 COP. Doce veces más cara. Y está bien que así sea.
+
+Cruzando el histórico completo de las cuentas que manejo, esto es lo que veo:
+
+- **Tráfico a Instagram** (seguidores / awareness): ~$143 COP por visita a perfil
+- **Interacción a WhatsApp** (venta): ~$1.736 COP por conversación iniciada
+
+La diferencia es de más de 12 veces. No es un problema. Es exactamente lo que se debería esperar.
+
+## Por qué no significan lo mismo
+
+Una visita a perfil es curiosidad. Alguien vio un anuncio, sintió interés, hizo clic. No cuesta casi nada porque no le pide casi nada a cambio.
+
+Una conversación de WhatsApp es intención de compra. La persona ya decidió dar el siguiente paso: escribir, preguntar, avanzar hacia una compra real. Eso vale más, y por eso cuesta más generarlo.
+
+## El error que veo seguido
+
+Comparar estos dos números como si fueran el mismo tipo de resultado. No lo son.
+
+Si el objetivo es awareness, el número que importa es el costo por visita. Si el objetivo es vender, el número que importa es el costo por conversación — y hay que aceptar que ese va a ser más alto.
+
+---
+
+*Cifras del banco de datos histórico: tráfico = 34.549 visitas / $4.955.204 COP invertidos en 13 cuentas. Interacción = 4.031 conversaciones / $6.997.702 COP invertidos en 19 cuentas.*
+    `,
+    image: '/blog/post_trafico_vs_interaccion.png',
+    date: '2026-07-16',
+    category: 'educativo',
+    readTime: 4,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'tendencia-ia-meta',
+    slug: 'ia-de-meta-y-el-rol-del-operador',
+    title: 'La IA ejecuta. La estrategia sigue siendo humana',
+    excerpt: 'Meta Ads en 2026 corre prácticamente solo. Entonces, ¿para qué sirve alguien que gestione campañas si la plataforma ya hace casi todo sola? Esto es lo que he visto cambiar en más de 5 años en esto.',
+    content: `
+# La IA ejecuta. La estrategia sigue siendo humana
+
+Meta Ads en 2026 corre prácticamente solo.
+
+La IA de Meta decide en tiempo real a quién mostrarle cada anuncio, cuánto pujar por esa persona, y qué versión de un mismo anuncio probar primero. Todo eso, antes, era trabajo manual de quien manejaba la cuenta.
+
+Por eso me preguntan seguido: ¿para qué sirve alguien que gestione campañas de Meta Ads si la plataforma ya hace casi todo sola?
+
+Llevo más de 5 años en esto, y esto es lo que he visto cambiar:
+
+## Lo que la IA sí decide
+
+La IA de Meta optimiza muy bien la distribución — a quién mostrarle el anuncio, cuándo, y con qué frecuencia, dentro de la información que le des.
+
+## Lo que la IA no decide por ti
+
+Esa información: qué oferta estás promocionando, con qué ángulo le hablas al cliente, en qué momento de decisión de compra está esa persona, y a dónde la mandas después del clic.
+
+Si esa parte está mal — la oferta, el mensaje, el destino — no importa qué tan buena sea la IA optimizando: va a optimizar algo que no funciona, cada vez más rápido.
+
+## Mi trabajo no desapareció. Cambió
+
+Antes ajustaba pujas y públicos a mano. Ahora paso más tiempo pensando en la estrategia que le doy a la máquina para que la ejecute bien.
+
+La IA ejecuta. La estrategia sigue siendo humana.
+    `,
+    image: '/blog/post_tendencia_ia_meta.png',
+    date: '2026-07-16',
+    category: 'tendencia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'evolucion-cuenta',
+    slug: 'evolucion-mensual-dos-campanas-mismo-costo',
+    title: 'Dos campañas distintas subieron de costo el mismo mes',
+    excerpt: 'En esta cuenta de estética manejamos dos campañas de interacción a WhatsApp, sin presupuesto compartido entre sí. Las dos subieron de costo al mismo tiempo. No fue coincidencia.',
+    content: `
+# Dos campañas distintas subieron de costo el mismo mes
+
+En esta cuenta de estética manejamos dos campañas de interacción a WhatsApp, una para cada servicio, sin presupuesto compartido entre sí. Esto es lo que vimos mes a mes en cada una:
+
+**Servicio 1:**
+- Enero: $3.759 COP por conversación
+- Febrero: $1.287 COP
+- Marzo: $1.523 COP
+- Abril: $2.174 COP
+- Mayo: $4.349 COP
+- Junio: $3.205 COP
+
+**Servicio 2:**
+- Enero: $2.573 COP por conversación
+- Febrero: $1.952 COP
+- Marzo: $1.800 COP
+- Abril: $2.535 COP
+- Mayo: $2.642 COP
+- Junio: $2.455 COP
+
+## El mes atípico
+
+En mayo, en las dos campañas pausamos los creativos normales y dejamos corriendo solo los de una promoción puntual de día de la madre. El resultado: las dos subieron de costo al mismo tiempo, aunque son servicios distintos y no comparten presupuesto.
+
+Eso no es coincidencia. Cuando una campaña se reduce a una sola oferta, aunque tenga varios creativos, pasan dos cosas a la vez: compites por la misma fecha comercial que el resto del mercado, y el sistema pierde la variedad de ofertas que normalmente usa para encontrar a la audiencia más barata.
+
+## La recuperación
+
+En junio volvimos a correr los creativos normales en ambas — más una campaña nueva de tráfico a Instagram, en reemplazo de una anterior que pausamos — y las dos bajaron otra vez.
+
+Y esto con el presupuesto mensual de la cuenta ya subido cerca de un 31% desde mediados de marzo. No es un tema de menos inversión, sino de qué tan concentrada corre esa inversión.
+
+El costo por resultado no depende solo de cuánta plata metes. Depende de cuántos creativos y ofertas distintas tiene esa campaña corriendo al mismo tiempo.
+    `,
+    image: '/blog/post_evolucion_cuenta.png',
+    date: '2026-07-21',
+    category: 'casos',
+    readTime: 4,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'cliente-potencial-seguimiento',
+    slug: 'el-cliente-potencial-se-ve-lo-que-pasa-despues-no',
+    title: 'El cliente potencial se ve. Lo que pasa después, no',
+    excerpt: 'Genero el cliente potencial. Ahí es donde casi todos mis clientes dejan de medir. Si el costo por resultado es la única métrica, solo estás viendo la mitad de la historia.',
+    content: `
+# El cliente potencial se ve. Lo que pasa después, no
+
+Genero el cliente potencial. Ahí es donde casi todos mis clientes dejan de medir.
+
+Llevo años armando campañas de interacción a WhatsApp para negocios locales, y hay una pregunta que casi nadie me puede responder cuando la hago: ¿cuántos de esos clientes potenciales terminaron comprando?
+
+Cuando la campaña, la segmentación y el creativo funcionan, la persona escribe — ya no es un desconocido, es alguien que se interesó porque ese anuncio le habló directamente a él. Les pregunto cosas simples: ¿qué cliente cerraste esta semana? ¿En qué momento dejó de responder? ¿Por qué se enfrió? La respuesta más común es "no sé" — no porque no les importe, sino porque nadie está llevando ese registro.
+
+## El costo por resultado solo cuenta la mitad
+
+Si genero 100 clientes potenciales baratos y ninguno cierra, esa campaña no es barata — es una campaña ciega.
+
+Por eso, además de la campaña, a los negocios con los que trabajo también les compartimos un manual de atención por WhatsApp: tiempos de respuesta esperados, qué responder ante las preguntas más comunes, casos prácticos de cómo llevar la conversación hasta el cierre. La campaña entrega el cliente potencial. Lo que pasa después de ese primer mensaje también se puede mejorar, y también es parte del trabajo.
+
+## Cerrar el círculo completo
+
+Mi trabajo no es solo bajar el costo por resultado. Es insistir en cerrar ese círculo completo: qué pasó con ese cliente potencial después, y cómo se atiende, para ajustar la campaña con datos reales de venta, no solo con datos de Meta.
+
+Si generas clientes potenciales pero no sabes qué pasa con ellos después, ese es el primer número que deberías empezar a medir.
+    `,
+    image: '/blog/post_cliente_potencial.png',
+    date: '2026-07-23',
+    category: 'estrategia',
+    readTime: 4,
     author: 'Nikolas García - ROZ Social Media',
   },
 ]
