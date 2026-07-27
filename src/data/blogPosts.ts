@@ -308,4 +308,36 @@ Si generas clientes potenciales pero no sabes qué pasa con ellos después, ese 
     readTime: 4,
     author: 'Nikolas García - ROZ Social Media',
   },
+  {
+    id: 'atribucion-y-base-de-datos',
+    slug: 'atribucion-de-ventas-y-base-de-datos-whatsapp',
+    title: 'Sabes que vendes más. No sabes de dónde viene',
+    excerpt: 'Un cliente lleva más ventas desde que trabajamos juntos. Eso lo sabe. Lo que no sabe es cuántas de esas ventas vinieron de la campaña, y cuántas de otro canal.',
+    content: `
+# Sabes que vendes más. No sabes de dónde viene
+
+Un cliente lleva más ventas desde que trabajamos juntos. Eso lo sabe. Lo que no sabe es cuántas de esas ventas vinieron de la campaña, y cuántas de otro canal.
+
+Es algo que veo seguido: el negocio crece, la relación sigue, todos contentos — pero cuando pregunto "¿cuánto de esto fue por la pauta?", nadie tiene el número exacto. Sin ese dato, cada mes toca confiar en que la campaña está aportando, en vez de comprobarlo.
+
+## El otro dato que se pierde
+
+Hay otro dato que se pierde igual de seguido: los números de WhatsApp de las personas que escriben por la campaña.
+
+Ahí hay un público hecho a la medida del negocio — se puede usar para crear una audiencia personalizada, o un público similar que ayuda a encontrar más gente parecida a la que ya compró. Se lo pido a los negocios con los que trabajo, mes tras mes. Casi nunca me lo entregan.
+
+No es porque no quieran. Es que ese beneficio es para ellos — mejores campañas, más ventas —, no algo que la agencia necesite para cobrar. Y aun así, cuesta que se vuelva un hábito.
+
+## No es un problema de marketing
+
+Estos dos puntos no son un problema de marketing. Son un problema de cómo el negocio organiza su propia información.
+
+Y mientras no se resuelvan, la campaña sigue funcionando a ciegas en dos frentes: no sabe cuánto realmente vende, y no aprovecha a quien ya le compró para encontrar más clientes iguales.
+    `,
+    image: '/blog/post_atribucion_bd.png',
+    date: '2026-07-27',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
 ]
