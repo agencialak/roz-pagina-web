@@ -11,7 +11,7 @@ export interface BlogPost {
   author: string
 }
 
-export const blogPosts: BlogPost[] = [
+const posts: BlogPost[] = [
   {
     id: 'costo-por-seguidor',
     slug: 'costo-por-seguidor-real',
@@ -341,3 +341,8 @@ Y mientras no se resuelvan, la campaña sigue funcionando a ciegas en dos frente
     author: 'Nikolas García - ROZ Social Media',
   },
 ]
+
+// Más recientes primero, sin importar el orden en que se agregaron arriba
+export const blogPosts: BlogPost[] = [...posts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+)
