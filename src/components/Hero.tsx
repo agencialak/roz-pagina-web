@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
 import { ArrowRight } from 'lucide-react'
 
@@ -82,6 +83,16 @@ const Hero = () => {
           >
             VER PROYECTOS
           </motion.a>
+
+          <Link to="/blog" className="w-full sm:w-auto">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-4 bg-primary-600/10 rounded-lg text-primary-300 font-bold text-sm sm:text-base hover:bg-primary-600/20 transition-all border border-primary-500/40 hover:border-primary-400/60 min-h-[48px] flex items-center justify-center"
+            >
+              BLOG
+            </motion.div>
+          </Link>
         </motion.div>
 
         {/* Floating Elements */}
