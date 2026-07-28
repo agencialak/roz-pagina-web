@@ -5,6 +5,7 @@ import { ArrowRight, ArrowLeft, Clock, User } from 'lucide-react'
 import { blogPosts, type BlogPost } from '../data/blogPosts'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { setPageSeo } from '../utils/seo'
+import BlogLikeButton from './BlogLikeButton'
 
 const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
   educativo: 'Educativo',
@@ -190,14 +191,17 @@ const BlogList = () => {
                   })}
                 </div>
 
-                {/* Read More Link */}
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold text-sm group/link"
-                >
-                  Leer artículo
-                  <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+                {/* Like + Read More */}
+                <div className="flex items-center justify-between gap-3">
+                  <BlogLikeButton postId={post.id} size="sm" />
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold text-sm group/link"
+                  >
+                    Leer artículo
+                    <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}

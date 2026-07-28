@@ -4,6 +4,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react'
 import { blogPosts } from '../data/blogPosts'
 import { setPageSeo } from '../utils/seo'
+import BlogLikeButton from './BlogLikeButton'
 
 // Convierte *texto* en <em> dentro de un fragmento sin negrillas
 const renderItalics = (text: string, keyPrefix: number) => {
@@ -155,6 +156,7 @@ const BlogPostDetail = () => {
               <Clock size={18} />
               <span className="text-sm">{post.readTime} min de lectura</span>
             </div>
+            <BlogLikeButton postId={post.id} />
           </div>
         </motion.div>
 
