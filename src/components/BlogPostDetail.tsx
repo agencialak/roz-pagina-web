@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, User, Calendar } from 'lucide-react'
 import { blogPosts } from '../data/blogPosts'
 import { setPageSeo } from '../utils/seo'
 import BlogLikeButton from './BlogLikeButton'
+import BlogCarousel from './BlogCarousel'
 
 // Convierte *texto* en <em> dentro de un fragmento sin negrillas
 const renderItalics = (text: string, keyPrefix: number) => {
@@ -160,18 +161,23 @@ const BlogPostDetail = () => {
           </div>
         </motion.div>
 
-        {/* Featured Image */}
+        {/* Featured Image / Carrusel */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mb-12 rounded-lg overflow-hidden border border-white/10"
         >
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-auto object-cover"
-          />
+          {post.images && post.images.length > 0 ? (
+            <BlogCarousel images={[post.image, ...post.images]} title={post.title} />
+          ) : (
+            <div className="mb-12 rounded-lg overflow-hidden border border-white/10">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          )}
         </motion.div>
 
         {/* Content */}

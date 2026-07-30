@@ -5,6 +5,8 @@ export interface BlogPost {
   excerpt: string
   content: string
   image: string
+  /** Láminas adicionales del carrusel (además de `image`, que sigue siendo la portada) */
+  images?: string[]
   date: string
   category: 'educativo' | 'casos' | 'estrategia' | 'tendencia'
   readTime: number

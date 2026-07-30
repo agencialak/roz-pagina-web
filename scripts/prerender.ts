@@ -166,13 +166,21 @@ console.log('prerender: blog/index.html')
 
 // --- Cada artículo /blog/<slug> ---
 for (const post of blogPosts) {
+  const galleryImages = post.images && post.images.length > 0 ? [post.image, ...post.images] : [post.image]
+  const galleryHtml = galleryImages
+    .map(
+      (src, i) =>
+        `<img src="${src}" alt="${escapeHtml(post.title)} - lámina ${i + 1} de ${galleryImages.length}" />`
+    )
+    .join('\n    ')
+
   const articleBody = `
 <main>
   <article>
     <p><a href="/blog">Blog</a></p>
     <h1>${escapeHtml(post.title)}</h1>
     <p>Por ${escapeHtml(post.author)} — ${post.date}</p>
-    <img src="${post.image}" alt="${escapeHtml(post.title)}" />
+    ${galleryHtml}
     ${contentToHtml(post.content)}
     <p><a href="${SITE_URL}">ROZ Social Media — Agencia digital en Pereira, Colombia</a></p>
   </article>
