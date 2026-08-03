@@ -342,6 +342,126 @@ Y mientras no se resuelvan, la campaña sigue funcionando a ciegas en dos frente
     readTime: 3,
     author: 'Nikolas García - ROZ Social Media',
   },
+  {
+    id: 'estacionalidad-misma-fecha-un-ano-despues',
+    slug: 'misma-fecha-un-ano-despues-resultados-opuestos',
+    title: 'Misma fecha, un año después: resultados opuestos',
+    excerpt: 'Repetimos las mismas campañas, en las mismas fechas comerciales, un año después, en una repostería. En una fecha, el costo bajó a la mitad. En la otra, subió. El presupuesto no explicó la diferencia.',
+    content: `
+# Misma fecha, un año después: resultados opuestos
+
+Repetimos las mismas campañas, en las mismas fechas comerciales, un año después, en una repostería. En una fecha, el costo bajó a la mitad. En la otra, subió. El dato que explica la diferencia no fue el presupuesto — fue los días que estuvo encendida cada una.
+
+## Día de la madre
+
+En 2025 estuvo activa 6 días y conseguimos 77 conversaciones de WhatsApp por $176.903 COP, a $2.297 COP cada una. Este año, activa los mismos 6 días, conseguimos 66 conversaciones invirtiendo menos de la mitad — $83.503 COP, a $1.265 COP cada una. Casi la mitad de costo, con la misma duración.
+
+## San Valentín
+
+En 2025 estuvo activa 7 días y conseguimos 49 conversaciones por $88.303 COP, a $1.802 COP cada una. Este año, con una inversión casi igual ($88.564 COP), la campaña solo estuvo activa 5 días — y conseguimos menos conversaciones (42) a un costo más alto: $2.109 COP.
+
+## La diferencia real
+
+Cuando la duración se mantiene igual, el sistema tiene el mismo tiempo para aprender y ajustar la entrega. Cuando se comprime — el mismo dinero en menos días —, se le quita al algoritmo el margen para optimizar, y el costo sube.
+
+También cambió la cantidad de creativos (10 → 8 en día de la madre, 8 → 10 en San Valentín), pero eso no explica el resultado — en la fecha que mejoró corrieron menos piezas, no más. Lo que sí explica el mejor costo en día de la madre es que ya teníamos un año de aprendizaje sobre qué funciona en ese nicho para esa fecha: las piezas de este año, aunque fueron menos, ya no eran apuestas a ciegas.
+
+Aun así, la variedad de creativos importa — sobre todo la primera vez que se corre una fecha, sin ese historial: ahí, si lanzas con una única pieza y falla, se pierde la fecha completa.
+
+---
+
+*Datos anonimizados por sector, sin nombres de clientes reales.*
+    `,
+    image: '/blog/post_estacionalidad_nelu.png',
+    date: '2026-07-29',
+    category: 'casos',
+    readTime: 4,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'variedad-creativa-sin-margen-de-error',
+    slug: 'dos-creativos-sin-margen-de-error',
+    title: '2 creativos. Sin margen de error',
+    excerpt: 'Dos campañas de la misma cuenta, mismo objetivo, mismas semanas de julio, cada una con solo 2 creativos corriendo. Una terminó en $3.112 COP por conversación. La otra, en $8.702 COP — casi 3 veces más cara.',
+    content: `
+# 2 creativos. Sin margen de error
+
+Dos campañas de la misma cuenta (una clínica de estética), mismo objetivo, mismas semanas de julio, cada una con solo 2 creativos corriendo. Una terminó en $3.112 COP por conversación de WhatsApp. La otra, en $8.702 COP — casi 3 veces más cara.
+
+## Campaña A — tráfico general
+
+Corrió con 2 variantes del mismo reel: una cerró en $5.363 COP por conversación, la otra en $2.212 COP. Ambas funcionaron razonablemente bien, y el promedio quedó en $3.112 COP.
+
+## Campaña B — láser
+
+También corrió con 2 piezas: una imagen estática con precios y un reel (duplicado en dos copias). La imagen tuvo un CTR de apenas 0,71% — los reels llegaron a 1,83% y 2,13% — y terminó costando $12.467 COP por conversación. Esa sola pieza arrastró el promedio de toda la campaña a $8.702 COP.
+
+## Por qué insistimos en más variedad
+
+Antes de lanzar, siempre recomendamos correr con más variedad. Pero hay clientes que prefieren arrancar con pocas piezas — por tiempo, por presupuesto, o porque ya tienen el contenido listo. Los números de arriba son exactamente la razón por la que insistimos en lo contrario.
+
+Lo vemos en tiempo real en otra cuenta: un consultorio de medicina estética lanzó hace unos días una campaña con también solo 2 creativos. Uno de ellos (una imagen con el precio de un tratamiento) ya lleva invertidos casi $19.400 COP sin una sola conversación — casi un tercio del presupuesto de la campaña sin ningún resultado que mostrar.
+
+Con 2 creativos, no hay margen: si uno no conecta, se lleva una porción grande del presupuesto y del promedio final con él. Con más variantes corriendo, una pieza floja pesa menos en el resultado total — y el algoritmo tiene más opciones entre las cuales encontrar la que sí funciona.
+
+---
+
+*Datos anonimizados por sector, sin nombres de clientes reales.*
+    `,
+    image: '/blog/post_variedad_creativa.png',
+    date: '2026-07-31',
+    category: 'educativo',
+    readTime: 4,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'alcance-vs-venta-carousel',
+    slug: 'el-costo-de-alcance-no-es-el-costo-de-venta',
+    title: 'El costo de alcance no es el costo de venta',
+    excerpt: 'Dos campañas reales. Dos "costos por resultado" completamente distintos: $2.963 COP y $19.368 COP. A simple vista parece que una salió carísima y la otra un regalo. No es por el creativo, ni por el público.',
+    content: `
+# El costo de alcance no es el costo de venta
+
+Dos campañas reales. Dos "costos por resultado" completamente distintos: $2.963 COP y $19.368 COP.
+
+A simple vista, parece que una salió carísima y la otra, un regalo. No es por el creativo, ni por el público, ni porque una cuenta esté mejor optimizada que la otra.
+
+## Lo que no explica la diferencia
+
+Ya descartamos las hipótesis obvias: no es el mejor creativo, no es un público más barato, no es que una cuenta esté mal optimizada. Esa es la única variable que cambió: **objetivos distintos**.
+
+Es que son objetivos distintos: una paga por atención (que la vea la mayor cantidad de gente posible). La otra paga por una decisión de compra (que alguien escriba para comprar).
+
+Comparar el costo de una contra la otra es comparar el precio de un afiche en la calle contra el de una venta cerrada.
+
+## Los números reales
+
+**Reconocimiento · un restaurante:** $2.963 COP por persona alcanzada, 205.006 personas alcanzadas.
+
+**Ventas/interacción · una clínica dental:** $19.368 COP por conversación con intención de compra, 20 conversaciones de WhatsApp.
+
+## El problema no es el precio
+
+El problema no es que la campaña esté cara. Es comparar objetivos que no se pueden comparar.
+
+---
+
+*Datos anonimizados por sector, sin nombres de clientes reales.*
+    `,
+    image: '/blog/carousel_alcance_vs_venta_1.png',
+    images: [
+      '/blog/carousel_alcance_vs_venta_2.png',
+      '/blog/carousel_alcance_vs_venta_3.png',
+      '/blog/carousel_alcance_vs_venta_4.png',
+      '/blog/carousel_alcance_vs_venta_5.png',
+      '/blog/carousel_alcance_vs_venta_6.png',
+      '/blog/carousel_alcance_vs_venta_7.png',
+    ],
+    date: '2026-08-03',
+    category: 'educativo',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
