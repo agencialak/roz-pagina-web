@@ -462,6 +462,66 @@ El problema no es que la campaña esté cara. Es comparar objetivos que no se pu
     readTime: 3,
     author: 'Nikolas García - ROZ Social Media',
   },
+  {
+    id: 'segmentacion-supuestos-vs-datos',
+    slug: 'suponiamos-que-sabiamos-quien-era-el-publico',
+    title: 'Suponíamos que sabíamos quién era el público. Los datos dijeron otra cosa',
+    excerpt: 'Le dimos más presupuesto al público que "hacía sentido". No fue el que más interactuó. Revisamos el desempeño por edad y género de una clínica de estética y los supuestos no coincidieron con los datos.',
+    content: `
+# Suponíamos que sabíamos quién era el público. Los datos dijeron otra cosa
+
+Le dimos más presupuesto al público que "hacía sentido". No fue el que más interactuó.
+
+En una clínica de estética, revisamos el desempeño por edad y género de los últimos 3 meses. La cuenta le puso el 70% del presupuesto a mujeres — es el público que uno asumiría para este tipo de negocio. Pero los hombres, con menos de un tercio del presupuesto, tuvieron un CTR de 5,75% frente a 3,53% de las mujeres.
+
+## Por edad pasa algo parecido
+
+El segmento de 65+ tuvo el CTR más alto (7,73%), casi el doble que el de 18-24 (3,77%) — y es el que menos presupuesto y alcance recibió.
+
+## Lo que esto significa (y lo que no)
+
+No es que haya que abandonar al público "obvio". Es que los supuestos sobre quién va a responder mejor no siempre coinciden con lo que dicen los datos — y la única forma de saberlo es mirar la segmentación real de cada cuenta, no asumirla.
+
+---
+
+*Datos anonimizados por sector, sin nombres de clientes reales.*
+    `,
+    image: '/blog/post_segmentacion_audiencia.png',
+    date: '2026-08-05',
+    category: 'educativo',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'facebook-vs-instagram-mismo-presupuesto',
+    slug: 'facebook-vs-instagram-mismo-presupuesto',
+    title: 'Misma cuenta. Mismos 3 meses. ¿Qué plataforma rindió mejor?',
+    excerpt: 'Facebook se llevó el 62% del presupuesto y llegó a 31.800 personas. Instagram, con el 38% restante, llegó a solo 8.349. Para una clínica de estética, la suposición común sería que Instagram manda. Pasó lo contrario.',
+    content: `
+# Misma cuenta. Mismos 3 meses. ¿Qué plataforma rindió mejor?
+
+Misma cuenta. Mismos 3 meses. Dos plataformas con resultados muy distintos.
+
+En una clínica de estética, revisamos cómo rindió el mismo presupuesto de anuncios según la plataforma. Facebook se llevó el 62% del presupuesto y llegó a 31.800 personas, con un CTR de 5,22% y un CPM de $5.633 COP. Instagram, con el 38% restante, llegó a solo 8.349 personas, con CTR de 2,31% y un CPM de $11.882 COP: más del doble de caro por cada mil impresiones.
+
+## La suposición común
+
+Para un negocio de estética, la suposición común sería que Instagram manda. Acá pasó lo contrario.
+
+## No es una regla general
+
+No es una regla que aplique a cualquier cuenta — es la razón por la que revisamos el desempeño por plataforma en cada cuenta en vez de asumirlo por el tipo de negocio.
+
+---
+
+*Datos anonimizados por sector, sin nombres de clientes reales.*
+    `,
+    image: '/blog/post_facebook_vs_instagram.png',
+    date: '2026-09-03',
+    category: 'educativo',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
