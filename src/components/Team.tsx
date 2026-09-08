@@ -154,12 +154,12 @@ const Team = () => {
             variants={fadeUpVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
           >
-            <span className="text-white">NUESTRO EQUIPO</span>
+            <span className="text-ink">NUESTRO EQUIPO</span>
             <span className="block gradient-text-purple">Expertos en Estrategia Digital</span>
           </motion.h2>
           <motion.p
             variants={fadeUpVariants}
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
+            className="text-lg text-ink-muted max-w-2xl mx-auto"
           >
             Estrategas, creativos y especialistas dedicados a escalar tu marca. Cada miembro aporta expertise de nivel internacional.
           </motion.p>
@@ -233,17 +233,17 @@ const Team = () => {
                               className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
                             >
                               {/* Name */}
-                              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                              <h3 className="text-xl md:text-2xl font-bold text-ink mb-2">
                                 {member.name}
                               </h3>
 
                               {/* Role */}
-                              <p className="text-primary-400 font-semibold mb-3 text-sm md:text-base">
+                              <p className="text-primary-600 font-semibold mb-3 text-sm md:text-base">
                                 {member.role}
                               </p>
 
                               {/* Bio */}
-                              <p className="text-gray-400 leading-relaxed text-sm">
+                              <p className="text-ink-muted leading-relaxed text-sm">
                                 {member.bio}
                               </p>
                             </motion.div>
@@ -264,7 +264,7 @@ const Team = () => {
                     setDirection('left')
                     setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))
                   }}
-                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
+                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronLeft size={24} className="text-primary-400" />
                 </motion.button>
@@ -278,7 +278,7 @@ const Team = () => {
                         setCurrentIndex(idx)
                       }}
                       className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
+                        idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20'
                       }`}
                     />
                   ))}
@@ -291,7 +291,7 @@ const Team = () => {
                     setDirection('right')
                     setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))
                   }}
-                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
+                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronRight size={24} className="text-primary-400" />
                 </motion.button>
@@ -346,17 +346,17 @@ const Team = () => {
                       className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
                     >
                       {/* Name */}
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                      <h3 className="text-2xl md:text-3xl font-bold text-ink mb-2">
                         {teamMembers[currentIndex].name}
                       </h3>
 
                       {/* Role */}
-                      <p className="text-primary-400 font-semibold mb-4 text-lg">
+                      <p className="text-primary-600 font-semibold mb-4 text-lg">
                         {teamMembers[currentIndex].role}
                       </p>
 
                       {/* Bio */}
-                      <p className="text-gray-400 leading-relaxed">
+                      <p className="text-ink-muted leading-relaxed">
                         {teamMembers[currentIndex].bio}
                       </p>
                     </motion.div>
@@ -373,7 +373,7 @@ const Team = () => {
                     setDirection('left')
                     setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))
                   }}
-                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
+                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronLeft size={24} className="text-primary-400" />
                 </motion.button>
@@ -387,7 +387,7 @@ const Team = () => {
                         setCurrentIndex(idx)
                       }}
                       className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
+                        idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20'
                       }`}
                     />
                   ))}
@@ -400,7 +400,7 @@ const Team = () => {
                     setDirection('right')
                     setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))
                   }}
-                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/10 transition-all"
+                  className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronRight size={24} className="text-primary-400" />
                 </motion.button>
@@ -415,7 +415,7 @@ const Team = () => {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
-          className="mt-20 pt-20 border-t border-white/10"
+          className="mt-20 pt-20 border-t border-ink/10"
         >
           <div className="flex justify-center">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl">
@@ -428,12 +428,12 @@ const Team = () => {
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
-                className="glass rounded-lg p-6 text-center border border-white/10 hover:border-primary-600/30 transition-colors"
+                className="glass rounded-lg p-6 text-center border border-ink/10 hover:border-primary-600/30 transition-colors"
               >
                 <div className="text-2xl sm:text-3xl font-bold gradient-text-purple mb-2">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-ink-muted">
                   {stat.label}
                 </div>
               </motion.div>

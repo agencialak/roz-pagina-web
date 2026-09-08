@@ -11,7 +11,7 @@ const Results = () => {
 
   useEffect(() => {
     const targets = {
-      views: 80,
+      views: 100,
       projects: 100,
       revenue: 7,
     }
@@ -85,12 +85,12 @@ const Results = () => {
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
           >
-            <span className="text-white">RESULTADOS QUE</span>
+            <span className="text-ink">RESULTADOS QUE</span>
             <span className="block gradient-text-purple">HABLAN POR SÍ SOLOS</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
+            className="text-lg text-ink-muted max-w-2xl mx-auto"
           >
             Números reales de proyectos reales. Cada métrica representa marcas que escalaron con ROZ.
           </motion.p>
@@ -132,12 +132,12 @@ const Results = () => {
                 </motion.div>
 
                 {/* Label */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-ink mb-3">
                   {stat.label}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-400">
+                <p className="text-ink-muted">
                   {stat.description}
                 </p>
 
@@ -170,12 +170,12 @@ const Results = () => {
             <motion.div
               key={idx}
               variants={itemVariants}
-              className="glass rounded-xl p-4 text-center border border-white/10 hover:border-primary-600/30 transition-colors"
+              className="glass rounded-xl p-4 text-center border border-ink/10 hover:border-primary-600/30 transition-colors"
             >
-              <div className="text-2xl sm:text-3xl font-bold text-primary-400 mb-2">
+              <div className="text-2xl sm:text-3xl font-bold text-primary-600 mb-2">
                 {metric.value}
               </div>
-              <div className="text-xs sm:text-sm text-gray-400">
+              <div className="text-xs sm:text-sm text-ink-muted">
                 {metric.label}
               </div>
             </motion.div>

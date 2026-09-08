@@ -20,6 +20,17 @@ export default {
           900: '#5a189a',
           950: '#240046',
         },
+        // Paleta clara — reemplaza el tema oscuro anterior
+        surface: {
+          DEFAULT: '#FAF9FD', // fondo de página
+          card: '#FFFFFF',    // tarjetas / paneles
+          muted: '#F1EEF8',   // superficies secundarias (hover, inputs)
+        },
+        ink: {
+          DEFAULT: '#181422', // texto principal
+          muted: '#5B5568',   // texto secundario
+          subtle: '#8B8698',  // labels, metadatos
+        },
       },
       fontFamily: {
         sans: ['Sora', 'Inter', 'Satoshi', 'sans-serif'],

@@ -96,7 +96,7 @@ const Clients = () => {
   }
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm border-y border-white/10">
+    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-surface-muted border-y border-ink/5">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -108,7 +108,7 @@ const Clients = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink"
           >
             Marcas que han confíado en nuestra estrategia digital
           </motion.h2>
@@ -142,7 +142,7 @@ const Clients = () => {
                   <img
                     src={client.logo}
                     alt={`${client.name} - Cliente de ROZ Social Media`}
-                    className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="max-h-full max-w-full object-contain filter brightness-0 opacity-50 hover:opacity-90 transition-opacity duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
                     }}
@@ -181,7 +181,7 @@ const Clients = () => {
                   <img
                     src={client.logo}
                     alt={`${client.name} - Cliente de ROZ Social Media`}
-                    className="max-h-full max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="max-h-full max-w-full object-contain filter brightness-0 opacity-50 hover:opacity-90 transition-opacity duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
                     }}

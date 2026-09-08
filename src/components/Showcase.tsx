@@ -74,12 +74,12 @@ const Showcase = () => {
             variants={itemVariants}
             className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
           >
-            <span className="text-white">GALERÍA DE</span>
+            <span className="text-ink">GALERÍA DE</span>
             <span className="block gradient-text-purple">PROYECTOS</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
+            className="text-sm sm:text-lg text-ink-muted max-w-2xl mx-auto px-2"
           >
             Casos de éxito que demuestran nuestra capacidad de transformar marcas.
           </motion.p>

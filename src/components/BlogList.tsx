@@ -54,7 +54,7 @@ const BlogList = () => {
   }, [activeCategory])
 
   return (
-    <div className="min-h-screen bg-black pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Back to Home */}
         <motion.div
@@ -64,7 +64,7 @@ const BlogList = () => {
         >
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors group"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors group"
           >
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             Volver a la página principal
@@ -80,13 +80,13 @@ const BlogList = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink mb-6"
           >
             Blog & Insights
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-400 max-w-2xl mx-auto"
+            className="text-lg text-ink-muted max-w-2xl mx-auto"
           >
             Datos reales, estrategias que funcionan, y todo lo que hemos aprendido manejando campañas para más de 300 negocios
           </motion.p>
@@ -103,7 +103,7 @@ const BlogList = () => {
             className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide transition-colors border ${
               !activeCategory
                 ? 'bg-primary-600 text-white border-primary-600'
-                : 'bg-white/5 text-gray-400 border-white/10 hover:border-primary-400/40 hover:text-primary-400'
+                : 'bg-surface-card text-ink-muted border-ink/10 hover:border-primary-400/40 hover:text-primary-600'
             }`}
           >
             Todos
@@ -115,7 +115,7 @@ const BlogList = () => {
               className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide transition-colors border ${
                 activeCategory === category
                   ? 'bg-primary-600 text-white border-primary-600'
-                  : 'bg-white/5 text-gray-400 border-white/10 hover:border-primary-400/40 hover:text-primary-400'
+                  : 'bg-surface-card text-ink-muted border-ink/10 hover:border-primary-400/40 hover:text-primary-600'
               }`}
             >
               {CATEGORY_LABELS[category]}
@@ -135,11 +135,11 @@ const BlogList = () => {
             <motion.div
               key={post.id}
               variants={itemVariants}
-              className="group relative bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-primary-400/30 transition-all duration-300 hover:bg-white/10"
+              className="group relative bg-surface-card border border-ink/10 rounded-lg overflow-hidden hover:border-primary-400/40 hover:shadow-lg transition-all duration-300"
             >
               {/* Image */}
               <Link to={`/blog/${post.slug}`}>
-                <div className="relative h-64 overflow-hidden bg-black/50">
+                <div className="relative h-64 overflow-hidden bg-surface-muted">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -160,18 +160,18 @@ const BlogList = () => {
 
                 {/* Title */}
                 <Link to={`/blog/${post.slug}`}>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-ink mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                 </Link>
 
                 {/* Excerpt */}
-                <p className="text-gray-400 text-sm mb-4 flex-grow line-clamp-2">
+                <p className="text-ink-muted text-sm mb-4 flex-grow line-clamp-2">
                   {post.excerpt}
                 </p>
 
                 {/* Meta */}
-                <div className="flex items-center justify-between text-xs text-gray-500 border-t border-white/10 pt-4 mb-4">
+                <div className="flex items-center justify-between text-xs text-ink-subtle border-t border-ink/10 pt-4 mb-4">
                   <div className="flex items-center gap-2">
                     <Clock size={14} />
                     <span>{post.readTime} min lectura</span>
@@ -183,7 +183,7 @@ const BlogList = () => {
                 </div>
 
                 {/* Date */}
-                <div className="text-xs text-gray-600 mb-4">
+                <div className="text-xs text-ink-subtle mb-4">
                   {new Date(post.date).toLocaleDateString('es-ES', {
                     year: 'numeric',
                     month: 'long',
@@ -196,7 +196,7 @@ const BlogList = () => {
                   <BlogLikeButton postId={post.id} size="sm" />
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold text-sm group/link"
+                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm group/link"
                   >
                     Leer artículo
                     <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
@@ -214,7 +214,7 @@ const BlogList = () => {
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-gray-400 text-lg">
+            <p className="text-ink-muted text-lg">
               {blogPosts.length === 0
                 ? 'Próximamente más artículos...'
                 : 'Todavía no hay artículos en esta categoría.'}
@@ -229,10 +229,10 @@ const BlogList = () => {
           viewport={{ once: true }}
           className="mt-20 bg-gradient-to-r from-primary-600/20 to-purple-600/20 border border-primary-400/20 rounded-lg p-8 sm:p-12 text-center"
         >
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+          <h3 className="text-2xl sm:text-3xl font-bold text-ink mb-4">
             ¿Quieres resultados como estos para tu negocio?
           </h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-ink-muted mb-8 max-w-2xl mx-auto">
             Llevamos más de 300 proyectos exitosos. Cuéntanos tu negocio y diseñamos una estrategia a medida con datos reales, no promesas.
           </p>
           <a

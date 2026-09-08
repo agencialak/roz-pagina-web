@@ -106,12 +106,12 @@ const Testimonials = () => {
             variants={itemVariants}
             className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
           >
-            <span className="text-white">LO QUE DICEN</span>
+            <span className="text-ink">LO QUE DICEN</span>
             <span className="block gradient-text-purple">NUESTROS CLIENTES</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
+            className="text-sm sm:text-lg text-ink-muted max-w-2xl mx-auto px-2"
           >
             Marcas que escalaron con ROZ comparten su experiencia.
           </motion.p>
@@ -146,16 +146,16 @@ const Testimonials = () => {
                 </div>
 
                 {/* Content */}
-                <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
+                <p className="text-ink-muted mb-6 leading-relaxed flex-grow">
                   "{testimonial.content}"
                 </p>
 
                 {/* Author */}
-                <div className="border-t border-white/10 pt-6">
-                  <h4 className="text-white font-bold">
+                <div className="border-t border-ink/10 pt-6">
+                  <h4 className="text-ink font-bold">
                     {testimonial.name}
                   </h4>
-                  <p className="text-primary-400 text-sm">
+                  <p className="text-primary-600 text-sm">
                     {testimonial.role || testimonial.business}
                   </p>
                 </div>
@@ -191,16 +191,16 @@ const Testimonials = () => {
               </div>
 
               {/* Content */}
-              <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
+              <p className="text-ink-muted mb-6 leading-relaxed flex-grow">
                 "{testimonials[currentIndex].content}"
               </p>
 
               {/* Author */}
-              <div className="border-t border-white/10 pt-6">
-                <h4 className="text-white font-bold">
+              <div className="border-t border-ink/10 pt-6">
+                <h4 className="text-ink font-bold">
                   {testimonials[currentIndex].name}
                 </h4>
-                <p className="text-primary-400 text-sm">
+                <p className="text-primary-600 text-sm">
                   {testimonials[currentIndex].role || testimonials[currentIndex].business}
                 </p>
               </div>
@@ -224,7 +224,7 @@ const Testimonials = () => {
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-gray-600'
+                    idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20'
                   }`}
                 />
               ))}

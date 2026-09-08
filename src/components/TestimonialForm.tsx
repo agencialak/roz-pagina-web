@@ -111,12 +111,12 @@ const TestimonialForm = () => {
                 variants={itemVariants}
                 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
               >
-                <span className="text-white">COMPARTE TU</span>
+                <span className="text-ink">COMPARTE TU</span>
                 <span className="block gradient-text-purple">TESTIMONIO</span>
               </motion.h2>
               <motion.p
                 variants={itemVariants}
-                className="text-sm sm:text-lg text-gray-300 max-w-2xl mx-auto px-2"
+                className="text-sm sm:text-lg text-ink-muted max-w-2xl mx-auto px-2"
               >
                 Tu experiencia nos ayuda a crecer. Cuéntanos cómo fue trabajar con ROZ.
               </motion.p>
@@ -133,7 +133,7 @@ const TestimonialForm = () => {
         >
           {/* Name */}
           <motion.div variants={itemVariants} className="mb-6">
-            <label className="block text-white font-semibold mb-3">
+            <label className="block text-ink font-semibold mb-3">
               Nombre
             </label>
             <input
@@ -142,14 +142,14 @@ const TestimonialForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full bg-black/40 border border-primary-600/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-600 transition-colors"
+              className="w-full bg-surface-card border border-primary-600/30 rounded-lg px-4 py-3 text-ink placeholder-ink-subtle focus:outline-none focus:border-primary-600 transition-colors"
               placeholder="Tu nombre"
             />
           </motion.div>
 
           {/* Business */}
           <motion.div variants={itemVariants} className="mb-6">
-            <label className="block text-white font-semibold mb-3">
+            <label className="block text-ink font-semibold mb-3">
               Tu negocio / Marca
             </label>
             <input
@@ -158,14 +158,14 @@ const TestimonialForm = () => {
               value={formData.business}
               onChange={handleChange}
               required
-              className="w-full bg-black/40 border border-primary-600/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-600 transition-colors"
+              className="w-full bg-surface-card border border-primary-600/30 rounded-lg px-4 py-3 text-ink placeholder-ink-subtle focus:outline-none focus:border-primary-600 transition-colors"
               placeholder="Nombre de tu negocio o marca"
             />
           </motion.div>
 
           {/* Email */}
           <motion.div variants={itemVariants} className="mb-6">
-            <label className="block text-white font-semibold mb-3">
+            <label className="block text-ink font-semibold mb-3">
               Correo electrónico
             </label>
             <input
@@ -174,14 +174,14 @@ const TestimonialForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full bg-black/40 border border-primary-600/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-600 transition-colors"
+              className="w-full bg-surface-card border border-primary-600/30 rounded-lg px-4 py-3 text-ink placeholder-ink-subtle focus:outline-none focus:border-primary-600 transition-colors"
               placeholder="tu@email.com"
             />
           </motion.div>
 
           {/* Rating */}
           <motion.div variants={itemVariants} className="mb-6">
-            <label className="block text-white font-semibold mb-3">
+            <label className="block text-ink font-semibold mb-3">
               Calificación
             </label>
             <div className="flex gap-2">
@@ -198,8 +198,8 @@ const TestimonialForm = () => {
                     size={32}
                     className={`${
                       i < formData.rating
-                        ? 'fill-primary-400 text-primary-400'
-                        : 'text-gray-600'
+                        ? 'fill-primary-500 text-primary-500'
+                        : 'text-ink/20'
                     } transition-colors`}
                   />
                 </motion.button>
@@ -209,7 +209,7 @@ const TestimonialForm = () => {
 
           {/* Message */}
           <motion.div variants={itemVariants} className="mb-8">
-            <label className="block text-white font-semibold mb-3">
+            <label className="block text-ink font-semibold mb-3">
               Tu testimonio
             </label>
             <textarea
@@ -218,7 +218,7 @@ const TestimonialForm = () => {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full bg-black/40 border border-primary-600/30 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary-600 transition-colors resize-none"
+              className="w-full bg-surface-card border border-primary-600/30 rounded-lg px-4 py-3 text-ink placeholder-ink-subtle focus:outline-none focus:border-primary-600 transition-colors resize-none"
               placeholder="Cuéntanos tu experiencia trabajando con ROZ..."
             />
           </motion.div>
@@ -253,7 +253,7 @@ const TestimonialForm = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 text-center"
+              className="mt-4 p-4 bg-green-50 border border-green-300 rounded-lg text-green-700 text-center"
             >
               ¡Gracias! Tu testimonio ha sido enviado exitosamente.
             </motion.div>
@@ -264,7 +264,7 @@ const TestimonialForm = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mt-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 text-center"
+              className="mt-4 p-4 bg-red-50 border border-red-300 rounded-lg text-red-700 text-center"
             >
               Hubo un error al enviar el testimonio. Intenta de nuevo.
             </motion.div>
@@ -280,7 +280,7 @@ const TestimonialForm = () => {
               onClick={() => setIsExpanded(false)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 text-gray-400 hover:text-white transition-colors font-semibold"
+              className="px-6 py-3 text-ink-muted hover:text-ink transition-colors font-semibold"
             >
               ← Cerrar formulario
             </motion.button>

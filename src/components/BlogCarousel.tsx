@@ -18,7 +18,7 @@ const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
 
   return (
     <div className="mb-12">
-      <div className="relative rounded-lg overflow-hidden border border-white/10 bg-black/40 aspect-square sm:aspect-[4/5]">
+      <div className="relative rounded-lg overflow-hidden border border-ink/10 bg-surface-muted aspect-square sm:aspect-[4/5]">
         <AnimatePresence initial={false}>
           <motion.img
             key={index}
@@ -65,7 +65,7 @@ const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
               type="button"
               onClick={() => goTo(i)}
               className={`h-2 rounded-full transition-all ${
-                i === index ? 'w-6 bg-primary-500' : 'w-2 bg-white/20 hover:bg-white/40'
+                i === index ? 'w-6 bg-primary-500' : 'w-2 bg-ink/15 hover:bg-ink/30'
               }`}
               aria-label={`Ir a la lámina ${i + 1}`}
             />

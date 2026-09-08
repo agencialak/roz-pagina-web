@@ -52,7 +52,7 @@ const Navbar = () => {
       transition={{ duration: 0.8 }}
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isOpen
-          ? 'bg-black/95 backdrop-blur-lg shadow-lg'
+          ? 'bg-surface/95 backdrop-blur-lg shadow-lg'
           : isScrolled
           ? 'glass shadow-lg'
           : 'bg-transparent'
@@ -69,7 +69,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2 cursor-pointer bg-none border-none p-0"
           >
-            <img src="/logo.png" alt="ROZ" className="h-10 w-auto" />
+            <img src="/logo-dark.png" alt="ROZ" className="h-10 w-auto" />
           </motion.button>
 
           {/* Desktop Menu */}
@@ -90,7 +90,7 @@ const Navbar = () => {
                   key={item.label}
                   onClick={() => handleNavClick(item)}
                   whileHover={{ color: '#6D28FF' }}
-                  className="text-sm font-medium text-gray-300 transition-colors bg-none border-none p-0 cursor-pointer"
+                  className="text-sm font-medium text-ink-muted transition-colors bg-none border-none p-0 cursor-pointer"
                 >
                   {item.label}
                 </motion.button>
@@ -111,7 +111,7 @@ const Navbar = () => {
                 rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
                 <img
-                  src={social.icon === 'ig' ? '/instagram-icon.png' : '/whatsapp-icon.png'}
+                  src={social.icon === 'ig' ? '/instagram-icon-dark.png' : '/whatsapp-icon-dark.png'}
                   alt={social.icon === 'ig' ? 'Instagram' : 'WhatsApp'}
                   className="w-full h-full object-contain"
                 />
@@ -124,7 +124,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-ink"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
@@ -136,7 +136,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden pb-6 border-t border-white/10"
+            className="md:hidden pb-6 border-t border-ink/10"
           >
             <div className="flex flex-col gap-4 pt-4">
               {navItems.map((item) =>
@@ -152,7 +152,7 @@ const Navbar = () => {
                   <motion.button
                     key={item.label}
                     onClick={() => handleNavClick(item)}
-                    className="text-sm font-medium text-gray-300 hover:text-primary-600 transition-colors text-left bg-none border-none p-0 cursor-pointer"
+                    className="text-sm font-medium text-ink-muted hover:text-primary-600 transition-colors text-left bg-none border-none p-0 cursor-pointer"
                   >
                     {item.label}
                   </motion.button>

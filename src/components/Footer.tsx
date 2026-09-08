@@ -11,25 +11,14 @@ const Footer = () => {
       links: [
         { label: 'Inicio', href: '/', type: 'route' },
         { label: 'Servicios', href: '#servicios', type: 'anchor' },
-        { label: 'Proyectos', href: '#', type: 'anchor' },
+        { label: 'Proyectos', href: '#proyectos', type: 'anchor' },
         { label: 'Blog', href: '/blog', type: 'route' },
-      ],
-    },
-    {
-      title: 'Recursos',
-      links: [
-        { label: 'Documentación', href: '#', type: 'anchor' },
-        { label: 'Case Studies', href: '#', type: 'anchor' },
-        { label: 'Newsletter', href: '#', type: 'anchor' },
-        { label: 'Resources', href: '#', type: 'anchor' },
       ],
     },
     {
       title: 'Legal',
       links: [
-        { label: 'Privacidad', href: '#', type: 'anchor' },
-        { label: 'Términos', href: '#', type: 'anchor' },
-        { label: 'Cookies', href: '#', type: 'anchor' },
+        { label: 'Privacidad', href: '/privacidad', type: 'route' },
         { label: 'Contacto', href: '#contacto', type: 'anchor' },
       ],
     },
@@ -50,10 +39,10 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="relative border-t border-white/10 bg-gradient-to-b from-black/50 to-black">
+    <footer className="relative border-t border-ink/10 bg-surface-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,8 +50,8 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <img src="/logo.png" alt="ROZ" className="h-10 w-auto mb-4" />
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <img src="/logo-dark.png" alt="ROZ" className="h-10 w-auto mb-4" />
+            <p className="text-sm text-ink-muted leading-relaxed">
               Estrategia digital para marcas que dominan.
             </p>
             <div className="mt-6 flex gap-3">
@@ -75,9 +64,9 @@ const Footer = () => {
                   target={social.href.startsWith('http') ? '_blank' : undefined}
                   rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 >
-                  {social.icon === 'ig' && <img src="/instagram-icon.png" alt="Instagram" className="w-full h-full object-contain" />}
-                  {social.icon === 'ws' && <img src="/whatsapp-icon.png" alt="WhatsApp" className="w-full h-full object-contain" />}
-                  {!['ig', 'ws'].includes(social.icon) && <span className="text-xs font-bold text-white">{social.icon}</span>}
+                  {social.icon === 'ig' && <img src="/instagram-icon-dark.png" alt="Instagram" className="w-full h-full object-contain" />}
+                  {social.icon === 'ws' && <img src="/whatsapp-icon-dark.png" alt="WhatsApp" className="w-full h-full object-contain" />}
+                  {!['ig', 'ws'].includes(social.icon) && <span className="text-xs font-bold text-ink">{social.icon}</span>}
                 </motion.a>
               ))}
             </div>
@@ -91,7 +80,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-sm font-bold text-white mb-6 uppercase tracking-wider">
+              <h4 className="text-sm font-bold text-ink mb-6 uppercase tracking-wider">
                 {column.title}
               </h4>
               <ul className="space-y-3">
@@ -104,7 +93,7 @@ const Footer = () => {
                       >
                         <Link
                           to={link.href}
-                          className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
+                          className="text-sm text-ink-muted hover:text-primary-600 transition-colors"
                         >
                           {link.label}
                         </Link>
@@ -117,7 +106,7 @@ const Footer = () => {
                           handleNavClick(link.href, link.type)
                         }}
                         whileHover={{ x: 5, color: '#6D28FF' }}
-                        className="text-sm text-gray-400 hover:text-primary-400 transition-colors inline-block cursor-pointer"
+                        className="text-sm text-ink-muted hover:text-primary-600 transition-colors inline-block cursor-pointer"
                       >
                         {link.label}
                       </motion.a>
@@ -134,14 +123,14 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-sm font-bold text-white mb-6 uppercase tracking-wider">
+            <h4 className="text-sm font-bold text-ink mb-6 uppercase tracking-wider">
               Contacto
             </h4>
             <div className="space-y-4">
               <motion.a
                 href="mailto:rozagencia23@gmail.com"
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-3 text-gray-400 hover:text-primary-400 transition-colors group"
+                className="flex items-center gap-3 text-ink-muted hover:text-primary-600 transition-colors group"
               >
                 <Mail size={18} className="group-hover:text-primary-600 transition-colors" />
                 <span className="text-sm">rozagencia23@gmail.com</span>
@@ -151,14 +140,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-3 text-gray-400 hover:text-primary-400 transition-colors group"
+                className="flex items-center gap-3 text-ink-muted hover:text-primary-600 transition-colors group"
               >
                 <Phone size={18} className="group-hover:text-primary-600 transition-colors" />
                 <span className="text-sm">+57 321 851 5587</span>
               </motion.a>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-3 text-gray-400 group"
+                className="flex items-center gap-3 text-ink-muted group"
               >
                 <MapPin size={18} className="text-primary-600" />
                 <span className="text-sm">Pereira, Risaralda</span>
@@ -172,16 +161,16 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="bg-white/5 border border-white/10 rounded-lg p-4 mb-8"
+          className="bg-surface-card border border-ink/10 rounded-lg p-4 mb-8"
         >
-          <p className="text-xs text-gray-400 text-center">
+          <p className="text-xs text-ink-muted text-center">
             Mejoramos nuestros productos y publicidad usando Microsoft Clarity para ver cómo usas nuestro sitio web.
             Al usar nuestro sitio, aceptas que nosotros y Microsoft podemos recopilar y usar estos datos. Nuestra{' '}
             <a
               href="https://www.microsoft.com/es-mx/privacy/privacystatement"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-400 hover:text-primary-300 underline"
+              className="text-primary-600 hover:text-primary-700 underline"
             >
               política de privacidad
             </a>
@@ -194,7 +183,7 @@ const Footer = () => {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
-          className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"
+          className="h-px bg-gradient-to-r from-transparent via-ink/15 to-transparent mb-8"
         />
 
         {/* Bottom Section */}
@@ -204,7 +193,7 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-sm text-gray-500"
+            className="text-sm text-ink-subtle"
           >
             © {currentYear} ROZ Social Media. Todos los derechos reservados.
           </motion.p>
@@ -214,7 +203,7 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-sm text-gray-400 text-center md:text-right italic"
+            className="text-sm text-ink-muted text-center md:text-right italic"
           >
             Construimos marcas que dominan. Estrategia, posicionamiento, resultados.
           </motion.p>

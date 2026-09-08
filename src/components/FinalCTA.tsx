@@ -39,7 +39,7 @@ const FinalCTA = () => {
             className="inline-block mb-8"
           >
             <div className="glass px-4 py-2 rounded-full border border-primary-600/30">
-              <span className="text-sm font-medium text-primary-300">
+              <span className="text-sm font-medium text-primary-700">
                 PRÓXIMO PASO
               </span>
             </div>
@@ -50,14 +50,14 @@ const FinalCTA = () => {
             variants={fadeUpVariants}
             className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 tracking-tight"
           >
-            <span className="text-white">¿LISTO PARA</span>
+            <span className="text-ink">¿LISTO PARA</span>
             <span className="block gradient-text-purple">ESCALAR TU MARCA?</span>
           </motion.h2>
 
           {/* Description */}
           <motion.p
             variants={fadeUpVariants}
-            className="text-lg sm:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-ink-muted mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             No esperes más. Las marcas que escalan son las que actúan hoy. Déjanos mostrarte cómo podemos transformar tu estrategia digital.
           </motion.p>
@@ -90,9 +90,9 @@ const FinalCTA = () => {
           {/* Trust Elements */}
           <motion.div
             variants={fadeUpVariants}
-            className="mt-16 pt-16 border-t border-white/10"
+            className="mt-16 pt-16 border-t border-ink/10"
           >
-            <p className="text-gray-400 mb-6">
+            <p className="text-ink-muted mb-6">
               Confían en ROZ
             </p>
             <div className="flex items-center justify-center gap-8 flex-wrap">
@@ -100,7 +100,7 @@ const FinalCTA = () => {
                 <motion.div
                   key={item}
                   whileHover={{ scale: 1.1 }}
-                  className="glass px-4 py-2 rounded-lg border border-white/10 text-sm font-semibold text-gray-300"
+                  className="glass px-4 py-2 rounded-lg border border-ink/10 text-sm font-semibold text-ink-muted"
                 >
                   {item}
                 </motion.div>

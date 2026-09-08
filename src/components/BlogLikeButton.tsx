@@ -24,8 +24,8 @@ const BlogLikeButton = ({ postId, size = 'md' }: BlogLikeButtonProps) => {
         size === 'sm' ? 'px-3 py-1.5 text-xs' : 'px-4 py-2 text-sm'
       } ${
         liked
-          ? 'bg-primary-600/20 text-primary-400 border border-primary-500/40'
-          : 'bg-white/5 text-gray-400 border border-white/10 hover:border-primary-400/40 hover:text-primary-400'
+          ? 'bg-primary-600/15 text-primary-700 border border-primary-500/40'
+          : 'bg-surface-card text-ink-muted border border-ink/10 hover:border-primary-400/40 hover:text-primary-600'
       }`}
       aria-label={liked ? 'Quitar like' : 'Dar like'}
     >

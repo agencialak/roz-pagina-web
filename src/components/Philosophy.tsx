@@ -49,13 +49,13 @@ const Philosophy = () => {
             variants={slideInLeftVariants}
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
-              <span className="block text-white mb-2">¿QUÉ ES</span>
+              <span className="block text-ink mb-2">¿QUÉ ES</span>
               <span className="gradient-text-purple">ROZ?</span>
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <p className="text-lg text-ink-muted leading-relaxed mb-6">
               Somos una agencia enfocada en construir marcas que dominan. No hacemos campañas genéricas ni tácticas de corto plazo.
             </p>
-            <p className="text-lg text-gray-400 leading-relaxed mb-8">
+            <p className="text-lg text-ink-muted leading-relaxed mb-8">
               Trabajamos en estrategia profunda, posicionamiento sostenible y crecimiento escalable. Cada proyecto es una oportunidad para transformar una marca en lider de su industria.
             </p>
 
@@ -66,14 +66,14 @@ const Philosophy = () => {
                 className="glass rounded-lg p-4 border border-primary-600/30"
               >
                 <div className="text-3xl font-bold gradient-text-purple">+5</div>
-                <div className="text-sm text-gray-400 mt-1">Años de experiencia</div>
+                <div className="text-sm text-ink-muted mt-1">Años de experiencia</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="glass rounded-lg p-4 border border-primary-600/30"
               >
                 <div className="text-3xl font-bold gradient-text-purple">+100</div>
-                <div className="text-sm text-gray-400 mt-1">Marcas escaladas</div>
+                <div className="text-sm text-ink-muted mt-1">Marcas escaladas</div>
               </motion.div>
             </div>
           </motion.div>
@@ -110,7 +110,7 @@ const Philosophy = () => {
                   }}
                   className="absolute glass rounded-lg p-4 border border-primary-600/30"
                 >
-                  <div className="text-sm font-semibold text-primary-300">
+                  <div className="text-sm font-semibold text-primary-700">
                     {card.label}
                   </div>
                 </motion.div>
@@ -127,7 +127,7 @@ const Philosophy = () => {
           variants={containerVariants}
         >
           <h3 className="text-3xl font-bold mb-12 text-center">
-            <span className="text-white">PILARES DE</span>{' '}
+            <span className="text-ink">PILARES DE</span>{' '}
             <span className="gradient-text-purple">NUESTRA FILOSOFÍA</span>
           </h3>
 
@@ -149,10 +149,10 @@ const Philosophy = () => {
                     </span>
                   </motion.div>
                   <div>
-                    <h4 className="text-xl font-bold text-white mb-2">
+                    <h4 className="text-xl font-bold text-ink mb-2">
                       {pillar.title}
                     </h4>
-                    <p className="text-gray-400">
+                    <p className="text-ink-muted">
                       {pillar.description}
                     </p>
                   </div>

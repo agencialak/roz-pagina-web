@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import { setPageSeo } from '../utils/seo'
 import Hero from './Hero'
+import CustomerJourney from './CustomerJourney'
 import Clients from './Clients'
 import Services from './Services'
+import ChannelsFlow from './ChannelsFlow'
 import Philosophy from './Philosophy'
 import Team from './Team'
 import Results from './Results'
@@ -19,9 +21,9 @@ function HomePage() {
   return (
     <main className="overflow-hidden relative">
       {/* Video Background */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
+      <div className="fixed inset-0 -z-10 overflow-hidden bg-surface">
         <video
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-[0.06] mix-blend-multiply"
           muted
           playsInline
           autoPlay
@@ -29,12 +31,14 @@ function HomePage() {
         >
           <source src="/hero-background.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-surface/80" />
       </div>
 
       <Hero />
+      <CustomerJourney />
       <Clients />
       <Services />
+      <ChannelsFlow />
       <Philosophy />
       <Team />
       <Results />

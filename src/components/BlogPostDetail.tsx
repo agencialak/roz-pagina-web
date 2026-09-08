@@ -12,7 +12,7 @@ const renderItalics = (text: string, keyPrefix: number) => {
   const parts = text.split(/\*(.+?)\*/g)
   return parts.map((part, i) =>
     i % 2 === 1 ? (
-      <em key={`${keyPrefix}-${i}`} className="text-gray-400">
+      <em key={`${keyPrefix}-${i}`} className="text-ink-muted">
         {part}
       </em>
     ) : (
@@ -26,7 +26,7 @@ const renderInline = (text: string) => {
   const parts = text.split(/\*\*(.+?)\*\*/g)
   return parts.map((part, i) =>
     i % 2 === 1 ? (
-      <strong key={i} className="text-white font-semibold">
+      <strong key={i} className="text-ink font-semibold">
         {part}
       </strong>
     ) : (
@@ -89,12 +89,12 @@ const BlogPostDetail = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center px-4">
+      <div className="min-h-screen bg-surface flex items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-white mb-4">Post no encontrado</h1>
+          <h1 className="text-3xl font-bold text-ink mb-4">Post no encontrado</h1>
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold"
           >
             <ArrowLeft size={20} />
             Volver al blog
@@ -105,14 +105,14 @@ const BlogPostDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate('/blog')}
-          className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors mb-8 group"
+          className="flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors mb-8 group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           Volver al blog
@@ -133,12 +133,12 @@ const BlogPostDetail = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink mb-6">
             {post.title}
           </h1>
 
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-gray-400 border-b border-white/10 pb-6">
+          <div className="flex flex-wrap items-center gap-6 text-ink-muted border-b border-ink/10 pb-6">
             <div className="flex items-center gap-2">
               <User size={18} />
               <span className="text-sm">{post.author}</span>
@@ -170,7 +170,7 @@ const BlogPostDetail = () => {
           {post.images && post.images.length > 0 ? (
             <BlogCarousel images={[post.image, ...post.images]} title={post.title} />
           ) : (
-            <div className="mb-12 rounded-lg overflow-hidden border border-white/10">
+            <div className="mb-12 rounded-lg overflow-hidden border border-ink/10">
               <img
                 src={post.image}
                 alt={post.title}
@@ -185,20 +185,20 @@ const BlogPostDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="prose prose-invert max-w-none mb-16"
+          className="prose max-w-none mb-16"
         >
-          <div className="text-gray-300 space-y-6 leading-relaxed">
+          <div className="text-ink-muted space-y-6 leading-relaxed">
             {post.content.split('\n\n').map((paragraph, idx) => {
               if (paragraph.startsWith('# ')) {
                 return (
-                  <h1 key={idx} className="text-3xl font-bold text-white mt-8 mb-4">
+                  <h1 key={idx} className="text-3xl font-bold text-ink mt-8 mb-4">
                     {paragraph.replace('# ', '')}
                   </h1>
                 )
               }
               if (paragraph.startsWith('## ')) {
                 return (
-                  <h2 key={idx} className="text-2xl font-bold text-white mt-8 mb-4">
+                  <h2 key={idx} className="text-2xl font-bold text-ink mt-8 mb-4">
                     {paragraph.replace('## ', '')}
                   </h2>
                 )
@@ -218,7 +218,7 @@ const BlogPostDetail = () => {
                 return (
                   <div
                     key={idx}
-                    className="my-8 border-t border-white/10"
+                    className="my-8 border-t border-ink/10"
                   />
                 )
               }
@@ -236,19 +236,19 @@ const BlogPostDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 pt-12 border-t border-white/10"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 pt-12 border-t border-ink/10"
         >
           {/* Previous Post */}
           {prevPost ? (
             <Link
               to={`/blog/${prevPost.slug}`}
-              className="group bg-white/5 border border-white/10 rounded-lg p-6 hover:border-primary-400/30 hover:bg-white/10 transition-all"
+              className="group bg-surface-card border border-ink/10 rounded-lg p-6 hover:border-primary-400/40 hover:shadow-lg transition-all"
             >
-              <div className="flex items-center gap-2 text-primary-400 mb-3 group-hover:gap-3 transition-all">
+              <div className="flex items-center gap-2 text-primary-600 mb-3 group-hover:gap-3 transition-all">
                 <ArrowLeft size={18} />
                 <span className="text-sm font-semibold">Post anterior</span>
               </div>
-              <h3 className="text-white font-bold group-hover:text-primary-400 transition-colors line-clamp-2">
+              <h3 className="text-ink font-bold group-hover:text-primary-600 transition-colors line-clamp-2">
                 {prevPost.title}
               </h3>
             </Link>
@@ -260,13 +260,13 @@ const BlogPostDetail = () => {
           {nextPost ? (
             <Link
               to={`/blog/${nextPost.slug}`}
-              className="group bg-white/5 border border-white/10 rounded-lg p-6 hover:border-primary-400/30 hover:bg-white/10 transition-all text-right"
+              className="group bg-surface-card border border-ink/10 rounded-lg p-6 hover:border-primary-400/40 hover:shadow-lg transition-all text-right"
             >
-              <div className="flex items-center justify-end gap-2 text-primary-400 mb-3 group-hover:gap-3 transition-all">
+              <div className="flex items-center justify-end gap-2 text-primary-600 mb-3 group-hover:gap-3 transition-all">
                 <span className="text-sm font-semibold">Siguiente post</span>
                 <ArrowLeft size={18} className="rotate-180" />
               </div>
-              <h3 className="text-white font-bold group-hover:text-primary-400 transition-colors line-clamp-2">
+              <h3 className="text-ink font-bold group-hover:text-primary-600 transition-colors line-clamp-2">
                 {nextPost.title}
               </h3>
             </Link>
@@ -282,10 +282,10 @@ const BlogPostDetail = () => {
           transition={{ delay: 0.5 }}
           className="mt-16 bg-gradient-to-r from-primary-600/20 to-purple-600/20 border border-primary-400/20 rounded-lg p-8 text-center"
         >
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-2xl font-bold text-ink mb-4">
             ¿Necesitas una estrategia digital como estas?
           </h3>
-          <p className="text-gray-400 mb-6">
+          <p className="text-ink-muted mb-6">
             Llevamos más de 300 proyectos exitosos. Cuéntanos tu negocio y diseñamos una estrategia a medida.
           </p>
           <a

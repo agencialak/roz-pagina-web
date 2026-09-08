@@ -1,27 +1,35 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { containerVariants, fadeUpVariants } from '../utils/animations'
 import { ArrowLeft } from 'lucide-react'
+import { setPageSeo } from '../utils/seo'
 
-interface PrivacyPolicyProps {
-  onBack?: () => void
-}
+const PrivacyPolicy = () => {
+  const navigate = useNavigate()
 
-const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
+  useEffect(() => {
+    setPageSeo({
+      title: 'Política de Privacidad | ROZ Social Media',
+      description:
+        'Cómo ROZ Social Media recopila y usa datos a través de Microsoft Clarity, Google Analytics y Meta Pixel.',
+      path: '/privacidad',
+    })
+  }, [])
+
   return (
-    <div className="min-h-screen bg-black pt-20 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Back Button */}
-        {onBack && (
-          <motion.button
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            onClick={onBack}
-            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors mb-8"
-          >
-            <ArrowLeft size={20} />
-            Volver
-          </motion.button>
-        )}
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors mb-8 group"
+        >
+          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          Volver a la página principal
+        </motion.button>
 
         {/* Header */}
         <motion.div
@@ -32,13 +40,13 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
         >
           <motion.h1
             variants={fadeUpVariants}
-            className="text-4xl sm:text-5xl font-black text-white mb-6"
+            className="text-4xl sm:text-5xl font-black text-ink mb-6"
           >
             Política de Privacidad
           </motion.h1>
           <motion.p
             variants={fadeUpVariants}
-            className="text-lg text-gray-300"
+            className="text-lg text-ink-muted"
           >
             Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
           </motion.p>
@@ -49,11 +57,11 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="space-y-8 text-gray-300"
+          className="space-y-8 text-ink-muted"
         >
           {/* Section 1 */}
           <motion.section variants={fadeUpVariants}>
-            <h2 className="text-2xl font-bold text-white mb-4">1. Microsoft Clarity</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">1. Microsoft Clarity</h2>
             <p className="mb-4">
               Asociados con Microsoft Clarity y Microsoft Advertising capturamos cómo usas nuestro sitio a través de métricas
               de comportamiento, mapas de calor y reproducción de sesiones para mejorar y comercializar nuestros productos/servicios.
@@ -69,7 +77,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
                 href="https://www.microsoft.com/es-mx/privacy/privacystatement"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 underline"
+                className="text-primary-600 hover:text-primary-700 underline"
               >
                 Declaración de Privacidad de Microsoft
               </a>
@@ -79,7 +87,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
 
           {/* Section 2 */}
           <motion.section variants={fadeUpVariants}>
-            <h2 className="text-2xl font-bold text-white mb-4">2. Google Analytics</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">2. Google Analytics</h2>
             <p className="mb-4">
               Utilizamos Google Analytics para entender cómo los usuarios interactúan con nuestro sitio web.
               Esta información nos ayuda a mejorar nuestros servicios y contenido.
@@ -90,7 +98,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 underline"
+                className="text-primary-600 hover:text-primary-700 underline"
               >
                 Política de Privacidad de Google
               </a>
@@ -100,7 +108,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
 
           {/* Section 3 */}
           <motion.section variants={fadeUpVariants}>
-            <h2 className="text-2xl font-bold text-white mb-4">3. Meta Pixel</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">3. Meta Pixel</h2>
             <p className="mb-4">
               Utilizamos el Meta Pixel para rastrear conversiones, optimizar anuncios y construir audiencias para nuestras
               campañas publicitarias. Esto nos permite entender mejor el comportamiento de los usuarios y mejorar nuestros servicios.
@@ -111,7 +119,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
                 href="https://www.facebook.com/policies/cookies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-400 hover:text-primary-300 underline"
+                className="text-primary-600 hover:text-primary-700 underline"
               >
                 Política de Cookies de Meta
               </a>
@@ -121,7 +129,7 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
 
           {/* Section 4 */}
           <motion.section variants={fadeUpVariants}>
-            <h2 className="text-2xl font-bold text-white mb-4">4. Cookies</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">4. Cookies</h2>
             <p className="mb-4">
               Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio web.
               Las cookies nos ayudan a recordar tus preferencias y a entender cómo usas nuestro sitio.
@@ -134,20 +142,20 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
 
           {/* Section 5 */}
           <motion.section variants={fadeUpVariants}>
-            <h2 className="text-2xl font-bold text-white mb-4">5. Tus Derechos</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">5. Tus Derechos</h2>
             <p className="mb-4">
               Tienes el derecho a acceder, corregir o eliminar tus datos personales.
               Si tienes preguntas sobre nuestras prácticas de privacidad, puedes contactarnos en:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-400">
-              <li>Email: hola@rozsocial.com</li>
+            <ul className="list-disc list-inside space-y-2 text-ink-subtle">
+              <li>Email: rozagencia23@gmail.com</li>
               <li>WhatsApp: +57 321 851 5587</li>
             </ul>
           </motion.section>
 
           {/* Section 6 */}
           <motion.section variants={fadeUpVariants}>
-            <h2 className="text-2xl font-bold text-white mb-4">6. Cambios en esta Política</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">6. Cambios en esta Política</h2>
             <p>
               Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento.
               Los cambios serán efectivos inmediatamente después de ser publicados en nuestro sitio web.
@@ -157,22 +165,22 @@ const PrivacyPolicy = ({ onBack }: PrivacyPolicyProps) => {
           {/* Contact Section */}
           <motion.section
             variants={fadeUpVariants}
-            className="bg-white/5 border border-white/10 rounded-lg p-6 mt-12"
+            className="bg-surface-card border border-ink/10 rounded-lg p-6 mt-12"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">Contacto</h2>
+            <h2 className="text-2xl font-bold text-ink mb-4">Contacto</h2>
             <p className="mb-4">
               Si tienes preguntas o inquietudes sobre nuestra política de privacidad o nuestras prácticas de privacidad,
               no dudes en contactarnos:
             </p>
             <div className="space-y-3">
               <p>
-                <span className="text-primary-400 font-semibold">Email:</span> hola@rozsocial.com
+                <span className="text-primary-600 font-semibold">Email:</span> rozagencia23@gmail.com
               </p>
               <p>
-                <span className="text-primary-400 font-semibold">WhatsApp:</span> +57 321 851 5587
+                <span className="text-primary-600 font-semibold">WhatsApp:</span> +57 321 851 5587
               </p>
               <p>
-                <span className="text-primary-400 font-semibold">Ubicación:</span> Pereira, Risaralda, Colombia
+                <span className="text-primary-600 font-semibold">Ubicación:</span> Pereira, Risaralda, Colombia
               </p>
             </div>
           </motion.section>

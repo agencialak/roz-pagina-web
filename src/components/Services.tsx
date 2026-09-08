@@ -51,12 +51,12 @@ const Services = () => {
             variants={fadeUpVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
           >
-            <span className="text-white">NUESTROS</span>
+            <span className="text-ink">NUESTROS</span>
             <span className="block gradient-text-purple">SERVICIOS</span>
           </motion.h2>
           <motion.p
             variants={fadeUpVariants}
-            className="text-lg text-gray-300 max-w-2xl mx-auto"
+            className="text-lg text-ink-muted max-w-2xl mx-auto"
           >
             Soluciones integrales para posicionar, crecer y dominar digitalmente.
           </motion.p>
@@ -98,12 +98,12 @@ const Services = () => {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-ink mb-3">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-ink-muted leading-relaxed">
                     {service.description}
                   </p>
 
