@@ -522,6 +522,38 @@ No es una regla que aplique a cualquier cuenta — es la razón por la que revis
     readTime: 3,
     author: 'Nikolas García - ROZ Social Media',
   },
+  {
+    id: 'venta-entradas-evento-b2b-chile',
+    slug: 'vender-entradas-evento-b2b-chile-meta-ads',
+    title: 'Vender entradas a un evento B2B en otro país, con público de nicho',
+    excerpt: 'Cerramos una campaña para vender entradas a un evento B2B en Chile, de energías limpias y renovables. En 19 días conseguimos 21 entradas a $17,29 USD cada una, con un ROAS de 7,58x.',
+    content: `
+# Vender entradas a un evento B2B en otro país, con público de nicho
+
+Un evento presencial de nicho no se llena solo con ganas — se llena con datos.
+
+Hace poco cerramos una campaña para vender entradas a un evento B2B en Chile, enfocado en energías limpias y renovables. Público específico, nada masivo: nadie compra una entrada así porque sí.
+
+## Los números
+
+En 19 días de campaña conseguimos 21 entradas vendidas, a un costo por venta de $17,29 USD, con un ROAS de 7,58x — por cada dólar invertido en Meta Ads, recuperamos casi 8 en ventas de entradas.
+
+## Por qué funcionó
+
+No fue alcance masivo ni un público genérico. Fue segmentación fina, una oferta clara, y una campaña optimizada para que la gente compre — no solo para que la gente vea.
+
+Vender entradas a un evento presencial en otro país, con un público de nicho, también se puede hacer con Meta Ads bien configurado.
+
+---
+
+*Datos reales de campaña, cifras en USD según el reporte de Meta Ads.*
+    `,
+    image: '/blog/post_evento_chile_energias.png',
+    date: '2026-09-15',
+    category: 'casos',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
