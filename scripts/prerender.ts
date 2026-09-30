@@ -120,6 +120,103 @@ function postJsonLd(post: BlogPost) {
 
 const template = readFileSync(join(DIST, 'index.html'), 'utf8')
 
+// --- Página de inicio ---
+// Duplica (no importa) el copy de Hero/Services/Philosophy/Team/Results/Testimonials:
+// es el único contenido legible que ven los bots que no ejecutan JavaScript (la mayoría
+// de rastreadores de IA), así que debe mantenerse alineado con esos componentes.
+const homeServices = [
+  ['Redes Sociales', 'Gestión estratégica de presencia en todas las plataformas de Meta.'],
+  ['Producción de Contenido', 'Contenido que genera engagement y convierte audiencia.'],
+  ['Meta Ads', 'Campañas publicitarias estratégicas con ROI medible.'],
+  ['Branding', 'Identidad visual coherente y memorable para tu marca.'],
+  ['Estrategia Creativa', 'Conceptos innovadores que diferencian tu marca del mercado.'],
+  ['Posicionamiento', 'Autoridad digital y liderazgo en tu nicho de mercado.'],
+]
+
+const homePillars = [
+  ['Estrategia', 'Cada decisión está fundamentada en data y análisis profundo del mercado.'],
+  ['Posicionamiento', 'Construimos autoridad digital que diferencia tu marca en el mercado.'],
+  ['Crecimiento', 'Resultados medibles: más seguidores, más ventas, más impacto.'],
+  ['Escalabilidad', 'Sistemas que funcionan hoy y mañana, a cualquier escala.'],
+  ['Acompañamiento', 'Somos consejeros constantes de tu marca. Te asesoramos en cada decisión para que inviertas estratégicamente, no solo gastes presupuesto.'],
+]
+
+const homeTeam = [
+  ['Santiago Rosales C.', 'CEO - Estrategia y Productor'],
+  ['Laura Rosales C.', 'Administradora & Directora de Producción Audiovisual'],
+  ['Nikolas Garcia', 'Co-Fundador & Estratega Digital de Campañas Publicitarias'],
+  ['Kevin Ríos', 'Camarógrafo / Filmmaker'],
+  ['Paulina Villegas', 'Especialista en Edición de Video'],
+  ['Erika Valencia', 'Diseñadora Gráfica - Especialista en Redes Sociales'],
+  ['Juan Herrera', 'Asistente de Producción'],
+  ['Camila Echeverri', 'Directora Creativa & Gestora de Negocio'],
+  ['Lina Gómez', 'Socia Co-Fundadora - Operaciones USA'],
+  ['Valentina Correa', 'Asistente Administrativo'],
+]
+
+const homeTestimonials = [
+  ['Brian Lopez', '@troncos05', 'Gracias por el acompañamiento y crecimiento que hemos tenido juntos. Cracks'],
+  ['Paula Posada', '@odentoco', '¡Ellos son mi agencia favorita! Estuve mucho tiempo buscándolos, pero ahora que los encontré, no los suelto. Los recomiendo al 100%.'],
+  ['Camilo Arango', '@dr.camiloarango', 'Excelente equipo, producciones impecables con ellos.'],
+  ['Sara Alzate', '@anamorapereira', 'Triplicando en ventas gracias al acompañamiento de todo el equipo.'],
+  ['Katherine Muñoz', '@opticalet18perreira', 'Son los mejores, súper recomendados. Muchas gracias.'],
+]
+
+const homeBody = `
+<main>
+  <h1>Construimos marcas que venden</h1>
+  <p>Estrategia digital que convierte atención en crecimiento real. Posicionamiento, autoridad y resultados medibles para tu marca. Agencia digital premium con operaciones en Colombia y USA.</p>
+
+  <section id="servicios">
+    <h2>Nuestros servicios</h2>
+    <ul>
+      ${homeServices.map(([title, desc]) => `<li><strong>${escapeHtml(title)}</strong> — ${escapeHtml(desc)}</li>`).join('\n      ')}
+    </ul>
+  </section>
+
+  <section id="filosofia">
+    <h2>¿Qué es ROZ?</h2>
+    <p>Somos una agencia enfocada en construir marcas que dominan. No hacemos campañas genéricas ni tácticas de corto plazo.</p>
+    <p>Trabajamos en estrategia profunda, posicionamiento sostenible y crecimiento escalable. Cada proyecto es una oportunidad para transformar una marca en líder de su industria. +5 años de experiencia, +100 marcas escaladas.</p>
+    <ul>
+      ${homePillars.map(([title, desc]) => `<li><strong>${escapeHtml(title)}</strong> — ${escapeHtml(desc)}</li>`).join('\n      ')}
+    </ul>
+  </section>
+
+  <section id="equipo">
+    <h2>Equipo</h2>
+    <ul>
+      ${homeTeam.map(([name, role]) => `<li>${escapeHtml(name)} — ${escapeHtml(role)}</li>`).join('\n      ')}
+    </ul>
+  </section>
+
+  <section id="resultados">
+    <h2>Resultados que hablan por sí solos</h2>
+    <p>Números reales de proyectos reales. Cada métrica representa marcas que escalaron con ROZ.</p>
+    <ul>
+      <li>$100M+ COP invertidos en Meta Ads</li>
+      <li>100+ marcas trabajadas</li>
+      <li>+8 países de presencia y alcance</li>
+      <li>4 meses de life time value promedio</li>
+      <li>Resultados desde el primer mes</li>
+      <li>Soporte 7/7</li>
+    </ul>
+  </section>
+
+  <section id="testimonios">
+    <h2>Testimonios de clientes</h2>
+    <ul>
+      ${homeTestimonials.map(([name, handle, content]) => `<li>&ldquo;${escapeHtml(content)}&rdquo; — ${escapeHtml(name)} (${escapeHtml(handle)})</li>`).join('\n      ')}
+    </ul>
+  </section>
+
+  <p>Contacto: <a href="mailto:rozagencia23@gmail.com">rozagencia23@gmail.com</a> · WhatsApp +57 321 851 5587 · Pereira, Risaralda, Colombia. También en <a href="/blog">el blog</a>.</p>
+</main>`
+
+const homeHtml = injectRootContent(template, homeBody)
+writeFileSync(join(DIST, 'index.html'), homeHtml)
+console.log('prerender: index.html')
+
 // --- Página /blog (lista de artículos) ---
 const listBody = `
 <main>
