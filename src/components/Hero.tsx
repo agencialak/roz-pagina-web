@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../utils/animations'
-import { ArrowRight, ArrowDown } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ArrowDown, ArrowUpRight } from 'lucide-react'
 import ScrollRevealText from './ScrollRevealText'
 import RevealHeading from './RevealHeading'
 import { useCountUp } from '../hooks/useCountUp'
@@ -99,6 +100,17 @@ const Hero = () => {
             </span>
             <ArrowDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
           </a>
+
+          <Link
+            to="/blog"
+            className="group inline-flex items-center gap-2 text-sm sm:text-base font-medium text-ink hover:text-primary-700 transition-colors"
+          >
+            <span className="relative">
+              Leer el blog
+              <span className="absolute left-0 -bottom-0.5 h-px w-full bg-current origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300" />
+            </span>
+            <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </motion.div>
 
         <motion.div
