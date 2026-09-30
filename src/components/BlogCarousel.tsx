@@ -10,6 +10,8 @@ interface BlogCarouselProps {
 const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState<'left' | 'right'>('right')
+  // El visor adopta la proporción de las láminas (cuadradas o 4:5) para no dejar franjas vacías
+  const [ratio, setRatio] = useState(4 / 5)
 
   const goTo = (newIndex: number) => {
     setDirection(newIndex > index ? 'right' : 'left')
@@ -18,12 +20,16 @@ const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
 
   return (
     <div className="mb-12">
-      <div className="relative rounded-lg overflow-hidden border border-ink/10 bg-surface-muted aspect-square sm:aspect-[4/5]">
+      <div
+        style={{ aspectRatio: ratio }}
+        className="relative rounded-2xl overflow-hidden border border-ink/[0.06] bg-surface-muted shadow-[0_24px_60px_-35px_rgba(24,20,34,0.35)]"
+      >
         <AnimatePresence initial={false}>
           <motion.img
             key={index}
             src={images[index]}
             alt={`${title} - lámina ${index + 1} de ${images.length}`}
+            onLoad={index === 0 ? (e) => setRatio(e.currentTarget.naturalWidth / e.currentTarget.naturalHeight) : undefined}
             initial={{ opacity: 0, x: direction === 'right' ? 60 : -60 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction === 'right' ? -60 : 60 }}
@@ -37,7 +43,7 @@ const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
             <button
               type="button"
               onClick={() => goTo(index - 1)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white hover:bg-black/80 transition-colors"
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur border border-ink/10 shadow-sm flex items-center justify-center text-ink hover:bg-white transition-colors"
               aria-label="Lámina anterior"
             >
               <ChevronLeft size={20} />
@@ -45,12 +51,12 @@ const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
             <button
               type="button"
               onClick={() => goTo(index + 1)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white hover:bg-black/80 transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur border border-ink/10 shadow-sm flex items-center justify-center text-ink hover:bg-white transition-colors"
               aria-label="Siguiente lámina"
             >
               <ChevronRight size={20} />
             </button>
-            <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-black/60 text-xs text-gray-300 font-medium">
+            <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-white/90 border border-ink/10 text-xs text-ink-muted font-medium tabular-nums">
               {index + 1} / {images.length}
             </div>
           </>
@@ -65,7 +71,7 @@ const BlogCarousel = ({ images, title }: BlogCarouselProps) => {
               type="button"
               onClick={() => goTo(i)}
               className={`h-2 rounded-full transition-all ${
-                i === index ? 'w-6 bg-primary-500' : 'w-2 bg-ink/15 hover:bg-ink/30'
+                i === index ? 'w-6 bg-primary-600' : 'w-2 bg-ink/15 hover:bg-ink/30'
               }`}
               aria-label={`Ir a la lámina ${i + 1}`}
             />

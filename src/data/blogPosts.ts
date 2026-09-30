@@ -561,6 +561,132 @@ Vender entradas a un evento presencial en otro país, con un público de nicho, 
     readTime: 3,
     author: 'Nikolas García - ROZ Social Media',
   },
+  {
+    id: 'conjuntos-dos-vendedores',
+    slug: 'conjuntos-de-anuncios-dos-vendedores',
+    title: 'Dos conjuntos de anuncios, dos vendedores distintos',
+    excerpt: 'Cuando prendemos varios conjuntos de anuncios en una misma campaña, no estamos duplicando el mismo anuncio. Estamos poniendo a trabajar a dos vendedores distintos, cada uno con su propio criterio.',
+    content: `
+# Dos conjuntos de anuncios, dos vendedores distintos
+
+Cuando prendemos varios conjuntos de anuncios en una misma campaña, no estamos duplicando el mismo anuncio. Estamos poniendo a trabajar a dos vendedores distintos, cada uno con su propio criterio.
+
+## El vendedor sin instrucciones: Advantage+
+
+A un conjunto — el de Advantage+ — casi no le damos instrucciones. Es como un vendedor al que le decimos "consígueme clientes" y dejamos que él decida, con toda la información que tiene, quién es la persona que más probablemente va a comprar.
+
+## El vendedor con instrucciones puntuales
+
+Al otro — intereses, público personalizado o similar — sí le damos instrucciones puntuales. Es como un vendedor al que le dices exactamente qué tipo de cliente buscar: esta edad, este comportamiento, esta similitud con los que ya compraron.
+
+## Ninguno es mejor que el otro
+
+Cada uno trae un cliente distinto — uno consigue una venta que el otro nunca hubiera tocado, porque estaba buscando en un lugar diferente.
+
+Por eso casi nunca dejamos corriendo un solo tipo de conjunto en una campaña. No es redundancia: es tener más de un vendedor buscando al mismo tiempo, cada uno mirando un ángulo distinto del mercado.
+    `,
+    image: '/blog/post_dos_vendedores_conjuntos.jpg',
+    date: '2026-09-21',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'anuncios-herramientas-vendedor',
+    slug: 'anuncios-herramientas-del-vendedor',
+    title: 'Una herramienta o una caja completa: los anuncios de tu campaña',
+    excerpt: 'Dar un solo anuncio es como mandar a un vendedor a la calle con un solo discurso memorizado. Con varias piezas, le das una caja de herramientas en vez de un solo martillo.',
+    content: `
+# Una herramienta o una caja completa: los anuncios de tu campaña
+
+Si los conjuntos de anuncios son vendedores distintos, cada uno con su propio criterio, los anuncios que le damos a cada vendedor son sus herramientas.
+
+## Un solo anuncio, un solo discurso
+
+Dar un solo anuncio es como mandar a un vendedor a la calle con un solo discurso memorizado. No importa con quién hable — usa las mismas palabras, el mismo gancho, el mismo argumento. A algunos les va a funcionar. A la mayoría, no.
+
+## Varias piezas, una caja de herramientas
+
+Cuando le damos varias piezas — distintos ángulos, formatos, mensajes — le estamos dando una caja de herramientas en vez de un solo martillo. Ese vendedor prueba con cada cliente cuál herramienta conecta: a uno le convence ver el precio de una vez, a otro necesita ver el producto en uso, a otro le llega más un testimonio real.
+
+## El error más común
+
+Es el error que más vemos cuando un dueño de negocio arma su propia campaña: sube un solo anuncio — a veces ni pensado para vender, solo una foto del producto — y espera que le hable a todo el mundo por igual.
+
+Mientras más herramientas le demos a cada vendedor, más rápido encuentra la que cierra la venta. Menos herramientas, más tiempo (y presupuesto) buscando a ciegas.
+    `,
+    image: '/blog/post_herramientas_vendedor.jpg',
+    date: '2026-09-23',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'humanos-no-robots',
+    slug: 'no-le-vendes-a-un-robot',
+    title: 'No le vendes a un robot. Le vendes a una persona',
+    excerpt: 'La mayoría de las personas no compran la primera vez que ven un anuncio. Lo ven una, dos, tres, hasta cuatro veces al día — y deciden tres días después. O cinco. U ocho. O diez.',
+    content: `
+# No le vendes a un robot. Le vendes a una persona
+
+Hablamos de los conjuntos de anuncios como vendedores, y de los anuncios como sus herramientas. Falta el otro lado: el cliente. Porque muchas veces se nos olvida que le estamos vendiendo a humanos, no a robots.
+
+## La expectativa equivocada
+
+Es un error común: como es la plata del dueño del negocio, su anuncio, su empresa, espera que el anuncio aparezca una vez y la persona compre de inmediato. Así no funciona.
+
+## Lo que pasa en la cabeza del cliente
+
+Detrás de cada clic hay una persona con psicología del consumidor, comportamiento de compra y procesos mentales que no se saltan solo porque el anuncio es bueno. Hay neuromarketing de por medio: la mente no decide comprar apenas ve un anuncio — lo procesa, lo compara, lo duda, lo posterga.
+
+La mayoría de las personas no compran la primera vez que ven un anuncio. Lo ven una, dos, tres, hasta cuatro veces al día — y toman la decisión tres días después. O cinco. U ocho. O diez.
+
+## Presencia sostenida, no un disparo único
+
+Por eso es tan importante estar presente en redes con pauta de forma sostenida. No es un anuncio compitiendo por un clic: es acompañar el proceso real que hace un humano antes de decidir comprar.
+
+Entender cómo piensa y decide una persona no es un detalle técnico. Es la diferencia entre un anuncio que se ve y uno que realmente vende.
+    `,
+    image: '/blog/post_humanos_no_robots.jpg',
+    date: '2026-09-25',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
+  {
+    id: 'camino-real-del-cliente',
+    slug: 'el-camino-real-antes-de-una-compra',
+    title: 'El camino real antes de una compra',
+    excerpt: 'Un cliente no compra la primera vez que ve tu anuncio. Puede verlo 15, 20 veces, entre mil interrupciones, hasta que un día lo ve completo — y ya está mucho más cerca de comprar.',
+    content: `
+# El camino real antes de una compra
+
+Un cliente no compra la primera vez que ve tu anuncio. Este es el camino real que puede recorrer antes de decidir — con toda la vida real metida en el medio.
+
+## Cuatro intentos, cuatro interrupciones
+
+Lo ve la primera vez, pero le entra un mensaje de WhatsApp y sale corriendo sin terminar de verlo. Días después lo vuelve a ver, pero suena el teléfono. Otro día se acuerda que tenía que revisar otra red social y se va. Otro día más, va manejando y bloquea el celular sin querer.
+
+## Y sigue pasando, una y otra vez
+
+Puede verlo 15, 20 veces, en medio de mil interrupciones distintas — hasta que un día, sin ninguna interrupción, lo ve completo. Ya conoce la marca, el producto, lo que ofreces, porque lleva días viéndolo. Y ese día está mucho más cerca de comprar.
+
+## Eso no pasa solo
+
+Pasa porque la marca estuvo presente, una y otra vez, el tiempo suficiente. Así funciona el comportamiento real de una persona en redes — no un robot que decide apenas ve un anuncio.
+    `,
+    image: '/blog/carrusel_camino_cliente_1.jpg',
+    images: [
+      '/blog/carrusel_camino_cliente_2.jpg',
+      '/blog/carrusel_camino_cliente_3.jpg',
+      '/blog/carrusel_camino_cliente_4.jpg',
+      '/blog/carrusel_camino_cliente_5.jpg',
+    ],
+    date: '2026-09-28',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas García - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
