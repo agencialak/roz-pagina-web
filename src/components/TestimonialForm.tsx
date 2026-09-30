@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import RevealHeading from './RevealHeading'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { Star, Send } from 'lucide-react'
 import { useState } from 'react'
@@ -107,13 +108,10 @@ const TestimonialForm = () => {
               variants={containerVariants}
               className="text-center mb-12 sm:mb-16"
             >
-              <motion.h2
-                variants={itemVariants}
-                className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
-              >
-                <span className="text-ink">COMPARTE TU</span>
-                <span className="block gradient-text-purple">TESTIMONIO</span>
-              </motion.h2>
+              <RevealHeading
+                className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-ink mb-4 sm:mb-6"
+                lines={[<>Comparte tu <span className="accent-serif gradient-text-purple text-[1.1em]">testimonio</span></>]}
+              />
               <motion.p
                 variants={itemVariants}
                 className="text-sm sm:text-lg text-ink-muted max-w-2xl mx-auto px-2"

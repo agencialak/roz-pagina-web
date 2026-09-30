@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
+import { scrollToTarget } from '../lib/smoothScroll'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -25,12 +26,7 @@ const Footer = () => {
   ]
 
   const handleNavClick = (href: string, type: string) => {
-    if (type === 'anchor') {
-      const element = document.querySelector(href)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
+    if (type === 'anchor') scrollToTarget(href)
   }
 
   const socialLinks = [

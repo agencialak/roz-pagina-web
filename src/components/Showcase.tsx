@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import RevealHeading from './RevealHeading'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { ImageIcon } from 'lucide-react'
 
@@ -70,13 +71,11 @@ const Showcase = () => {
           variants={containerVariants}
           className="text-center mb-12 sm:mb-16"
         >
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
-          >
-            <span className="text-ink">GALERÍA DE</span>
-            <span className="block gradient-text-purple">PROYECTOS</span>
-          </motion.h2>
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-ink-subtle mb-4">Portafolio</p>
+          <RevealHeading
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-ink mb-4 sm:mb-6"
+            lines={[<>Galería de <span className="accent-serif gradient-text-purple text-[1.1em]">proyectos</span></>]}
+          />
           <motion.p
             variants={itemVariants}
             className="text-sm sm:text-lg text-ink-muted max-w-2xl mx-auto px-2"

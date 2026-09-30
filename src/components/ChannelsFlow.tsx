@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import { motion } from 'framer-motion'
 import { Facebook, Instagram, MessageCircle, Infinity as InfinityIcon, DollarSign } from 'lucide-react'
+import RevealHeading from './RevealHeading'
 
 const channels = [
   { Icon: Facebook, label: 'Facebook', bg: 'bg-[#1877F2]', x: 8 },
@@ -20,16 +21,13 @@ const ChannelsFlow = () => {
   return (
     <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3"
-        >
-          <span className="text-ink">Gestionamos tus canales. </span>
-          <span className="gradient-text-purple">Los convertimos en resultados.</span>
-        </motion.h2>
+        <RevealHeading
+          className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.03em] text-ink mb-4"
+          lines={[
+            'Gestionamos tus canales.',
+            <span className="accent-serif gradient-text-purple text-[1.1em]">Los convertimos en resultados.</span>,
+          ]}
+        />
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}

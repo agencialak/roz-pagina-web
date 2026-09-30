@@ -1,4 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import RevealHeading from './RevealHeading'
+import TiltCard from './TiltCard'
 import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
@@ -150,13 +152,14 @@ const Team = () => {
           variants={containerVariants}
           className="text-center mb-20"
         >
-          <motion.h2
-            variants={fadeUpVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
-          >
-            <span className="text-ink">NUESTRO EQUIPO</span>
-            <span className="block gradient-text-purple">Expertos en Estrategia Digital</span>
-          </motion.h2>
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-ink-subtle mb-4">Equipo</p>
+          <RevealHeading
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-ink mb-6"
+            lines={[
+              'Nuestro equipo,',
+              <span className="accent-serif gradient-text-purple text-[1.1em]">expertos en estrategia digital</span>,
+            ]}
+          />
           <motion.p
             variants={fadeUpVariants}
             className="text-lg text-ink-muted max-w-2xl mx-auto"
@@ -203,37 +206,24 @@ const Team = () => {
                           className="group"
                         >
                           {/* Card Container - Vertical Layout */}
-                          <motion.div
-                            whileHover={{ y: -5 }}
-                            className="flex flex-col items-center gap-6"
-                          >
-                            {/* Image Container - Outside Card */}
-                            <motion.div
-                              whileHover={{
-                                boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
-                              }}
-                              className="relative w-full overflow-hidden rounded-2xl"
-                            >
-                              {/* Image */}
+                          <TiltCard className="rounded-2xl" maxTilt={5}>
+                          <div className="flex flex-col items-center gap-4 h-full rounded-2xl bg-surface-card border border-ink/[0.06] p-3 group-hover:border-primary-600/30 group-hover:shadow-[0_24px_60px_-28px_rgba(109,40,255,0.4)] transition-[border-color,box-shadow] duration-300">
+                            <div className="relative w-full overflow-hidden rounded-xl bg-gradient-to-b from-primary-50 to-surface-muted">
                               <div className="relative w-full h-64 overflow-hidden">
                                 <img
                                   src={member.image}
                                   alt={`${member.name} - ${member.role} en ROZ Social Media`}
-                                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
                                   onError={(e) => {
                                     e.currentTarget.src = ''
                                     e.currentTarget.style.display = 'none'
                                   }}
                                 />
                               </div>
-                            </motion.div>
+                            </div>
 
-                            {/* Info Container - Inside Card */}
-                            <motion.div
-                              className="w-full glass rounded-2xl p-6 flex flex-col justify-center border border-primary-600/30 group-hover:border-primary-600/60 transition-colors"
-                            >
-                              {/* Name */}
-                              <h3 className="text-xl md:text-2xl font-bold text-ink mb-2">
+                            <div className="w-full px-3 pb-3 flex flex-col justify-center">
+                              <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-ink mb-1">
                                 {member.name}
                               </h3>
 
@@ -242,12 +232,12 @@ const Team = () => {
                                 {member.role}
                               </p>
 
-                              {/* Bio */}
                               <p className="text-ink-muted leading-relaxed text-sm">
                                 {member.bio}
                               </p>
-                            </motion.div>
-                          </motion.div>
+                            </div>
+                          </div>
+                          </TiltCard>
                         </motion.div>
                     )
                   })}

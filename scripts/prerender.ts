@@ -35,7 +35,8 @@ function contentToHtml(content: string): string {
     .split('\n\n')
     .map((block) => {
       const b = block.trim()
-      if (b.startsWith('# ')) return `<h1>${inline(b.slice(2))}</h1>`
+      // El título ya va como <h1> del artículo; repetirlo daría dos <h1>
+      if (b.startsWith('# ')) return ''
       if (b.startsWith('## ')) return `<h2>${inline(b.slice(3))}</h2>`
       if (b.startsWith('---')) return '<hr />'
       if (b.startsWith('- ')) {

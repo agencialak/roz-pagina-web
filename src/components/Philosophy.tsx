@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { slideInLeftVariants, slideInRightVariants, containerVariants, itemVariants } from '../utils/animations'
+import RevealHeading from './RevealHeading'
 
 const Philosophy = () => {
   const pillars = [
@@ -26,7 +27,7 @@ const Philosophy = () => {
   ]
 
   return (
-    <section id="filosofia" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="filosofia" className="relative py-28 sm:py-36 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -48,10 +49,11 @@ const Philosophy = () => {
             viewport={{ once: true, margin: '-100px' }}
             variants={slideInLeftVariants}
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
-              <span className="block text-ink mb-2">¿QUÉ ES</span>
-              <span className="gradient-text-purple">ROZ?</span>
-            </h2>
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-ink-subtle mb-4">Estrategia</p>
+            <RevealHeading
+              className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-ink mb-6"
+              lines={[<>¿Qué es <span className="accent-serif gradient-text-purple text-[1.15em]">ROZ?</span></>]}
+            />
             <p className="text-lg text-ink-muted leading-relaxed mb-6">
               Somos una agencia enfocada en construir marcas que dominan. No hacemos campañas genéricas ni tácticas de corto plazo.
             </p>
@@ -126,30 +128,25 @@ const Philosophy = () => {
           viewport={{ once: true, margin: '-100px' }}
           variants={containerVariants}
         >
-          <h3 className="text-3xl font-bold mb-12 text-center">
-            <span className="text-ink">PILARES DE</span>{' '}
-            <span className="gradient-text-purple">NUESTRA FILOSOFÍA</span>
-          </h3>
+          <RevealHeading
+            as="h3"
+            className="text-3xl sm:text-4xl font-semibold tracking-[-0.03em] text-ink mb-12 text-center"
+            lines={[<>Pilares de <span className="accent-serif gradient-text-purple text-[1.1em]">nuestra filosofía</span></>]}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pillars.map((pillar, idx) => (
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ x: 10 }}
-                className="glass rounded-2xl p-8 border border-primary-600/30 hover:border-primary-600/60 transition-colors group"
+                className="rounded-2xl p-8 bg-surface-card border border-ink/[0.06] hover:border-primary-600/30 hover:shadow-[0_20px_50px_-24px_rgba(109,40,255,0.35)] transition-[border-color,box-shadow] duration-300 group"
               >
-                <div className="flex items-start gap-4">
-                  <motion.div
-                    className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center flex-shrink-0"
-                    whileHover={{ rotate: 20, scale: 1.1 }}
-                  >
-                    <span className="text-xl font-bold text-white">
-                      {idx + 1}
-                    </span>
-                  </motion.div>
+                <div className="flex items-start gap-5">
+                  <span className="accent-serif text-4xl leading-none text-primary-600/80 tabular-nums pt-1 flex-shrink-0">
+                    {String(idx + 1).padStart(2, '0')}
+                  </span>
                   <div>
-                    <h4 className="text-xl font-bold text-ink mb-2">
+                    <h4 className="text-xl font-semibold tracking-tight text-ink mb-2">
                       {pillar.title}
                     </h4>
                     <p className="text-ink-muted">

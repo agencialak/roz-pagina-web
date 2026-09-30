@@ -1,186 +1,88 @@
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../utils/animations'
-import { useEffect, useState } from 'react'
+import RevealHeading from './RevealHeading'
+import { useCountUp } from '../hooks/useCountUp'
+
+const BigStat = ({ number, label, description }: { number: string; label: string; description: string }) => {
+  const { ref, display } = useCountUp(number)
+  return (
+    <motion.div variants={itemVariants} className="px-2 sm:px-8 py-8 md:py-2 text-center md:text-left">
+      <span ref={ref} className="block text-6xl sm:text-7xl font-semibold tracking-[-0.04em] gradient-text-light tabular-nums">
+        {display}
+      </span>
+      <h3 className="mt-5 text-lg sm:text-xl font-semibold text-white">{label}</h3>
+      <p className="mt-1 text-white/55">{description}</p>
+    </motion.div>
+  )
+}
 
 const Results = () => {
-  const [counts, setCounts] = useState({
-    views: 0,
-    projects: 0,
-    revenue: 0,
-  })
-
-  useEffect(() => {
-    const targets = {
-      views: 100,
-      projects: 100,
-      revenue: 7,
-    }
-
-    const duration = 2000
-    const steps = 60
-    const stepDuration = duration / steps
-
-    let currentStep = 0
-    const interval = setInterval(() => {
-      currentStep++
-      const progress = currentStep / steps
-
-      setCounts({
-        views: Math.floor(targets.views * progress),
-        projects: Math.floor(targets.projects * progress),
-        revenue: Math.floor(targets.revenue * progress),
-      })
-
-      if (currentStep >= steps) {
-        clearInterval(interval)
-        setCounts(targets)
-      }
-    }, stepDuration)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const stats = [
-    {
-      number: `$${counts.views}M+ COP`,
-      label: 'Invertidos en Meta Ads',
-      description: 'Presupuesto total manejado',
-    },
-    {
-      number: `${counts.projects}+`,
-      label: 'Marcas Trabajadas',
-      description: 'Empresas escaladas con ROZ',
-    },
-    {
-      number: '+8',
-      label: 'Países',
-      description: 'Presencia global de alcance',
-    },
-  ]
-
   return (
-    <section id="resultados" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{ duration: 15, repeat: Infinity }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-primary-600/10 to-primary-900/10 rounded-full blur-3xl"
-        />
-      </div>
+    <section id="resultados" className="relative py-6 sm:py-10 px-3 sm:px-6">
+      <div className="relative max-w-7xl mx-auto overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-ink px-6 sm:px-12 lg:px-16 py-20 sm:py-28">
+        {/* Resplandores internos */}
+        <div aria-hidden className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-24 w-[520px] h-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(139,92,255,0.35),transparent)]" />
+          <div className="absolute -bottom-40 -left-24 w-[460px] h-[460px] rounded-full bg-[radial-gradient(closest-side,rgba(109,40,255,0.25),transparent)]" />
+          <div
+            className="absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage:
+                'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)',
+              backgroundSize: '64px 64px',
+              maskImage: 'radial-gradient(ellipse 70% 60% at 50% 40%, #000, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 40%, #000, transparent 80%)',
+            }}
+          />
+        </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          variants={containerVariants}
-          className="text-center mb-20"
-        >
-          <motion.h2
-            variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
-          >
-            <span className="text-ink">RESULTADOS QUE</span>
-            <span className="block gradient-text-purple">HABLAN POR SÍ SOLOS</span>
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-ink-muted max-w-2xl mx-auto"
-          >
-            Números reales de proyectos reales. Cada métrica representa marcas que escalaron con ROZ.
-          </motion.p>
-        </motion.div>
+        <div className="relative z-10">
+          <div className="text-center mb-16 sm:mb-20">
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-white/45 mb-4">Resultados</p>
+            <RevealHeading
+              className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-white mb-6"
+              lines={['Resultados que', <span className="accent-serif gradient-text-light text-[1.1em]">hablan por sí solos</span>]}
+            />
+            <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              Números reales de proyectos reales. Cada métrica representa marcas que escalaron con ROZ.
+            </p>
+          </div>
 
-        {/* Stats Grid */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
-        >
-          {stats.map((stat, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className="group"
-            >
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 mb-16 sm:mb-20"
+          >
+            <BigStat number="$100M+" label="COP invertidos en Meta Ads" description="Presupuesto total manejado" />
+            <BigStat number="100+" label="Marcas trabajadas" description="Empresas escaladas con ROZ" />
+            <BigStat number="+8" label="Países" description="Presencia global de alcance" />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={containerVariants}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
+          >
+            {[
+              { value: '4 meses', label: 'Life time value promedio' },
+              { value: 'Mes 1', label: 'Resultados desde el primer mes' },
+              { value: '7/7', label: 'Soporte todos los días' },
+            ].map((metric) => (
               <motion.div
-                whileHover={{
-                  boxShadow: '0 0 60px rgba(109, 40, 255, 0.5)',
-                  borderColor: 'rgba(109, 40, 255, 0.6)',
-                }}
-                className="glass rounded-3xl p-12 border border-primary-600/30 transition-all h-full text-center"
+                key={metric.label}
+                variants={itemVariants}
+                className="rounded-2xl p-5 text-center bg-white/[0.04] border border-white/10 hover:bg-white/[0.07] transition-colors"
               >
-                {/* Number */}
-                <motion.div
-                  className="mb-6"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.2, duration: 0.8 }}
-                >
-                  <div className="text-6xl sm:text-7xl font-black gradient-text-purple">
-                    {stat.number}
-                  </div>
-                </motion.div>
-
-                {/* Label */}
-                <h3 className="text-xl sm:text-2xl font-bold text-ink mb-3">
-                  {stat.label}
-                </h3>
-
-                {/* Description */}
-                <p className="text-ink-muted">
-                  {stat.description}
-                </p>
-
-                {/* Decorative line */}
-                <motion.div
-                  className="mt-8 h-1 bg-gradient-to-r from-transparent via-primary-600 to-transparent rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.2 + 0.4 }}
-                />
+                <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-1">{metric.value}</div>
+                <div className="text-xs sm:text-sm text-white/55">{metric.label}</div>
               </motion.div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Additional Metrics */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          variants={containerVariants}
-          className="grid grid-cols-2 md:grid-cols-3 gap-4"
-        >
-          {[
-            { value: '4 meses', label: 'Life time value promedio' },
-            { value: 'Mes 1', label: 'Resultados desde el primer mes' },
-            { value: '7/7', label: 'Soporte todos los días' },
-          ].map((metric, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariants}
-              className="glass rounded-xl p-4 text-center border border-ink/10 hover:border-primary-600/30 transition-colors"
-            >
-              <div className="text-2xl sm:text-3xl font-bold text-primary-600 mb-2">
-                {metric.value}
-              </div>
-              <div className="text-xs sm:text-sm text-ink-muted">
-                {metric.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   )

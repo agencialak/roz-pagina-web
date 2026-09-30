@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowUp } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { scrollToTarget } from '../lib/smoothScroll'
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -14,9 +15,7 @@ const ScrollToTop = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  const scrollToTop = () => scrollToTarget(0)
 
   return (
     <AnimatePresence>
@@ -27,13 +26,13 @@ const ScrollToTop = () => {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          whileHover={{ scale: 1.15 }}
+          whileHover={{ y: -2 }}
           whileTap={{ scale: 0.95 }}
-          className="fixed bottom-8 left-8 z-40 w-16 h-16 rounded-full bg-gradient-to-r from-primary-600 to-primary-800 shadow-2xl flex items-center justify-center hover:shadow-2xl transition-shadow"
+          className="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-white/90 backdrop-blur border border-ink/10 shadow-sm flex items-center justify-center text-ink-muted hover:text-ink hover:border-ink/20 transition-colors"
           title="Volver al inicio"
-          aria-label="Scroll to top"
+          aria-label="Volver al inicio"
         >
-          <ArrowUp size={24} className="text-white" />
+          <ArrowUp size={18} />
         </motion.button>
       )}
     </AnimatePresence>

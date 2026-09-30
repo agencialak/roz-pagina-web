@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import RevealHeading from './RevealHeading'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
@@ -102,13 +103,11 @@ const Testimonials = () => {
           variants={containerVariants}
           className="text-center mb-12 sm:mb-16"
         >
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 tracking-tight"
-          >
-            <span className="text-ink">LO QUE DICEN</span>
-            <span className="block gradient-text-purple">NUESTROS CLIENTES</span>
-          </motion.h2>
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-ink-subtle mb-4">Testimonios</p>
+          <RevealHeading
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.035em] text-ink mb-4 sm:mb-6"
+            lines={['Lo que dicen', <span className="accent-serif gradient-text-purple text-[1.1em]">nuestros clientes</span>]}
+          />
           <motion.p
             variants={itemVariants}
             className="text-sm sm:text-lg text-ink-muted max-w-2xl mx-auto px-2"

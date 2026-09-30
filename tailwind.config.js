@@ -35,6 +35,7 @@ export default {
       fontFamily: {
         sans: ['Sora', 'Inter', 'Satoshi', 'sans-serif'],
         display: ['Sora', 'Inter', 'Satoshi', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],

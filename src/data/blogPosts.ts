@@ -13,6 +13,13 @@ export interface BlogPost {
   author: string
 }
 
+export const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
+  educativo: 'Educativo',
+  casos: 'Casos',
+  estrategia: 'Estrategia',
+  tendencia: 'Tendencia',
+}
+
 const posts: BlogPost[] = [
   {
     id: 'costo-por-seguidor',

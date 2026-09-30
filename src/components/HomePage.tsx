@@ -20,20 +20,6 @@ function HomePage() {
 
   return (
     <main className="overflow-hidden relative">
-      {/* Video Background */}
-      <div className="fixed inset-0 -z-10 overflow-hidden bg-surface">
-        <video
-          className="w-full h-full object-cover opacity-[0.06] mix-blend-multiply"
-          muted
-          playsInline
-          autoPlay
-          loop
-        >
-          <source src="/hero-background.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-surface/80" />
-      </div>
-
       <Hero />
       <CustomerJourney />
       <Clients />

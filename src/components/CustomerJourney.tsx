@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Eye, MousePointerClick, ShoppingBag } from 'lucide-react'
+import RevealHeading from './RevealHeading'
 
 const assumptionSteps = [
   { icon: Eye, label: 'Ven el anuncio' },
@@ -226,16 +227,10 @@ const CustomerJourney = () => {
             visible: { transition: { staggerChildren: 0.15 } },
           }}
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-black text-center mb-10"
-          >
-            <span className="text-ink">Lo que </span>
-            <span className="gradient-text-purple">en realidad</span>
-            <span className="text-ink"> pasa</span>
-          </motion.h2>
+          <RevealHeading
+            className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.03em] text-ink text-center mb-10"
+            lines={[<>Lo que <span className="accent-serif gradient-text-purple text-[1.1em]">en realidad</span> pasa</>]}
+          />
 
           <RealityPath steps={realitySteps} />
         </motion.div>
@@ -248,9 +243,9 @@ const CustomerJourney = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-12 sm:mt-16 text-center max-w-xl mx-auto"
         >
-          <p className="text-xl sm:text-2xl font-bold mb-4">
+          <p className="text-2xl sm:text-3xl font-semibold tracking-[-0.03em] mb-5">
             <span className="text-ink">Comprar no es un momento. </span>
-            <span className="gradient-text-purple">Es un proceso.</span>
+            <span className="accent-serif gradient-text-purple text-[1.12em]">Es un proceso.</span>
           </p>
           <div className="glass rounded-xl border border-primary-600/20 p-5 sm:p-6">
             <p className="text-sm sm:text-base text-ink-muted leading-relaxed">

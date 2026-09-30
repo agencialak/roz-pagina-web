@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { scrollToTarget } from '../lib/smoothScroll'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,10 +34,7 @@ const Navbar = () => {
     if (item.type === 'route') {
       navigate(item.href)
     } else {
-      const element = document.querySelector(item.href)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
+      scrollToTarget(item.href)
     }
   }
 
@@ -64,7 +62,7 @@ const Navbar = () => {
           <motion.button
             onClick={() => {
               navigate('/')
-              window.scrollTo({ top: 0, behavior: 'smooth' })
+              scrollToTarget(0)
             }}
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2 cursor-pointer bg-none border-none p-0"

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import RevealHeading from './RevealHeading'
 import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
 import { ArrowRight } from 'lucide-react'
 
@@ -13,7 +14,7 @@ const FinalCTA = () => {
             y: [0, 50, 0],
           }}
           transition={{ duration: 20, repeat: Infinity }}
-          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary-600 to-primary-900 rounded-full blur-3xl opacity-30"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary-600 to-primary-900 rounded-full blur-3xl opacity-[0.12]"
         />
         <motion.div
           animate={{
@@ -21,7 +22,7 @@ const FinalCTA = () => {
             y: [0, -50, 0],
           }}
           transition={{ duration: 25, repeat: Infinity }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-primary-700 to-primary-950 rounded-full blur-3xl opacity-30"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-primary-700 to-primary-950 rounded-full blur-3xl opacity-[0.12]"
         />
       </div>
 
@@ -38,21 +39,16 @@ const FinalCTA = () => {
             variants={itemVariants}
             className="inline-block mb-8"
           >
-            <div className="glass px-4 py-2 rounded-full border border-primary-600/30">
-              <span className="text-sm font-medium text-primary-700">
-                PRÓXIMO PASO
-              </span>
-            </div>
+            <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-ink-subtle">
+              Próximo paso
+            </p>
           </motion.div>
 
           {/* Main Title */}
-          <motion.h2
-            variants={fadeUpVariants}
-            className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8 tracking-tight"
-          >
-            <span className="text-ink">¿LISTO PARA</span>
-            <span className="block gradient-text-purple">ESCALAR TU MARCA?</span>
-          </motion.h2>
+          <RevealHeading
+            className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-[-0.04em] text-ink mb-8"
+            lines={['¿Listo para', <span className="accent-serif gradient-text-purple text-[1.1em]">escalar tu marca?</span>]}
+          />
 
           {/* Description */}
           <motion.p
@@ -71,18 +67,14 @@ const FinalCTA = () => {
               href="https://wa.me/573218515587"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 80px rgba(109, 40, 255, 0.6)' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-gradient-to-r from-primary-600 to-primary-800 text-white font-bold text-lg rounded-lg flex items-center gap-3 hover:shadow-xl transition-shadow group"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="group pl-8 pr-2 py-2 bg-ink text-white font-medium text-lg rounded-full flex items-center gap-5 shadow-[0_12px_36px_-12px_rgba(109,40,255,0.65)] hover:shadow-[0_16px_46px_-12px_rgba(109,40,255,0.8)] transition-shadow min-h-[60px]"
             >
-              TRABAJEMOS JUNTOS
-              <motion.span
-                className="inline-block"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <ArrowRight size={24} />
-              </motion.span>
+              Trabajemos juntos
+              <span className="w-11 h-11 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
+                <ArrowRight size={20} />
+              </span>
             </motion.a>
 
           </motion.div>
