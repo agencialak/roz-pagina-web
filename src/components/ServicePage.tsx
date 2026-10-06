@@ -23,6 +23,7 @@ const ServicePage = () => {
       title: service.metaTitle,
       description: service.metaDescription,
       path: `/servicios/${service.slug}`,
+      image: service.ogImage,
     })
   }, [service])
 

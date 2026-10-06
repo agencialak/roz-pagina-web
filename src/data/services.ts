@@ -8,6 +8,8 @@ export interface ServiceProof {
 export interface ServicePageData {
   slug: string
   name: string
+  /** imagen de vista previa al compartir (1200x630) */
+  ogImage: string
   /** h1 en dos partes: la segunda va en serif itálica */
   heading: [string, string]
   metaTitle: string
@@ -23,6 +25,7 @@ export interface ServicePageData {
 export const services: ServicePageData[] = [
   {
     slug: 'meta-ads',
+    ogImage: '/og-meta-ads.jpg',
     name: 'Meta Ads',
     heading: ['Publicidad en Meta Ads', 'para negocios que necesitan vender'],
     metaTitle: 'Agencia de Meta Ads en Pereira y Colombia | ROZ Social Media',
@@ -65,6 +68,7 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'gestion-redes-sociales',
+    ogImage: '/og-redes-sociales.jpg',
     name: 'Gestión de redes sociales',
     heading: ['Gestión de redes sociales', 'con estrategia detrás'],
     metaTitle: 'Gestión de redes sociales en Pereira | ROZ Social Media',
@@ -101,6 +105,7 @@ export const services: ServicePageData[] = [
   },
   {
     slug: 'produccion-audiovisual',
+    ogImage: '/og-produccion-audiovisual.jpg',
     name: 'Producción audiovisual',
     heading: ['Producción audiovisual', 'para redes y pauta'],
     metaTitle: 'Producción audiovisual para redes sociales en Pereira | ROZ Social Media',

@@ -269,7 +269,7 @@ let listHtml = applyMeta(template, {
   description:
     'Datos reales de campañas de Meta Ads, estrategias que funcionan y análisis de costos por seguidor y conversación. Aprendizajes de más de 300 proyectos en Colombia.',
   path: '/blog',
-  image: '/og-image.jpg',
+  image: '/og-blog.jpg',
 })
 listHtml = injectJsonLd(listHtml, {
   '@context': 'https://schema.org',
@@ -355,7 +355,7 @@ for (const sv of services) {
     title: sv.metaTitle,
     description: sv.metaDescription,
     path: `/servicios/${sv.slug}`,
-    image: '/og-image.jpg',
+    image: sv.ogImage,
   })
   html = injectJsonLd(html, {
     '@context': 'https://schema.org',

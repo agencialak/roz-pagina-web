@@ -135,6 +135,7 @@ const BlogList = () => {
       // Todas las vistas filtradas canonicalizan a /blog: es la misma lista,
       // solo reordenada, para no crear contenido duplicado a ojos de Google.
       path: '/blog',
+      image: '/og-blog.jpg',
     })
   }, [activeCategory])
 
