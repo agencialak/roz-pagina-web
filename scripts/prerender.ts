@@ -17,6 +17,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { blogPosts, type BlogPost } from '../src/data/blogPosts'
 import { services } from '../src/data/services'
+import { faqs } from '../src/data/faqs'
 import { googleReviews, GOOGLE_PROFILE_URL } from '../src/data/googleReviews'
 
 const SITE_URL = 'https://rozagencia.com'
@@ -222,10 +223,26 @@ const homeBody = `
     <p><a href="${GOOGLE_PROFILE_URL}">Ver todas las reseñas de Agencia Roz en Google</a></p>
   </section>
 
+  <section id="preguntas-frecuentes">
+    <h2>Preguntas frecuentes</h2>
+    ${faqs.map((f) => `<h3>${escapeHtml(f.q)}</h3><p>${escapeHtml(f.a)}</p>`).join('')}
+  </section>
+
   <p>Contacto: <a href="mailto:rozagencia23@gmail.com">rozagencia23@gmail.com</a> · WhatsApp +57 321 851 5587 · Pereira, Risaralda, Colombia. También en <a href="/blog">el blog</a>.</p>
 </main>`
 
-const homeHtml = injectRootContent(template, homeBody)
+const homeHtml = injectRootContent(
+  injectJsonLd(template, {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }),
+  homeBody
+)
 writeFileSync(join(DIST, 'index.html'), homeHtml)
 console.log('prerender: index.html')
 

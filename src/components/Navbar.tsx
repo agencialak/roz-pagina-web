@@ -26,6 +26,7 @@ const Navbar = () => {
     { label: 'Resultados', href: '#resultados', type: 'anchor' },
     { label: 'Testimonios', href: '#testimonios', type: 'anchor' },
     { label: 'Blog', href: '/blog', type: 'route' },
+    { label: 'Preguntas frecuentes', href: '#preguntas-frecuentes', type: 'anchor' },
     { label: 'Contacto', href: '#contacto', type: 'anchor' },
   ]
 
@@ -65,13 +66,13 @@ const Navbar = () => {
               scrollToTarget(0)
             }}
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 cursor-pointer bg-none border-none p-0"
+            className="flex items-center gap-2 shrink-0 cursor-pointer bg-none border-none p-0"
           >
             <img src="/logo-dark.png" alt="ROZ" className="h-10 w-auto" />
           </motion.button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-7">
             {navItems.map((item) =>
               item.label === 'Blog' ? (
                 <motion.button
@@ -88,7 +89,7 @@ const Navbar = () => {
                   key={item.label}
                   onClick={() => handleNavClick(item)}
                   whileHover={{ color: '#6D28FF' }}
-                  className="text-sm font-medium text-ink-muted transition-colors bg-none border-none p-0 cursor-pointer"
+                  className="text-sm font-medium text-ink-muted whitespace-nowrap transition-colors bg-none border-none p-0 cursor-pointer"
                 >
                   {item.label}
                 </motion.button>
@@ -97,7 +98,7 @@ const Navbar = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             {socialIcons.map((social) => (
               <motion.a
                 key={social.icon}
@@ -122,7 +123,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-ink"
+            className="xl:hidden p-2 text-ink"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
@@ -134,7 +135,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden pb-6 border-t border-ink/10"
+            className="xl:hidden pb-6 border-t border-ink/10"
           >
             <div className="flex flex-col gap-4 pt-4">
               {navItems.map((item) =>

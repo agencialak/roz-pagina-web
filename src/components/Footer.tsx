@@ -15,6 +15,7 @@ const Footer = () => {
         { label: 'Servicios', href: '#servicios', type: 'anchor' },
         { label: 'Proyectos', href: '#proyectos', type: 'anchor' },
         { label: 'Blog', href: '/blog', type: 'route' },
+        { label: 'Preguntas frecuentes', href: '#preguntas-frecuentes', type: 'anchor' },
       ],
     },
     {

@@ -11,6 +11,7 @@ import Results from './Results'
 import Testimonials from './Testimonials'
 import TestimonialForm from './TestimonialForm'
 import GoogleReviews from './GoogleReviews'
+import FAQ from './FAQ'
 import Showcase from './Showcase'
 import FinalCTA from './FinalCTA'
 
@@ -33,6 +34,7 @@ function HomePage() {
       <GoogleReviews />
       <TestimonialForm />
       <Showcase />
+      <FAQ />
       <FinalCTA />
     </main>
   )
