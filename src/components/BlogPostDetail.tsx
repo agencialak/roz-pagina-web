@@ -11,16 +11,35 @@ import BlogCta from './BlogCta'
 
 const EASE = [0.22, 1, 0.36, 1] as const
 
+// Convierte [texto](/ruta) en enlace interno
+const renderLinks = (text: string, keyPrefix: string) => {
+  const parts = text.split(/\[([^\]]+)\]\((\/[^)\s]*)\)/g)
+  return parts.map((part, i) => {
+    if (i % 3 === 1) {
+      return (
+        <Link
+          key={`${keyPrefix}-l${i}`}
+          to={parts[i + 1]}
+          className="text-primary-700 underline decoration-primary-600/40 underline-offset-4 hover:decoration-primary-600 transition-colors"
+        >
+          {part}
+        </Link>
+      )
+    }
+    return i % 3 === 2 ? null : part
+  })
+}
+
 // Convierte *texto* en <em> dentro de un fragmento sin negrillas
 const renderItalics = (text: string, keyPrefix: number) => {
   const parts = text.split(/\*(.+?)\*/g)
   return parts.map((part, i) =>
     i % 2 === 1 ? (
       <em key={`${keyPrefix}-${i}`} className="text-ink-subtle">
-        {part}
+        {renderLinks(part, `${keyPrefix}-${i}`)}
       </em>
     ) : (
-      part
+      renderLinks(part, `${keyPrefix}-${i}`)
     )
   )
 }

@@ -30,6 +30,7 @@ const inline = (s: string) =>
   escapeHtml(s)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, '<a href="$2">$1</a>')
 
 // Convierte el contenido markdown-simple de los posts a HTML semántico
 function contentToHtml(content: string): string {

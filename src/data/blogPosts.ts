@@ -695,6 +695,42 @@ Pasa porque la marca estuvo presente, una y otra vez, el tiempo suficiente. Así
     readTime: 3,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'primera-campana-no-es-la-definitiva',
+    slug: 'la-primera-campana-no-es-la-definitiva',
+    title: 'La primera campaña no es la definitiva',
+    excerpt: 'Una campaña de armonización facial arrancó en enero a $2.573 COP por conversación de WhatsApp. En marzo, la misma campaña bajó a $1.800 COP: 30% menos en dos meses, sin cambiar de servicio ni de oferta.',
+    content: `
+# La primera campaña no es la definitiva
+
+Una campaña de armonización facial que manejamos arrancó en enero con un costo de $2.573 COP por conversación de WhatsApp. En marzo, la misma campaña — mismo cliente, mismo objetivo, mismo público base — bajó a $1.800 COP. Una reducción del 30% en dos meses, sin cambiar de servicio ni de oferta.
+
+## Los números
+
+- **Enero:** $2.573 COP por conversación
+- **Febrero:** $1.952 COP por conversación
+- **Marzo:** $1.800 COP por conversación
+
+## Qué cambió en el medio
+
+No fue el presupuesto ni el público. Fue optimización constante: revisar qué creativos estaban funcionando y cuáles no, pausar los que no conectaban, ajustar la segmentación con lo que el algoritmo iba aprendiendo campaña tras campaña, y darle tiempo a la fase de aprendizaje antes de sacar conclusiones.
+
+## Mejora continua, no un botón de encendido
+
+Es un error común esperar que la primera versión de una campaña sea la definitiva. Casi nunca lo es. Meta Ads no es un botón de encender y listo — es un proceso de mejora continua, semana a semana.
+
+Si tu campaña tiene el mismo costo por resultado desde el día uno, lo más probable es que nadie la esté optimizando.
+
+---
+
+*Es la misma cuenta del caso [Dos campañas distintas subieron de costo el mismo mes](/blog/evolucion-mensual-dos-campanas-mismo-costo), donde mostramos qué pasó en los meses siguientes. Datos anonimizados por sector, sin nombres de clientes reales.*
+    `,
+    image: '/blog/post_optimizacion_costo_conversacion.jpg',
+    date: '2026-10-06',
+    category: 'casos',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
