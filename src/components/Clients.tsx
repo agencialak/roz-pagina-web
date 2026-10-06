@@ -1,16 +1,16 @@
 import RevealHeading from './RevealHeading'
 
 const clients = [
-  { name: 'Anato Eje Cafetero', logo: '/clients/Anato Eje Cafetero Blanco.png', instagram: 'https://www.instagram.com/anatoejecafetero/' },
-  { name: 'Bariatric Care', logo: '/clients/Bariatric care.PNG', instagram: 'https://www.instagram.com/dra.anapimienta/' },
-  { name: 'Clínica San Rafael', logo: '/clients/Clinica san rafael.png', instagram: 'https://www.instagram.com/clinica.sanrafael/' },
-  { name: 'Dr Romero', logo: '/clients/Dr romero.png', instagram: 'https://www.instagram.com/drfabianromero/' },
-  { name: 'Dr Steer', logo: '/clients/Dr steer.png', instagram: 'https://www.instagram.com/reconstruccionoseasteer/' },
-  { name: 'Latam Mobility', logo: '/clients/Latam Mobility.png', instagram: 'https://www.instagram.com/' }, // En espera de habilitación
-  { name: 'Media Maratón Pereira', logo: '/clients/Media maraton pereira.png', instagram: 'https://www.instagram.com/mediamaratonpereira/' },
-  { name: 'Odento', logo: '/clients/Odento.png', instagram: 'https://www.instagram.com/odentoco/' },
-  { name: 'Sayonara', logo: '/clients/SAYONARA.png', instagram: 'https://www.instagram.com/sayonara_co/' },
-  { name: 'Troncos', logo: '/clients/troncos.png', instagram: 'https://www.instagram.com/troncos05/' },
+  { name: 'Anato Eje Cafetero', logo: '/clients/web/Anato Eje Cafetero Blanco.png', instagram: 'https://www.instagram.com/anatoejecafetero/' },
+  { name: 'Bariatric Care', logo: '/clients/web/Bariatric care.png', instagram: 'https://www.instagram.com/dra.anapimienta/' },
+  { name: 'Clínica San Rafael', logo: '/clients/web/Clinica san rafael.png', instagram: 'https://www.instagram.com/clinica.sanrafael/' },
+  { name: 'Dr Romero', logo: '/clients/web/Dr romero.png', instagram: 'https://www.instagram.com/drfabianromero/' },
+  { name: 'Dr Steer', logo: '/clients/web/Dr steer.png', instagram: 'https://www.instagram.com/reconstruccionoseasteer/' },
+  { name: 'Latam Mobility', logo: '/clients/web/Latam Mobility.png', instagram: 'https://www.instagram.com/' }, // En espera de habilitación
+  { name: 'Media Maratón Pereira', logo: '/clients/web/Media maraton pereira.png', instagram: 'https://www.instagram.com/mediamaratonpereira/' },
+  { name: 'Odento', logo: '/clients/web/Odento.png', instagram: 'https://www.instagram.com/odentoco/' },
+  { name: 'Sayonara', logo: '/clients/web/SAYONARA.png', instagram: 'https://www.instagram.com/sayonara_co/' },
+  { name: 'Troncos', logo: '/clients/web/troncos.png', instagram: 'https://www.instagram.com/troncos05/' },
 ]
 
 const Clients = () => {
@@ -39,12 +39,12 @@ const Clients = () => {
               rel="noopener noreferrer"
               aria-hidden={idx >= clients.length}
               tabIndex={idx >= clients.length ? -1 : undefined}
-              className="flex items-center justify-center h-16 sm:h-20 w-36 sm:w-48 mx-6 sm:mx-10 shrink-0"
+              className="flex items-center justify-center h-16 sm:h-20 w-40 sm:w-52 mx-5 sm:mx-8 shrink-0"
             >
               <img
                 src={client.logo}
                 alt={idx < clients.length ? `${client.name} - Cliente de ROZ Social Media` : ''}
-                className="max-h-full max-w-full object-contain brightness-0 opacity-40 hover:opacity-80 transition-opacity duration-300"
+                className="max-h-full max-w-full object-contain brightness-0 opacity-45 hover:opacity-90 transition-opacity duration-300"
                 loading="lazy"
               />
             </a>
