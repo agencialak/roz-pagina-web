@@ -2,8 +2,25 @@ import { motion, AnimatePresence } from 'framer-motion'
 import RevealHeading from './RevealHeading'
 import TiltCard from './TiltCard'
 import { fadeUpVariants, containerVariants, itemVariants } from '../utils/animations'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Linkedin } from 'lucide-react'
 import { useState } from 'react'
+
+// Enlazar el nombre al perfil de LinkedIn le confirma a Google que es la misma persona
+const MemberName = ({ name, linkedin }: { name: string; linkedin: string }) =>
+  linkedin ? (
+    <a
+      href={linkedin}
+      target="_blank"
+      rel="noopener noreferrer me"
+      className="group/ln inline-flex items-center gap-2 hover:text-primary-700 transition-colors"
+      title={`${name} en LinkedIn`}
+    >
+      {name}
+      <Linkedin size={18} className="text-[#0A66C2] opacity-80 group-hover/ln:opacity-100 transition-opacity" />
+    </a>
+  ) : (
+    <>{name}</>
+  )
 
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -17,7 +34,7 @@ const Team = () => {
       bio: 'Fundador y líder estratégico de ROZ Social Media',
       social: {
         email: 'santiago@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -28,7 +45,7 @@ const Team = () => {
       bio: 'Experta en gestión operativa y creación de contenido visual de alto impacto',
       social: {
         email: 'laura@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -39,7 +56,7 @@ const Team = () => {
       bio: 'Especialista en estrategia digital y ejecución de campañas publicitarias de alto rendimiento',
       social: {
         email: 'nikolas@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: 'https://www.linkedin.com/in/nikolasgarciaroz/',
       },
     },
     {
@@ -50,7 +67,7 @@ const Team = () => {
       bio: 'Especialista en captura de contenido audiovisual de alta calidad con visión cinematográfica',
       social: {
         email: 'kevin@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -61,7 +78,7 @@ const Team = () => {
       bio: 'Experta en postproducción y edición de video con narrativa visual impactante',
       social: {
         email: 'paulina@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -72,7 +89,7 @@ const Team = () => {
       bio: 'Creadora de diseños visuales estratégicos que conectan con audiencias en redes sociales',
       social: {
         email: 'erika@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -83,7 +100,7 @@ const Team = () => {
       bio: 'Profesional en logística y coordinación de procesos de producción audiovisual',
       social: {
         email: 'juan@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -94,7 +111,7 @@ const Team = () => {
       bio: 'Líder creativa que impulsa la estrategia comercial y establece relaciones clave',
       social: {
         email: 'camila@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -105,7 +122,7 @@ const Team = () => {
       bio: 'Líder estratégica en expansión internacional y operaciones de la agencia en Estados Unidos',
       social: {
         email: 'lina@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
     {
@@ -116,7 +133,7 @@ const Team = () => {
       bio: 'Coordinadora de procesos administrativos que garantiza eficiencia operativa',
       social: {
         email: 'valentina@rozsocial.com',
-        linkedin: 'https://linkedin.com',
+        linkedin: '',
       },
     },
   ]
@@ -224,7 +241,7 @@ const Team = () => {
 
                             <div className="w-full px-3 pb-3 flex flex-col justify-center">
                               <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-ink mb-1">
-                                {member.name}
+                                <MemberName name={member.name} linkedin={member.social.linkedin} />
                               </h3>
 
                               {/* Role */}
@@ -337,7 +354,7 @@ const Team = () => {
                     >
                       {/* Name */}
                       <h3 className="text-2xl md:text-3xl font-bold text-ink mb-2">
-                        {teamMembers[currentIndex].name}
+                        <MemberName name={teamMembers[currentIndex].name} linkedin={teamMembers[currentIndex].social.linkedin} />
                       </h3>
 
                       {/* Role */}

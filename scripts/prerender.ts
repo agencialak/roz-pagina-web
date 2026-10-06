@@ -15,7 +15,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { blogPosts, type BlogPost } from '../src/data/blogPosts'
+import { blogPosts, AUTHOR_PROFILES, type BlogPost } from '../src/data/blogPosts'
 import { services } from '../src/data/services'
 import { faqs } from '../src/data/faqs'
 import { googleReviews, GOOGLE_PROFILE_URL } from '../src/data/googleReviews'
@@ -111,6 +111,7 @@ function postJsonLd(post: BlogPost) {
     author: {
       '@type': 'Person',
       name: post.author.split(' - ')[0],
+      ...AUTHOR_PROFILES[post.author.split(' - ')[0]],
       worksFor: { '@type': 'Organization', name: 'ROZ Social Media' },
     },
     publisher: {

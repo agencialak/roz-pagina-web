@@ -13,6 +13,14 @@ export interface BlogPost {
   author: string
 }
 
+// Perfil del autor de los artículos; va en el JSON-LD para que Google lo asocie con su LinkedIn
+export const AUTHOR_PROFILES: Record<string, { jobTitle: string; sameAs: string[] }> = {
+  'Nikolas Garcia': {
+    jobTitle: 'Co-Fundador y Estratega de Meta Ads',
+    sameAs: ['https://www.linkedin.com/in/nikolasgarciaroz/'],
+  },
+}
+
 export const CATEGORY_LABELS: Record<BlogPost['category'], string> = {
   educativo: 'Educativo',
   casos: 'Casos',
@@ -68,7 +76,7 @@ Pide también el costo por seguidor real. Son números distintos, y la diferenci
     date: '2026-07-06',
     category: 'educativo',
     readTime: 4,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'costo-por-conversacion',
@@ -119,7 +127,7 @@ Si comparas el costo por conversación de tu negocio contra el de otro sin tener
     date: '2026-07-08',
     category: 'educativo',
     readTime: 5,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'investigacion-de-mercado',
@@ -160,7 +168,7 @@ La pauta no arregla una estrategia mal pensada. **Solo la hace más cara.**
     date: '2026-07-14',
     category: 'estrategia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'trafico-vs-interaccion',
@@ -199,7 +207,7 @@ Si el objetivo es awareness, el número que importa es el costo por visita. Si e
     date: '2026-07-16',
     category: 'educativo',
     readTime: 4,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'tendencia-ia-meta',
@@ -237,7 +245,7 @@ La IA ejecuta. La estrategia sigue siendo humana.
     date: '2026-07-16',
     category: 'tendencia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'evolucion-cuenta',
@@ -283,7 +291,7 @@ El costo por resultado no depende solo de cuánta plata metes. Depende de cuánt
     date: '2026-07-21',
     category: 'casos',
     readTime: 4,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'cliente-potencial-seguimiento',
@@ -315,7 +323,7 @@ Si generas clientes potenciales pero no sabes qué pasa con ellos después, ese 
     date: '2026-07-23',
     category: 'estrategia',
     readTime: 4,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'atribucion-y-base-de-datos',
@@ -347,7 +355,7 @@ Y mientras no se resuelvan, la campaña sigue funcionando a ciegas en dos frente
     date: '2026-07-27',
     category: 'estrategia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'estacionalidad-misma-fecha-un-ano-despues',
@@ -383,7 +391,7 @@ Aun así, la variedad de creativos importa — sobre todo la primera vez que se 
     date: '2026-07-29',
     category: 'casos',
     readTime: 4,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'variedad-creativa-sin-margen-de-error',
@@ -419,7 +427,7 @@ Con 2 creativos, no hay margen: si uno no conecta, se lleva una porción grande 
     date: '2026-07-31',
     category: 'educativo',
     readTime: 4,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'alcance-vs-venta-carousel',
@@ -467,7 +475,7 @@ El problema no es que la campaña esté cara. Es comparar objetivos que no se pu
     date: '2026-08-03',
     category: 'educativo',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'segmentacion-supuestos-vs-datos',
@@ -497,7 +505,7 @@ No es que haya que abandonar al público "obvio". Es que los supuestos sobre qui
     date: '2026-08-05',
     category: 'educativo',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'facebook-vs-instagram-mismo-presupuesto',
@@ -527,7 +535,7 @@ No es una regla que aplique a cualquier cuenta — es la razón por la que revis
     date: '2026-09-03',
     category: 'educativo',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'venta-entradas-evento-b2b-chile',
@@ -559,7 +567,7 @@ Vender entradas a un evento presencial en otro país, con un público de nicho, 
     date: '2026-09-15',
     category: 'casos',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'conjuntos-dos-vendedores',
@@ -589,7 +597,7 @@ Por eso casi nunca dejamos corriendo un solo tipo de conjunto en una campaña. N
     date: '2026-09-21',
     category: 'estrategia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'anuncios-herramientas-vendedor',
@@ -619,7 +627,7 @@ Mientras más herramientas le demos a cada vendedor, más rápido encuentra la q
     date: '2026-09-23',
     category: 'estrategia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'humanos-no-robots',
@@ -651,7 +659,7 @@ Entender cómo piensa y decide una persona no es un detalle técnico. Es la dife
     date: '2026-09-25',
     category: 'estrategia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
   {
     id: 'camino-real-del-cliente',
@@ -685,7 +693,7 @@ Pasa porque la marca estuvo presente, una y otra vez, el tiempo suficiente. Así
     date: '2026-09-28',
     category: 'estrategia',
     readTime: 3,
-    author: 'Nikolas García - ROZ Social Media',
+    author: 'Nikolas Garcia - ROZ Social Media',
   },
 ]
 

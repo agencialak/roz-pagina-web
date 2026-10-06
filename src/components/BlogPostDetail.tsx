@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-import { blogPosts, CATEGORY_LABELS } from '../data/blogPosts'
+import { blogPosts, AUTHOR_PROFILES, CATEGORY_LABELS } from '../data/blogPosts'
 import { setPageSeo } from '../utils/seo'
 import { formatPostDate } from '../utils/date'
 import BlogLikeButton from './BlogLikeButton'
@@ -78,6 +78,7 @@ const BlogPostDetail = () => {
       author: {
         '@type': 'Person',
         name: post.author.split(' - ')[0],
+        ...AUTHOR_PROFILES[post.author.split(' - ')[0]],
         worksFor: { '@type': 'Organization', name: 'ROZ Social Media' },
       },
       publisher: {
@@ -167,7 +168,20 @@ const BlogPostDetail = () => {
                 {authorName.split(' ').map((w) => w[0]).slice(0, 2).join('')}
               </div>
               <div className="leading-tight">
-                <p className="text-sm font-medium text-ink">{authorName}</p>
+                <p className="text-sm font-medium text-ink">
+                  {AUTHOR_PROFILES[authorName] ? (
+                    <a
+                      href={AUTHOR_PROFILES[authorName].sameAs[0]}
+                      target="_blank"
+                      rel="noopener noreferrer me"
+                      className="hover:text-primary-700 transition-colors"
+                    >
+                      {authorName}
+                    </a>
+                  ) : (
+                    authorName
+                  )}
+                </p>
                 <p className="text-xs text-ink-subtle">
                   {formatPostDate(post.date)} · {post.readTime} min de lectura
                 </p>
