@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
-import { scrollToTarget } from '../lib/smoothScroll'
+import { goToSection } from '../lib/smoothScroll'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const navigate = useNavigate()
 
   const footerLinks = [
     {
@@ -17,6 +18,14 @@ const Footer = () => {
       ],
     },
     {
+      title: 'Servicios',
+      links: [
+        { label: 'Meta Ads', href: '/servicios/meta-ads', type: 'route' },
+        { label: 'Redes sociales', href: '/servicios/gestion-redes-sociales', type: 'route' },
+        { label: 'Producción audiovisual', href: '/servicios/produccion-audiovisual', type: 'route' },
+      ],
+    },
+    {
       title: 'Legal',
       links: [
         { label: 'Privacidad', href: '/privacidad', type: 'route' },
@@ -26,7 +35,7 @@ const Footer = () => {
   ]
 
   const handleNavClick = (href: string, type: string) => {
-    if (type === 'anchor') scrollToTarget(href)
+    if (type === 'anchor') goToSection(href, navigate)
   }
 
   const socialLinks = [
@@ -38,7 +47,7 @@ const Footer = () => {
     <footer className="relative border-t border-ink/10 bg-surface-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

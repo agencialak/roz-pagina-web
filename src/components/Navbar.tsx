@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { scrollToTarget } from '../lib/smoothScroll'
+import { scrollToTarget, goToSection } from '../lib/smoothScroll'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +34,7 @@ const Navbar = () => {
     if (item.type === 'route') {
       navigate(item.href)
     } else {
-      scrollToTarget(item.href)
+      goToSection(item.href, navigate)
     }
   }
 

@@ -16,6 +16,8 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { blogPosts, type BlogPost } from '../src/data/blogPosts'
+import { services } from '../src/data/services'
+import { googleReviews, GOOGLE_PROFILE_URL } from '../src/data/googleReviews'
 
 const SITE_URL = 'https://rozagencia.com'
 const DIST = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist')
@@ -173,6 +175,7 @@ const homeBody = `
     <ul>
       ${homeServices.map(([title, desc]) => `<li><strong>${escapeHtml(title)}</strong> — ${escapeHtml(desc)}</li>`).join('\n      ')}
     </ul>
+    <p>Más detalle: ${services.map((sv) => `<a href="/servicios/${sv.slug}">${escapeHtml(sv.name)}</a>`).join(' · ')}</p>
   </section>
 
   <section id="filosofia">
@@ -209,6 +212,14 @@ const homeBody = `
     <ul>
       ${homeTestimonials.map(([name, handle, content]) => `<li>&ldquo;${escapeHtml(content)}&rdquo; — ${escapeHtml(name)} (${escapeHtml(handle)})</li>`).join('\n      ')}
     </ul>
+  </section>
+
+  <section id="resenas-google">
+    <h2>Reseñas en Google</h2>
+    <ul>
+      ${googleReviews.map((r) => `<li>&ldquo;${escapeHtml(r.text)}&rdquo; — ${escapeHtml(r.name)}</li>`).join('')}
+    </ul>
+    <p><a href="${GOOGLE_PROFILE_URL}">Ver todas las reseñas de Agencia Roz en Google</a></p>
   </section>
 
   <p>Contacto: <a href="mailto:rozagencia23@gmail.com">rozagencia23@gmail.com</a> · WhatsApp +57 321 851 5587 · Pereira, Risaralda, Colombia. También en <a href="/blog">el blog</a>.</p>
@@ -296,4 +307,62 @@ for (const post of blogPosts) {
   mkdirSync(join(DIST, 'blog', post.slug), { recursive: true })
   writeFileSync(join(DIST, 'blog', post.slug, 'index.html'), html)
   console.log(`prerender: blog/${post.slug}/index.html`)
+}
+
+// --- Páginas de servicio /servicios/<slug> ---
+for (const sv of services) {
+  const related = sv.relatedPosts
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is BlogPost => Boolean(p))
+
+  const body = `
+<main>
+  <nav><a href="/">Inicio</a> / Servicios / ${escapeHtml(sv.name)}</nav>
+  <h1>${escapeHtml(sv.heading[0])} ${escapeHtml(sv.heading[1])}</h1>
+  <p>${escapeHtml(sv.intro)}</p>
+  <h2>Resultados</h2>
+  <ul>${sv.proof.map((p) => `<li><strong>${escapeHtml(p.value)}</strong> ${escapeHtml(p.label)}${p.postSlug ? ` (<a href="/blog/${p.postSlug}">ver el caso</a>)` : ''}</li>`).join('')}</ul>
+  <h2>Para quién es</h2>
+  <ul>${sv.forWhom.map((f) => `<li><strong>${escapeHtml(f.title)}</strong> — ${escapeHtml(f.text)}</li>`).join('')}</ul>
+  <h2>Qué incluye</h2>
+  <ul>${sv.includes.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
+  <h2>Cómo trabajamos</h2>
+  <ol>${sv.process.map((p) => `<li><strong>${escapeHtml(p.title)}</strong> — ${escapeHtml(p.text)}</li>`).join('')}</ol>
+  <h2>Del blog</h2>
+  <ul>${related.map((p) => `<li><a href="/blog/${p.slug}">${escapeHtml(p.title)}</a></li>`).join('')}</ul>
+  <p><a href="https://wa.me/573218515587">Cotizar este servicio por WhatsApp</a> · <a href="${SITE_URL}">ROZ Social Media — Agencia digital en Pereira, Colombia</a></p>
+</main>`
+
+  let html = applyMeta(template, {
+    title: sv.metaTitle,
+    description: sv.metaDescription,
+    path: `/servicios/${sv.slug}`,
+    image: '/og-image.jpg',
+  })
+  html = injectJsonLd(html, {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: sv.name,
+    serviceType: sv.name,
+    description: sv.metaDescription,
+    url: `${SITE_URL}/servicios/${sv.slug}`,
+    areaServed: [
+      { '@type': 'Country', name: 'Colombia' },
+      { '@type': 'Country', name: 'United States' },
+    ],
+    provider: { '@type': 'LocalBusiness', name: 'ROZ Social Media', url: SITE_URL, telephone: '+573218515587' },
+  })
+  html = injectJsonLd(html, {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: sv.name, item: `${SITE_URL}/servicios/${sv.slug}` },
+    ],
+  })
+  html = injectRootContent(html, body)
+
+  mkdirSync(join(DIST, 'servicios', sv.slug), { recursive: true })
+  writeFileSync(join(DIST, 'servicios', sv.slug, 'index.html'), html)
+  console.log(`prerender: servicios/${sv.slug}/index.html`)
 }

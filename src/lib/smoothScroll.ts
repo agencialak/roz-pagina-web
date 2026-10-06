@@ -26,6 +26,8 @@ export function resetScroll() {
 
 export function scrollToTarget(target: string | number) {
   if (lenis) {
+    // Tras cambiar de página el alto cambia; sin recalcular, Lenis recorta el destino al alto viejo
+    lenis.resize()
     lenis.scrollTo(target, { offset: typeof target === 'number' ? 0 : -80 })
     return
   }
@@ -34,4 +36,15 @@ export function scrollToTarget(target: string | number) {
   } else {
     document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' })
   }
+}
+
+// Los anclas (#servicios, #contacto…) solo existen en la home: desde otra página
+// primero volvemos al inicio y luego bajamos a la sección.
+export function goToSection(hash: string, navigate: (to: string) => void) {
+  if (document.querySelector(hash)) {
+    scrollToTarget(hash)
+    return
+  }
+  navigate('/')
+  setTimeout(() => scrollToTarget(hash), 450)
 }

@@ -10,6 +10,7 @@ import Team from './Team'
 import Results from './Results'
 import Testimonials from './Testimonials'
 import TestimonialForm from './TestimonialForm'
+import GoogleReviews from './GoogleReviews'
 import Showcase from './Showcase'
 import FinalCTA from './FinalCTA'
 
@@ -29,6 +30,7 @@ function HomePage() {
       <Team />
       <Results />
       <Testimonials />
+      <GoogleReviews />
       <TestimonialForm />
       <Showcase />
       <FinalCTA />
