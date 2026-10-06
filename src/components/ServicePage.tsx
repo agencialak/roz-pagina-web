@@ -45,7 +45,8 @@ const ServicePage = () => {
   const others = services.filter((s) => s.slug !== service.slug)
 
   return (
-    <div className="relative min-h-screen pt-28 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    // key: al saltar entre servicios se remonta todo, si no las animaciones "al aparecer" ya disparadas dejan los bloques nuevos invisibles
+    <div key={service.slug} className="relative min-h-screen pt-28 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div aria-hidden className="absolute left-1/2 -translate-x-1/2 -top-40 w-[900px] h-[560px] rounded-full bg-[radial-gradient(closest-side,rgba(139,92,255,0.16),transparent)] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">

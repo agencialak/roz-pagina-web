@@ -122,7 +122,7 @@ const BlogPostDetail = () => {
   const authorName = post.author.split(' - ')[0]
 
   return (
-    <div className="relative min-h-screen pt-28 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div key={post.slug} className="relative min-h-screen pt-28 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <ReadingProgress />
       <div aria-hidden className="absolute left-1/2 -translate-x-1/2 -top-40 w-[900px] h-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(139,92,255,0.12),transparent)] pointer-events-none" />
 
