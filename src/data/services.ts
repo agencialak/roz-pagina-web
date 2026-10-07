@@ -27,12 +27,12 @@ export const services: ServicePageData[] = [
     slug: 'meta-ads',
     ogImage: '/og-meta-ads.jpg',
     name: 'Meta Ads',
-    heading: ['Publicidad en Meta Ads', 'para negocios que necesitan vender'],
-    metaTitle: 'Agencia de Meta Ads en Pereira y Colombia | ROZ Social Media',
+    heading: ['Publicidad en Facebook e Instagram', 'para negocios que necesitan vender'],
+    metaTitle: 'Publicidad en Facebook e Instagram en Pereira | Agencia Roz',
     metaDescription:
-      'Campañas de Facebook, Instagram y WhatsApp para clínicas, restaurantes, e-commerce y eventos. Más de $100M COP invertidos en Meta Ads con datos reales de resultados.',
+      'Agencia de Meta Ads en Pereira: anuncios en Facebook, Instagram y WhatsApp para clínicas, restaurantes, e-commerce y eventos. Más de $100M COP invertidos con resultados reales.',
     intro:
-      'Diseñamos y manejamos campañas en Facebook, Instagram y WhatsApp pensadas para generar conversaciones y ventas, no solo alcance. Cada campaña arranca con investigación de mercado y se optimiza semana a semana con datos reales.',
+      'Diseñamos y manejamos tu publicidad en Facebook, Instagram y WhatsApp (Meta Ads) desde Pereira para toda Colombia, pensada para generar conversaciones y ventas, no solo alcance. Cada campaña arranca con investigación de mercado y se optimiza semana a semana con datos reales.',
     forWhom: [
       { title: 'Clínicas de estética y odontología', text: 'Campañas de interacción a WhatsApp para procedimientos de ticket bajo y alto, con agenda de citas como objetivo.' },
       { title: 'Restaurantes y negocios de comida', text: 'Pauta para domicilios, fechas comerciales y crecimiento de comunidad local.' },
@@ -70,12 +70,12 @@ export const services: ServicePageData[] = [
     slug: 'gestion-redes-sociales',
     ogImage: '/og-redes-sociales.jpg',
     name: 'Gestión de redes sociales',
-    heading: ['Gestión de redes sociales', 'con estrategia detrás'],
-    metaTitle: 'Gestión de redes sociales en Pereira | ROZ Social Media',
+    heading: ['Manejo de redes sociales', 'con estrategia detrás'],
+    metaTitle: 'Manejo y gestión de redes sociales en Pereira | Agencia Roz',
     metaDescription:
       'Estrategia de contenido, diseño, publicación y crecimiento de seguidores reales en Instagram y Facebook, conectado con la pauta. Medimos costo por seguidor real, no solo visitas.',
     intro:
-      'Gestionamos la presencia de tu marca en Instagram y Facebook: estrategia de contenido, calendario, diseño, publicación y crecimiento de comunidad. Todo conectado con la pauta, para que cada publicación trabaje para el mismo objetivo.',
+      'Nos encargamos del manejo y la gestión de las redes sociales de tu marca en Instagram y Facebook: estrategia de contenido, calendario, diseño, publicación y crecimiento de comunidad. Todo conectado con la pauta, para que cada publicación trabaje para el mismo objetivo.',
     forWhom: [
       { title: 'Negocios locales', text: 'Restaurantes, clínicas, tiendas y servicios que necesitan verse activos y confiables en redes.' },
       { title: 'Profesionales de la salud', text: 'Médicos, odontólogos y especialistas que construyen autoridad con su marca personal.' },
@@ -108,7 +108,7 @@ export const services: ServicePageData[] = [
     ogImage: '/og-produccion-audiovisual.jpg',
     name: 'Producción audiovisual',
     heading: ['Producción audiovisual', 'para redes y pauta'],
-    metaTitle: 'Producción audiovisual para redes sociales en Pereira | ROZ Social Media',
+    metaTitle: 'Producción audiovisual en Pereira para redes sociales | Agencia Roz',
     metaDescription:
       'Grabación y edición de reels, videos para anuncios, testimonios y cubrimiento de eventos con equipo propio de producción en Pereira. Más de 120M de visualizaciones generadas.',
     intro:

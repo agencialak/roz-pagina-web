@@ -51,7 +51,7 @@ const Hero = () => {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-600" />
             </span>
             <span className="text-xs sm:text-sm font-medium text-ink-muted">
-              Bienvenido a ROZ Social Media
+              Agencia de publicidad y marketing digital en Pereira
             </span>
           </div>
         </motion.div>

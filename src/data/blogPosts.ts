@@ -32,10 +32,10 @@ const posts: BlogPost[] = [
   {
     id: 'costo-por-seguidor',
     slug: 'costo-por-seguidor-real',
-    title: 'Costo real por seguidor: lo que nadie te cuenta',
+    title: 'Costo por seguidor en Instagram: datos reales de 7 cuentas',
     excerpt: 'La diferencia entre costo por visita y costo por seguidor real puede ser de más de 13 veces. Estos son datos de 7 cuentas distintas.',
     content: `
-# Costo real por seguidor: lo que nadie te cuenta
+# Costo por seguidor en Instagram: datos reales de 7 cuentas
 
 Cuando revisamos el costo por seguidor real (no solo visitas a perfil) en 7 cuentas de clientes, la diferencia fue de más de 13 veces entre la mejor y la peor cuenta.
 

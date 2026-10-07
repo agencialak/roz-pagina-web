@@ -1,8 +1,8 @@
 const SITE_URL = 'https://rozagencia.com'
 const DEFAULT_TITLE =
-  'ROZ Social Media - Agencia Digital Premium | Estrategia Digital y Posicionamiento'
+  'Agencia Roz | Agencia de publicidad y marketing digital en Pereira'
 const DEFAULT_DESCRIPTION =
-  'ROZ Social Media - Agencia digital premium especializada en estrategia de redes sociales, pauta publicitaria y posicionamiento de marca. 120M+ visualizaciones, 300+ proyectos exitosos en Colombia y USA.'
+  'Agencia de publicidad y marketing digital en Pereira. Publicidad en Facebook e Instagram, manejo de redes sociales y producción audiovisual con resultados reales.'
 
 function setMeta(selector: string, attribute: string, value: string) {
   const el = document.querySelector<HTMLElement>(selector)

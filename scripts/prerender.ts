@@ -170,6 +170,7 @@ const homeTestimonials = [
 
 const homeBody = `
 <main>
+  <p>Agencia Roz (ROZ Social Media) — agencia de publicidad y marketing digital en Pereira, Colombia.</p>
   <h1>Construimos marcas que venden</h1>
   <p>Estrategia digital que convierte atención en crecimiento real. Posicionamiento, autoridad y resultados medibles para tu marca. Agencia digital premium con operaciones en Colombia y USA.</p>
 

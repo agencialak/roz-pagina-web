@@ -4,6 +4,10 @@ export const faqs: { q: string; a: string }[] = [
     a: 'Tenemos planes con un valor mensual fijo y también la opción de cobrar un porcentaje del presupuesto de pauta. Si tu negocio necesita otra forma de trabajo, nos adaptamos.',
   },
   {
+    q: '¿Cuánto cuesta la publicidad en Facebook e Instagram?',
+    a: 'Depende del objetivo y del tipo de negocio. Como referencia de nuestras campañas reales: una conversación de WhatsApp ha costado entre $375 y $19.368 COP según el sector, y una visita al perfil de Instagram alrededor de $143 COP. Para empezar recomendamos un presupuesto total mínimo de $600.000 COP.',
+  },
+  {
     q: '¿Cuál es el presupuesto mínimo para pautar?',
     a: 'El presupuesto total mínimo es de $600.000 COP.',
   },
