@@ -133,7 +133,7 @@ const template = readFileSync(join(DIST, 'index.html'), 'utf8')
 const homeServices = [
   ['Redes Sociales', 'Gestión estratégica de presencia en todas las plataformas de Meta.'],
   ['Producción de Contenido', 'Contenido que genera engagement y convierte audiencia.'],
-  ['Meta Ads', 'Campañas publicitarias estratégicas con ROI medible.'],
+  ['Publicidad en Facebook e Instagram', 'Anuncios pensados para generar mensajes y ventas, con resultados medibles.'],
   ['Branding', 'Identidad visual coherente y memorable para tu marca.'],
   ['Estrategia Creativa', 'Conceptos innovadores que diferencian tu marca del mercado.'],
   ['Posicionamiento', 'Autoridad digital y liderazgo en tu nicho de mercado.'],

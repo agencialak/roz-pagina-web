@@ -21,7 +21,7 @@ const Footer = () => {
     {
       title: 'Servicios',
       links: [
-        { label: 'Meta Ads', href: '/servicios/meta-ads', type: 'route' },
+        { label: 'Publicidad en Facebook e Instagram', href: '/servicios/meta-ads', type: 'route' },
         { label: 'Redes sociales', href: '/servicios/gestion-redes-sociales', type: 'route' },
         { label: 'Producción audiovisual', href: '/servicios/produccion-audiovisual', type: 'route' },
       ],

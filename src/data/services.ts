@@ -26,13 +26,13 @@ export const services: ServicePageData[] = [
   {
     slug: 'meta-ads',
     ogImage: '/og-meta-ads.jpg',
-    name: 'Meta Ads',
+    name: 'Publicidad en Facebook e Instagram',
     heading: ['Publicidad en Facebook e Instagram', 'para negocios que necesitan vender'],
     metaTitle: 'Publicidad en Facebook e Instagram en Pereira | Agencia Roz',
     metaDescription:
       'Agencia de Meta Ads en Pereira: anuncios en Facebook, Instagram y WhatsApp para clínicas, restaurantes, e-commerce y eventos. Más de $100M COP invertidos con resultados reales.',
     intro:
-      'Diseñamos y manejamos tu publicidad en Facebook, Instagram y WhatsApp (Meta Ads) desde Pereira para toda Colombia, pensada para generar conversaciones y ventas, no solo alcance. Cada campaña arranca con investigación de mercado y se optimiza semana a semana con datos reales.',
+      'Diseñamos y manejamos tu publicidad en Facebook, Instagram y WhatsApp (Meta Ads) desde Pereira para toda Colombia y cualquier parte del mundo, pensada para generar conversaciones y ventas, no solo alcance. Cada campaña arranca con investigación de mercado y se optimiza semana a semana con datos reales.',
     forWhom: [
       { title: 'Clínicas de estética y odontología', text: 'Campañas de interacción a WhatsApp para procedimientos de ticket bajo y alto, con agenda de citas como objetivo.' },
       { title: 'Restaurantes y negocios de comida', text: 'Pauta para domicilios, fechas comerciales y crecimiento de comunidad local.' },
