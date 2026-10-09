@@ -128,10 +128,10 @@ const BlogList = () => {
     const label = activeCategory ? CATEGORY_LABELS[activeCategory as BlogPost['category']] : null
     setPageSeo({
       title: label
-        ? `${label} | Blog ROZ Social Media`
-        : 'Blog & Insights | ROZ Social Media - Datos reales de Meta Ads',
+        ? `${label} | Blog de Agencia Roz`
+        : 'Blog de publicidad en Facebook e Instagram | Agencia Roz',
       description:
-        'Datos reales de campañas de Meta Ads, estrategias que funcionan y análisis de costos por seguidor y conversación. Aprendizajes de más de 300 proyectos en Colombia.',
+        'Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads): costos por seguidor y por conversación, y estrategias que funcionan. Aprendizajes de más de 300 proyectos en Colombia.',
       // Todas las vistas filtradas canonicalizan a /blog: es la misma lista,
       // solo reordenada, para no crear contenido duplicado a ojos de Google.
       path: '/blog',

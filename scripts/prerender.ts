@@ -252,8 +252,8 @@ console.log('prerender: index.html')
 // --- Página /blog (lista de artículos) ---
 const listBody = `
 <main>
-  <h1>Blog &amp; Insights — ROZ Social Media</h1>
-  <p>Datos reales de campañas de Meta Ads, estrategias que funcionan y aprendizajes de más de 300 proyectos en Colombia.</p>
+  <h1>Blog de publicidad en Facebook e Instagram — Agencia Roz</h1>
+  <p>Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads), estrategias que funcionan y aprendizajes de más de 300 proyectos en Colombia.</p>
   <ul>
     ${blogPosts
       .map(
@@ -267,16 +267,16 @@ const listBody = `
 </main>`
 
 let listHtml = applyMeta(template, {
-  title: 'Blog & Insights | ROZ Social Media - Datos reales de Meta Ads',
+  title: 'Blog de publicidad en Facebook e Instagram | Agencia Roz',
   description:
-    'Datos reales de campañas de Meta Ads, estrategias que funcionan y análisis de costos por seguidor y conversación. Aprendizajes de más de 300 proyectos en Colombia.',
+    'Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads): costos por seguidor y por conversación, y estrategias que funcionan. Aprendizajes de más de 300 proyectos en Colombia.',
   path: '/blog',
   image: '/og-blog.jpg',
 })
 listHtml = injectJsonLd(listHtml, {
   '@context': 'https://schema.org',
   '@type': 'Blog',
-  name: 'Blog & Insights — ROZ Social Media',
+  name: 'Blog de publicidad en Facebook e Instagram — Agencia Roz',
   url: `${SITE_URL}/blog`,
   inLanguage: 'es',
   publisher: { '@type': 'Organization', name: 'ROZ Social Media' },
