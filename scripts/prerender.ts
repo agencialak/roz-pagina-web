@@ -316,7 +316,7 @@ for (const post of blogPosts) {
 </main>`
 
   let html = applyMeta(template, {
-    title: `${post.title} | ROZ Social Media`,
+    title: `${post.title} | Agencia Roz`,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     image: post.image,

@@ -731,6 +731,126 @@ Si tu campaña tiene el mismo costo por resultado desde el día uno, lo más pro
     readTime: 3,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'dejen-trabajar-al-experto',
+    slug: 'por-que-todos-creen-que-saben-de-marketing',
+    title: '¿Por qué todos creen que saben de marketing?',
+    excerpt: 'Si contratas una agencia de marketing, es para que la dejes trabajar. El gusto del dueño del negocio no es el gusto del cliente que tiene que comprarle, y cuando esa opinión decide la estrategia, los resultados bajan.',
+    content: `
+# ¿Por qué todos creen que saben de marketing?
+
+Nos pasa muy seguido: una empresa nos contrata, y en la primera reunión ya nos está diciendo exactamente qué anuncio poner, qué público usar y qué presupuesto mover. Ahí nos hacemos dos preguntas.
+
+## Dos preguntas
+
+La primera: si ya sabes qué hacer, ¿para qué nos contratas?
+
+La segunda, y la que de verdad importa: si contratas una agencia de marketing, es para que la dejes trabajar. Para eso somos los expertos.
+
+## El gusto del dueño no es el gusto del mercado
+
+Casi siempre esa opinión viene desde el gusto personal: "no me gusta ese color", "esa letra no me convence", "esa edición no es mi estilo". El problema es que el gusto del dueño del negocio no es el gusto del cliente que tiene que comprarle.
+
+Cuando esa opinión personal termina decidiendo la estrategia, los resultados bajan, porque se está optimizando para agradar a una sola persona, no al mercado.
+
+## Contexto sí, dictar la estrategia no
+
+No decimos que el cliente no deba opinar. Conoce su negocio mejor que nadie, y esa parte es clave. Pero una cosa es dar contexto del negocio, y otra muy distinta es dictar la estrategia de algo que no es tu oficio, basado en tu gusto personal.
+
+Los mejores resultados que hemos tenido no fueron con el cliente que más opinaba. Fueron con el que confió, dio el contexto y nos dejó trabajar.
+    `,
+    image: '/blog/post_dejen_trabajar_al_experto.jpg',
+    date: '2026-10-13',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
+  {
+    id: 'doctores-del-mercado',
+    slug: 'somos-los-doctores-del-mercado',
+    title: 'Somos los doctores del mercado: primero diagnóstico, después receta',
+    excerpt: 'Ningún médico te mira dos segundos y te dice "tómese esto". Antes de tocar una campaña, preguntamos: "necesito vender más" es el síntoma, no el diagnóstico.',
+    content: `
+# Somos los doctores del mercado: primero diagnóstico, después receta
+
+Respondiendo los comentarios de [¿Por qué todos creen que saben de marketing?](/blog/por-que-todos-creen-que-saben-de-marketing), nos quedó dando vueltas una idea: en marketing deberíamos trabajar como los doctores.
+
+## Nadie receta sin preguntar
+
+Llegas al médico y le dices qué te duele. Él no te mira dos segundos y te dice "tómese esto". Te pregunta desde cuándo te duele, dónde, qué has probado, qué cambió. Y solo después de eso te dice qué hacer.
+
+Con un negocio pasa igual.
+
+## El síntoma no es el diagnóstico
+
+Un cliente llega y nos dice qué le duele: "necesito vender más", "nadie me conoce", "invierto en publicidad y no veo números". Eso es el síntoma. No es el diagnóstico.
+
+## Las preguntas antes de la campaña
+
+Antes de tocar una campaña, preguntamos:
+
+- ¿Qué vendes y a quién?
+- ¿Cuánto vale para ti un cliente nuevo?
+- ¿Qué has probado y qué pasó?
+- ¿Dónde se pierde la gente: no te escribe, te escribe y no compra, o compra una vez y no vuelve?
+
+Dos negocios pueden decir "necesito vender más" y necesitar cosas totalmente distintas. Uno necesita que lo conozcan. El otro ya tiene tráfico, pero lo pierde en el WhatsApp.
+
+## Recetar sin diagnosticar sale caro
+
+Recetar sin diagnosticar es la forma más rápida de gastar plata en publicidad sin resultados.
+
+Por eso somos los doctores del mercado: primero escuchamos, después preguntamos, y solo entonces decidimos el camino.
+    `,
+    image: '/blog/post_doctores_del_mercado.jpg',
+    date: '2026-10-15',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
+  {
+    id: 'evento-b2b-mexico-resultados',
+    slug: 'evento-b2b-mexico-triple-de-ventas',
+    title: 'Mismo evento, otro país: casi el triple de ventas',
+    excerpt: 'En Chile vendimos 21 entradas a $17,29 USD cada una. En México, para el mismo tipo de evento B2B, 60 entradas a $7,09 USD cada una, con un ROAS de 10x en 20 días.',
+    content: `
+# Mismo evento, otro país: casi el triple de ventas
+
+- **Chile:** 21 entradas vendidas a $17,29 USD cada una.
+- **México:** 60 entradas a $7,09 USD cada una.
+
+Mismo tipo de evento B2B, mismo público de nicho, otro país.
+
+## De dónde partimos
+
+En agosto cerramos la [campaña de Chile](/blog/vender-entradas-evento-b2b-chile-meta-ads) con un ROAS de 7,58x. Nos pareció un buen resultado.
+
+## Los números de México
+
+En septiembre nos tocó el mismo reto en México. En 20 días de campaña:
+
+- **60 entradas vendidas**
+- **$7,09 USD por venta**
+- **ROAS de 10x:** por cada dólar invertido en Meta Ads, volvieron 10 en ventas.
+
+Casi el triple de ventas, a menos de la mitad del costo por venta.
+
+## Punto de partida, no receta
+
+No fue un presupuesto gigante. Fue usar lo que aprendimos en Chile como punto de partida, sin casarnos con eso.
+
+Y eso fue lo que más nos sorprendió: varias de las cosas que ganaron en Chile, en México perdieron. El público que mejor funcionó en un país no fue el mismo en el otro, y un anuncio que casi no vendió en Chile terminó siendo de los mejores en México.
+
+---
+
+*Datos reales de campaña, cifras en USD según el reporte de Meta Ads. Datos anonimizados, sin nombres de clientes.*
+    `,
+    image: '/blog/post_evento_mexico_resultados.jpg',
+    date: '2026-10-20',
+    category: 'casos',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba

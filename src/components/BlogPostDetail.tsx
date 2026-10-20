@@ -79,7 +79,7 @@ const BlogPostDetail = () => {
     if (!post) return
 
     setPageSeo({
-      title: `${post.title} | ROZ Social Media`,
+      title: `${post.title} | Agencia Roz`,
       description: post.excerpt,
       path: `/blog/${post.slug}`,
       image: post.image,
