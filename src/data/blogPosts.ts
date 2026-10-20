@@ -81,10 +81,10 @@ Pide también el costo por seguidor real. Son números distintos, y la diferenci
   {
     id: 'costo-por-conversacion',
     slug: 'costo-por-conversacion-whatsapp',
-    title: 'Costo por conversación de WhatsApp: por qué varían 50 veces',
-    excerpt: 'Una conversación de WhatsApp nos costó $375 COP. Otra, en un nicho distinto, casi $20.000 COP. Las dos campañas funcionaron bien. Esto es lo que las diferencia.',
+    title: 'Cuánto cuesta una conversación de WhatsApp con publicidad',
+    excerpt: 'Una conversación de WhatsApp nos costó $375 COP; otra, en un nicho distinto, casi $20.000 COP. Las dos campañas funcionaron. Esto explica la diferencia.',
     content: `
-# Costo por conversación de WhatsApp: por qué varían 50 veces
+# Cuánto cuesta una conversación de WhatsApp con publicidad
 
 Una conversación de WhatsApp nos costó $375 COP. Otra, en un nicho distinto, casi $20.000 COP. Las dos campañas funcionaron bien. Esto es lo que las diferencia.
 
@@ -132,10 +132,10 @@ Si comparas el costo por conversación de tu negocio contra el de otro sin tener
   {
     id: 'investigacion-de-mercado',
     slug: 'investigacion-de-mercado-antes-de-pautar',
-    title: 'Investigación de mercado: el paso que la mayoría de campañas se saltan',
-    excerpt: 'Antes de crear el primer anuncio, casi nunca hablamos de Meta Ads. Hablamos de quién es el cliente, qué le duele y qué objeciones tiene. Ese paso cambia todo lo que viene después.',
+    title: 'Investigación de mercado antes de pautar en Facebook e Instagram',
+    excerpt: 'Antes del primer anuncio hablamos de quién es el cliente, qué le duele y qué objeciones tiene. Por qué ese paso define el resultado de la campaña.',
     content: `
-# Investigación de mercado: el paso que la mayoría de campañas se saltan
+# Investigación de mercado antes de pautar en Facebook e Instagram
 
 Antes de crear el primer anuncio, casi nunca hablamos de Meta Ads.
 
@@ -173,10 +173,10 @@ La pauta no arregla una estrategia mal pensada. **Solo la hace más cara.**
   {
     id: 'trafico-vs-interaccion',
     slug: 'trafico-vs-interaccion-costos-distintos',
-    title: 'Tráfico vs. interacción: por qué cuestan distinto (y está bien)',
-    excerpt: 'Una visita a Instagram me cuesta en promedio $143 COP. Una conversación de WhatsApp, $1.736 COP. Doce veces más cara. Y está bien que así sea.',
+    title: 'Tráfico vs. interacción en Meta Ads: por qué cuestan distinto',
+    excerpt: 'Una visita a Instagram cuesta en promedio $143 COP y una conversación de WhatsApp $1.736 COP: doce veces más. Por qué está bien que así sea.',
     content: `
-# Tráfico vs. interacción: por qué cuestan distinto (y está bien)
+# Tráfico vs. interacción en Meta Ads: por qué cuestan distinto
 
 Una visita a Instagram me cuesta en promedio $143 COP. Una conversación de WhatsApp, $1.736 COP. Doce veces más cara. Y está bien que así sea.
 
@@ -212,10 +212,10 @@ Si el objetivo es awareness, el número que importa es el costo por visita. Si e
   {
     id: 'tendencia-ia-meta',
     slug: 'ia-de-meta-y-el-rol-del-operador',
-    title: 'La IA ejecuta. La estrategia sigue siendo humana',
-    excerpt: 'Meta Ads en 2026 corre prácticamente solo. Entonces, ¿para qué sirve alguien que gestione campañas si la plataforma ya hace casi todo sola? Esto es lo que he visto cambiar en más de 5 años en esto.',
+    title: 'IA en Meta Ads: qué hace sola y qué sigue siendo humano',
+    excerpt: 'En 2026 Meta Ads corre casi solo. Entonces, ¿para qué alguien que gestione las campañas? Lo que ha cambiado y lo que no en más de 5 años manejando cuentas.',
     content: `
-# La IA ejecuta. La estrategia sigue siendo humana
+# IA en Meta Ads: qué hace sola y qué sigue siendo humano
 
 Meta Ads en 2026 corre prácticamente solo.
 
@@ -250,10 +250,10 @@ La IA ejecuta. La estrategia sigue siendo humana.
   {
     id: 'evolucion-cuenta',
     slug: 'evolucion-mensual-dos-campanas-mismo-costo',
-    title: 'Dos campañas distintas subieron de costo el mismo mes',
-    excerpt: 'En esta cuenta de estética manejamos dos campañas de interacción a WhatsApp, sin presupuesto compartido entre sí. Las dos subieron de costo al mismo tiempo. No fue coincidencia.',
+    title: 'Por qué sube el costo por conversación de WhatsApp en Meta Ads',
+    excerpt: 'Dos campañas de una clínica de estética subieron de costo el mismo mes sin compartir presupuesto. La causa: concentrar todo en una sola oferta.',
     content: `
-# Dos campañas distintas subieron de costo el mismo mes
+# Por qué sube el costo por conversación de WhatsApp en Meta Ads
 
 En esta cuenta de estética manejamos dos campañas de interacción a WhatsApp, una para cada servicio, sin presupuesto compartido entre sí. Esto es lo que vimos mes a mes en cada una:
 
@@ -296,10 +296,10 @@ El costo por resultado no depende solo de cuánta plata metes. Depende de cuánt
   {
     id: 'cliente-potencial-seguimiento',
     slug: 'el-cliente-potencial-se-ve-lo-que-pasa-despues-no',
-    title: 'El cliente potencial se ve. Lo que pasa después, no',
-    excerpt: 'Genero el cliente potencial. Ahí es donde casi todos mis clientes dejan de medir. Si el costo por resultado es la única métrica, solo estás viendo la mitad de la historia.',
+    title: 'El cliente potencial no es la venta: qué medir después',
+    excerpt: 'El costo por resultado muestra cuánto cuesta el cliente potencial, no si terminó comprando. Por qué medir solo eso deja por fuera la mitad de la historia.',
     content: `
-# El cliente potencial se ve. Lo que pasa después, no
+# El cliente potencial no es la venta: qué medir después
 
 Genero el cliente potencial. Ahí es donde casi todos mis clientes dejan de medir.
 
@@ -328,10 +328,10 @@ Si generas clientes potenciales pero no sabes qué pasa con ellos después, ese 
   {
     id: 'atribucion-y-base-de-datos',
     slug: 'atribucion-de-ventas-y-base-de-datos-whatsapp',
-    title: 'Sabes que vendes más. No sabes de dónde viene',
-    excerpt: 'Un cliente lleva más ventas desde que trabajamos juntos. Eso lo sabe. Lo que no sabe es cuántas de esas ventas vinieron de la campaña, y cuántas de otro canal.',
+    title: 'Cómo saber cuántas ventas vienen de tus anuncios',
+    excerpt: 'Un cliente vende más desde que trabajamos juntos, pero no sabe cuántas de esas ventas vienen de la campaña. Cómo medirlo con una base de datos de WhatsApp.',
     content: `
-# Sabes que vendes más. No sabes de dónde viene
+# Cómo saber cuántas ventas vienen de tus anuncios
 
 Un cliente lleva más ventas desde que trabajamos juntos. Eso lo sabe. Lo que no sabe es cuántas de esas ventas vinieron de la campaña, y cuántas de otro canal.
 
@@ -360,10 +360,10 @@ Y mientras no se resuelvan, la campaña sigue funcionando a ciegas en dos frente
   {
     id: 'estacionalidad-misma-fecha-un-ano-despues',
     slug: 'misma-fecha-un-ano-despues-resultados-opuestos',
-    title: 'Misma fecha, un año después: resultados opuestos',
-    excerpt: 'Repetimos las mismas campañas, en las mismas fechas comerciales, un año después, en una repostería. En una fecha, el costo bajó a la mitad. En la otra, subió. El presupuesto no explicó la diferencia.',
+    title: 'Fechas comerciales en Meta Ads: misma fecha, resultados opuestos',
+    excerpt: 'Repetimos las campañas de día de la madre y San Valentín de una repostería un año después. Una bajó el costo a la mitad y la otra subió. Qué lo explicó.',
     content: `
-# Misma fecha, un año después: resultados opuestos
+# Fechas comerciales en Meta Ads: misma fecha, resultados opuestos
 
 Repetimos las mismas campañas, en las mismas fechas comerciales, un año después, en una repostería. En una fecha, el costo bajó a la mitad. En la otra, subió. El dato que explica la diferencia no fue el presupuesto — fue los días que estuvo encendida cada una.
 
@@ -396,10 +396,10 @@ Aun así, la variedad de creativos importa — sobre todo la primera vez que se 
   {
     id: 'variedad-creativa-sin-margen-de-error',
     slug: 'dos-creativos-sin-margen-de-error',
-    title: '2 creativos. Sin margen de error',
-    excerpt: 'Dos campañas de la misma cuenta, mismo objetivo, mismas semanas de julio, cada una con solo 2 creativos corriendo. Una terminó en $3.112 COP por conversación. La otra, en $8.702 COP — casi 3 veces más cara.',
+    title: 'Pocos creativos en Meta Ads: la misma clínica, 3 veces más cara',
+    excerpt: 'Dos campañas de una misma clínica, con solo 2 creativos cada una: una cerró en $3.112 COP por conversación y la otra en $8.702 COP. Por qué pasó.',
     content: `
-# 2 creativos. Sin margen de error
+# Pocos creativos en Meta Ads: la misma clínica, 3 veces más cara
 
 Dos campañas de la misma cuenta (una clínica de estética), mismo objetivo, mismas semanas de julio, cada una con solo 2 creativos corriendo. Una terminó en $3.112 COP por conversación de WhatsApp. La otra, en $8.702 COP — casi 3 veces más cara.
 
@@ -432,10 +432,10 @@ Con 2 creativos, no hay margen: si uno no conecta, se lleva una porción grande 
   {
     id: 'alcance-vs-venta-carousel',
     slug: 'el-costo-de-alcance-no-es-el-costo-de-venta',
-    title: 'El costo de alcance no es el costo de venta',
-    excerpt: 'Dos campañas reales. Dos "costos por resultado" completamente distintos: $2.963 COP y $19.368 COP. A simple vista parece que una salió carísima y la otra un regalo. No es por el creativo, ni por el público.',
+    title: 'Costo por resultado: alcance no es lo mismo que venta',
+    excerpt: 'Dos campañas reales: $2.963 COP y $19.368 COP por resultado. No es el creativo ni el público: son objetivos distintos que no se pueden comparar.',
     content: `
-# El costo de alcance no es el costo de venta
+# Costo por resultado: alcance no es lo mismo que venta
 
 Dos campañas reales. Dos "costos por resultado" completamente distintos: $2.963 COP y $19.368 COP.
 
@@ -480,10 +480,10 @@ El problema no es que la campaña esté cara. Es comparar objetivos que no se pu
   {
     id: 'segmentacion-supuestos-vs-datos',
     slug: 'suponiamos-que-sabiamos-quien-era-el-publico',
-    title: 'Suponíamos que sabíamos quién era el público. Los datos dijeron otra cosa',
-    excerpt: 'Le dimos más presupuesto al público que "hacía sentido". No fue el que más interactuó. Revisamos el desempeño por edad y género de una clínica de estética y los supuestos no coincidieron con los datos.',
+    title: 'Edad y género del público en Meta Ads: supuestos vs. datos',
+    excerpt: 'Le dimos más presupuesto al público que "hacía sentido" y no fue el que más interactuó. Lo que mostró el desempeño por edad y género de una clínica de estética.',
     content: `
-# Suponíamos que sabíamos quién era el público. Los datos dijeron otra cosa
+# Edad y género del público en Meta Ads: supuestos vs. datos
 
 Le dimos más presupuesto al público que "hacía sentido". No fue el que más interactuó.
 
@@ -510,10 +510,10 @@ No es que haya que abandonar al público "obvio". Es que los supuestos sobre qui
   {
     id: 'facebook-vs-instagram-mismo-presupuesto',
     slug: 'facebook-vs-instagram-mismo-presupuesto',
-    title: 'Misma cuenta. Mismos 3 meses. ¿Qué plataforma rindió mejor?',
-    excerpt: 'Facebook se llevó el 62% del presupuesto y llegó a 31.800 personas. Instagram, con el 38% restante, llegó a solo 8.349. Para una clínica de estética, la suposición común sería que Instagram manda. Pasó lo contrario.',
+    title: 'Facebook vs. Instagram: ¿dónde rinde más tu publicidad?',
+    excerpt: 'Misma cuenta, mismos 3 meses: Facebook se llevó el 62% del presupuesto y llegó a 31.800 personas; Instagram, a 8.349. El caso de una clínica de estética.',
     content: `
-# Misma cuenta. Mismos 3 meses. ¿Qué plataforma rindió mejor?
+# Facebook vs. Instagram: ¿dónde rinde más tu publicidad?
 
 Misma cuenta. Mismos 3 meses. Dos plataformas con resultados muy distintos.
 
@@ -540,10 +540,10 @@ No es una regla que aplique a cualquier cuenta — es la razón por la que revis
   {
     id: 'venta-entradas-evento-b2b-chile',
     slug: 'vender-entradas-evento-b2b-chile-meta-ads',
-    title: 'Vender entradas a un evento B2B en otro país, con público de nicho',
-    excerpt: 'Cerramos una campaña para vender entradas a un evento B2B en Chile, de energías limpias y renovables. En 19 días conseguimos 21 entradas a $17,29 USD cada una, con un ROAS de 7,58x.',
+    title: 'Vender entradas a un evento B2B con Meta Ads: caso Chile',
+    excerpt: 'En 19 días vendimos 21 entradas para un evento B2B de energías renovables en Chile, a $17,29 USD cada una y con un ROAS de 7,58x. Así lo hicimos.',
     content: `
-# Vender entradas a un evento B2B en otro país, con público de nicho
+# Vender entradas a un evento B2B con Meta Ads: caso Chile
 
 Un evento presencial de nicho no se llena solo con ganas — se llena con datos.
 
@@ -572,10 +572,10 @@ Vender entradas a un evento presencial en otro país, con un público de nicho, 
   {
     id: 'conjuntos-dos-vendedores',
     slug: 'conjuntos-de-anuncios-dos-vendedores',
-    title: 'Dos conjuntos de anuncios, dos vendedores distintos',
-    excerpt: 'Cuando prendemos varios conjuntos de anuncios en una misma campaña, no estamos duplicando el mismo anuncio. Estamos poniendo a trabajar a dos vendedores distintos, cada uno con su propio criterio.',
+    title: 'Conjuntos de anuncios en Meta Ads: por qué usar más de uno',
+    excerpt: 'Un conjunto Advantage+ y otro con intereses o públicos similares no son el mismo anuncio duplicado: son dos vendedores buscando clientes distintos.',
     content: `
-# Dos conjuntos de anuncios, dos vendedores distintos
+# Conjuntos de anuncios en Meta Ads: por qué usar más de uno
 
 Cuando prendemos varios conjuntos de anuncios en una misma campaña, no estamos duplicando el mismo anuncio. Estamos poniendo a trabajar a dos vendedores distintos, cada uno con su propio criterio.
 
@@ -602,10 +602,10 @@ Por eso casi nunca dejamos corriendo un solo tipo de conjunto en una campaña. N
   {
     id: 'anuncios-herramientas-vendedor',
     slug: 'anuncios-herramientas-del-vendedor',
-    title: 'Una herramienta o una caja completa: los anuncios de tu campaña',
-    excerpt: 'Dar un solo anuncio es como mandar a un vendedor a la calle con un solo discurso memorizado. Con varias piezas, le das una caja de herramientas en vez de un solo martillo.',
+    title: 'Cuántos anuncios poner en una campaña de Meta Ads',
+    excerpt: 'Un solo anuncio es como mandar a un vendedor con un solo discurso. Por qué varias piezas, ángulos y formatos encuentran más rápido al cliente.',
     content: `
-# Una herramienta o una caja completa: los anuncios de tu campaña
+# Cuántos anuncios poner en una campaña de Meta Ads
 
 Si los conjuntos de anuncios son vendedores distintos, cada uno con su propio criterio, los anuncios que le damos a cada vendedor son sus herramientas.
 
@@ -632,10 +632,10 @@ Mientras más herramientas le demos a cada vendedor, más rápido encuentra la q
   {
     id: 'humanos-no-robots',
     slug: 'no-le-vendes-a-un-robot',
-    title: 'No le vendes a un robot. Le vendes a una persona',
-    excerpt: 'La mayoría de las personas no compran la primera vez que ven un anuncio. Lo ven una, dos, tres, hasta cuatro veces al día — y deciden tres días después. O cinco. U ocho. O diez.',
+    title: 'Por qué la gente no compra la primera vez que ve tu anuncio',
+    excerpt: 'Casi nadie compra la primera vez que ve un anuncio: lo ve varias veces y decide días después. Por qué la pauta tiene que ser constante.',
     content: `
-# No le vendes a un robot. Le vendes a una persona
+# Por qué la gente no compra la primera vez que ve tu anuncio
 
 Hablamos de los conjuntos de anuncios como vendedores, y de los anuncios como sus herramientas. Falta el otro lado: el cliente. Porque muchas veces se nos olvida que le estamos vendiendo a humanos, no a robots.
 
@@ -664,10 +664,10 @@ Entender cómo piensa y decide una persona no es un detalle técnico. Es la dife
   {
     id: 'camino-real-del-cliente',
     slug: 'el-camino-real-antes-de-una-compra',
-    title: 'El camino real antes de una compra',
-    excerpt: 'Un cliente no compra la primera vez que ve tu anuncio. Puede verlo 15, 20 veces, entre mil interrupciones, hasta que un día lo ve completo — y ya está mucho más cerca de comprar.',
+    title: 'Cuántas veces ve alguien tu anuncio antes de comprar',
+    excerpt: 'Un cliente puede ver tu anuncio 15 o 20 veces, entre mil interrupciones, antes de verlo completo y decidir. Así es el camino real hacia una compra.',
     content: `
-# El camino real antes de una compra
+# Cuántas veces ve alguien tu anuncio antes de comprar
 
 Un cliente no compra la primera vez que ve tu anuncio. Este es el camino real que puede recorrer antes de decidir — con toda la vida real metida en el medio.
 
@@ -698,10 +698,10 @@ Pasa porque la marca estuvo presente, una y otra vez, el tiempo suficiente. Así
   {
     id: 'primera-campana-no-es-la-definitiva',
     slug: 'la-primera-campana-no-es-la-definitiva',
-    title: 'La primera campaña no es la definitiva',
-    excerpt: 'Una campaña de armonización facial arrancó en enero a $2.573 COP por conversación de WhatsApp. En marzo, la misma campaña bajó a $1.800 COP: 30% menos en dos meses, sin cambiar de servicio ni de oferta.',
+    title: 'La primera campaña no es la definitiva: 30% menos en 2 meses',
+    excerpt: 'Una campaña de armonización facial pasó de $2.573 a $1.800 COP por conversación de WhatsApp en dos meses, sin cambiar la oferta. Así la optimizamos.',
     content: `
-# La primera campaña no es la definitiva
+# La primera campaña no es la definitiva: 30% menos en 2 meses
 
 Una campaña de armonización facial que manejamos arrancó en enero con un costo de $2.573 COP por conversación de WhatsApp. En marzo, la misma campaña — mismo cliente, mismo objetivo, mismo público base — bajó a $1.800 COP. Una reducción del 30% en dos meses, sin cambiar de servicio ni de oferta.
 
@@ -735,7 +735,7 @@ Si tu campaña tiene el mismo costo por resultado desde el día uno, lo más pro
     id: 'dejen-trabajar-al-experto',
     slug: 'por-que-todos-creen-que-saben-de-marketing',
     title: '¿Por qué todos creen que saben de marketing?',
-    excerpt: 'Si contratas una agencia de marketing, es para que la dejes trabajar. El gusto del dueño del negocio no es el gusto del cliente que tiene que comprarle, y cuando esa opinión decide la estrategia, los resultados bajan.',
+    excerpt: 'Si contratas una agencia, es para dejarla trabajar. El gusto del dueño no es el del cliente que compra, y cuando decide la estrategia, los resultados bajan.',
     content: `
 # ¿Por qué todos creen que saben de marketing?
 
@@ -811,10 +811,10 @@ Por eso somos los doctores del mercado: primero escuchamos, después preguntamos
   {
     id: 'evento-b2b-mexico-resultados',
     slug: 'evento-b2b-mexico-triple-de-ventas',
-    title: 'Mismo evento, otro país: casi el triple de ventas',
+    title: 'Evento B2B en México con Meta Ads: 60 entradas y ROAS de 10x',
     excerpt: 'En Chile vendimos 21 entradas a $17,29 USD cada una. En México, para el mismo tipo de evento B2B, 60 entradas a $7,09 USD cada una, con un ROAS de 10x en 20 días.',
     content: `
-# Mismo evento, otro país: casi el triple de ventas
+# Evento B2B en México con Meta Ads: 60 entradas y ROAS de 10x
 
 - **Chile:** 21 entradas vendidas a $17,29 USD cada una.
 - **México:** 60 entradas a $7,09 USD cada una.
