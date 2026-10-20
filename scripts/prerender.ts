@@ -64,40 +64,33 @@ function applyMeta(
   const title = escapeHtml(opts.title)
   const description = escapeHtml(opts.description)
 
-  return html
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
-    .replace(
-      /(<meta name="description" content=")[^"]*(")/,
-      `$1${description}$2`
-    )
-    .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${url}$2`)
-    .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${title}$2`)
-    .replace(
-      /(<meta property="og:description" content=")[^"]*(")/,
-      `$1${description}$2`
-    )
-    .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${url}$2`)
-    .replace(/(<meta property="og:image" content=")[^"]*(")/, `$1${image}$2`)
-    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${title}$2`)
-    .replace(
-      /(<meta name="twitter:description" content=")[^"]*(")/,
-      `$1${description}$2`
-    )
-    .replace(/(<meta name="twitter:image" content=")[^"]*(")/, `$1${image}$2`)
+  // Reemplazos con función: el texto puede traer "$" (ej. "$17,29 USD") y en un
+  // string de reemplazo "$1"/"$2" se interpretarían como grupos de la regex.
+  const setAttr = (src: string, re: RegExp, value: string) =>
+    src.replace(re, (_m, before: string, after: string) => `${before}${value}${after}`)
+
+  let out = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${title}</title>`)
+  out = setAttr(out, /(<meta name="description" content=")[^"]*(")/, description)
+  out = setAttr(out, /(<link rel="canonical" href=")[^"]*(")/, url)
+  out = setAttr(out, /(<meta property="og:title" content=")[^"]*(")/, title)
+  out = setAttr(out, /(<meta property="og:description" content=")[^"]*(")/, description)
+  out = setAttr(out, /(<meta property="og:url" content=")[^"]*(")/, url)
+  out = setAttr(out, /(<meta property="og:image" content=")[^"]*(")/, image)
+  out = setAttr(out, /(<meta name="twitter:title" content=")[^"]*(")/, title)
+  out = setAttr(out, /(<meta name="twitter:description" content=")[^"]*(")/, description)
+  out = setAttr(out, /(<meta name="twitter:image" content=")[^"]*(")/, image)
+  return out
 }
 
 function injectJsonLd(html: string, jsonLd: object) {
   return html.replace(
     '</head>',
-    `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script></head>`
+    () => `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script></head>`
   )
 }
 
 function injectRootContent(html: string, body: string) {
-  return html.replace(
-    '<div id="root"></div>',
-    `<div id="root">${body}</div>`
-  )
+  return html.replace('<div id="root"></div>', () => `<div id="root">${body}</div>`)
 }
 
 function postJsonLd(post: BlogPost) {

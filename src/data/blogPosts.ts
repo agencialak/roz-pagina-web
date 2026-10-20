@@ -32,10 +32,10 @@ const posts: BlogPost[] = [
   {
     id: 'costo-por-seguidor',
     slug: 'costo-por-seguidor-real',
-    title: 'Costo por seguidor en Instagram: datos reales de 7 cuentas',
-    excerpt: 'La diferencia entre costo por visita y costo por seguidor real puede ser de más de 13 veces. Estos son datos de 7 cuentas distintas.',
+    title: 'Cuánto cuesta un seguidor en Instagram: de $264 a $3.552 COP',
+    excerpt: 'Datos reales de 7 negocios en Colombia con publicidad en Instagram: un seguidor costó entre $264 y $3.552 COP. Por qué varía 13 veces y qué pedirle a tu agencia.',
     content: `
-# Costo por seguidor en Instagram: datos reales de 7 cuentas
+# Cuánto cuesta un seguidor en Instagram: de $264 a $3.552 COP
 
 Cuando revisamos el costo por seguidor real (no solo visitas a perfil) en 7 cuentas de clientes, la diferencia fue de más de 13 veces entre la mejor y la peor cuenta.
 
