@@ -81,10 +81,10 @@ Pide también el costo por seguidor real. Son números distintos, y la diferenci
   {
     id: 'costo-por-conversacion',
     slug: 'costo-por-conversacion-whatsapp',
-    title: 'Cuánto cuesta una conversación de WhatsApp con publicidad',
-    excerpt: 'Una conversación de WhatsApp nos costó $375 COP; otra, en un nicho distinto, casi $20.000 COP. Las dos campañas funcionaron. Esto explica la diferencia.',
+    title: 'Costo por conversación de WhatsApp en Meta Ads: ¿cuál es bueno?',
+    excerpt: '¿Qué es un buen costo por conversación? Una nos costó $375 COP y otra casi $20.000 COP, y las dos campañas funcionaron. Esto explica la diferencia.',
     content: `
-# Cuánto cuesta una conversación de WhatsApp con publicidad
+# Costo por conversación de WhatsApp en Meta Ads: ¿cuál es bueno?
 
 Una conversación de WhatsApp nos costó $375 COP. Otra, en un nicho distinto, casi $20.000 COP. Las dos campañas funcionaron bien. Esto es lo que las diferencia.
 
@@ -173,10 +173,10 @@ La pauta no arregla una estrategia mal pensada. **Solo la hace más cara.**
   {
     id: 'trafico-vs-interaccion',
     slug: 'trafico-vs-interaccion-costos-distintos',
-    title: 'Tráfico vs. interacción en Meta Ads: por qué cuestan distinto',
+    title: 'Tráfico o interacción en Meta Ads: ¿qué es mejor y cuánto cuesta?',
     excerpt: 'Una visita a Instagram cuesta en promedio $143 COP y una conversación de WhatsApp $1.736 COP: doce veces más. Por qué está bien que así sea.',
     content: `
-# Tráfico vs. interacción en Meta Ads: por qué cuestan distinto
+# Tráfico o interacción en Meta Ads: ¿qué es mejor y cuánto cuesta?
 
 Una visita a Instagram me cuesta en promedio $143 COP. Una conversación de WhatsApp, $1.736 COP. Doce veces más cara. Y está bien que así sea.
 
@@ -360,10 +360,10 @@ Y mientras no se resuelvan, la campaña sigue funcionando a ciegas en dos frente
   {
     id: 'estacionalidad-misma-fecha-un-ano-despues',
     slug: 'misma-fecha-un-ano-despues-resultados-opuestos',
-    title: 'Fechas comerciales en Meta Ads: misma fecha, resultados opuestos',
+    title: 'Fechas comerciales en Colombia: misma campaña, resultados opuestos',
     excerpt: 'Repetimos las campañas de día de la madre y San Valentín de una repostería un año después. Una bajó el costo a la mitad y la otra subió. Qué lo explicó.',
     content: `
-# Fechas comerciales en Meta Ads: misma fecha, resultados opuestos
+# Fechas comerciales en Colombia: misma campaña, resultados opuestos
 
 Repetimos las mismas campañas, en las mismas fechas comerciales, un año después, en una repostería. En una fecha, el costo bajó a la mitad. En la otra, subió. El dato que explica la diferencia no fue el presupuesto — fue los días que estuvo encendida cada una.
 
@@ -432,10 +432,10 @@ Con 2 creativos, no hay margen: si uno no conecta, se lleva una porción grande 
   {
     id: 'alcance-vs-venta-carousel',
     slug: 'el-costo-de-alcance-no-es-el-costo-de-venta',
-    title: 'Costo por resultado: alcance no es lo mismo que venta',
+    title: 'Costo por resultado en Meta Ads: alcance no es lo mismo que venta',
     excerpt: 'Dos campañas reales: $2.963 COP y $19.368 COP por resultado. No es el creativo ni el público: son objetivos distintos que no se pueden comparar.',
     content: `
-# Costo por resultado: alcance no es lo mismo que venta
+# Costo por resultado en Meta Ads: alcance no es lo mismo que venta
 
 Dos campañas reales. Dos "costos por resultado" completamente distintos: $2.963 COP y $19.368 COP.
 
@@ -510,10 +510,10 @@ No es que haya que abandonar al público "obvio". Es que los supuestos sobre qui
   {
     id: 'facebook-vs-instagram-mismo-presupuesto',
     slug: 'facebook-vs-instagram-mismo-presupuesto',
-    title: 'Facebook vs. Instagram: ¿dónde rinde más tu publicidad?',
+    title: 'Facebook o Instagram: ¿cuál es mejor para tu publicidad?',
     excerpt: 'Misma cuenta, mismos 3 meses: Facebook se llevó el 62% del presupuesto y llegó a 31.800 personas; Instagram, a 8.349. El caso de una clínica de estética.',
     content: `
-# Facebook vs. Instagram: ¿dónde rinde más tu publicidad?
+# Facebook o Instagram: ¿cuál es mejor para tu publicidad?
 
 Misma cuenta. Mismos 3 meses. Dos plataformas con resultados muy distintos.
 
@@ -540,10 +540,10 @@ No es una regla que aplique a cualquier cuenta — es la razón por la que revis
   {
     id: 'venta-entradas-evento-b2b-chile',
     slug: 'vender-entradas-evento-b2b-chile-meta-ads',
-    title: 'Vender entradas a un evento B2B con Meta Ads: caso Chile',
+    title: 'Cómo vender entradas para un evento B2B con Meta Ads: caso Chile',
     excerpt: 'En 19 días vendimos 21 entradas para un evento B2B de energías renovables en Chile, a $17,29 USD cada una y con un ROAS de 7,58x. Así lo hicimos.',
     content: `
-# Vender entradas a un evento B2B con Meta Ads: caso Chile
+# Cómo vender entradas para un evento B2B con Meta Ads: caso Chile
 
 Un evento presencial de nicho no se llena solo con ganas — se llena con datos.
 
@@ -572,10 +572,10 @@ Vender entradas a un evento presencial en otro país, con un público de nicho, 
   {
     id: 'conjuntos-dos-vendedores',
     slug: 'conjuntos-de-anuncios-dos-vendedores',
-    title: 'Conjuntos de anuncios en Meta Ads: por qué usar más de uno',
+    title: 'Cuántos conjuntos de anuncios usar en una campaña de Meta Ads',
     excerpt: 'Un conjunto Advantage+ y otro con intereses o públicos similares no son el mismo anuncio duplicado: son dos vendedores buscando clientes distintos.',
     content: `
-# Conjuntos de anuncios en Meta Ads: por qué usar más de uno
+# Cuántos conjuntos de anuncios usar en una campaña de Meta Ads
 
 Cuando prendemos varios conjuntos de anuncios en una misma campaña, no estamos duplicando el mismo anuncio. Estamos poniendo a trabajar a dos vendedores distintos, cada uno con su propio criterio.
 
@@ -735,7 +735,7 @@ Si tu campaña tiene el mismo costo por resultado desde el día uno, lo más pro
     id: 'dejen-trabajar-al-experto',
     slug: 'por-que-todos-creen-que-saben-de-marketing',
     title: '¿Por qué todos creen que saben de marketing?',
-    excerpt: 'Si contratas una agencia, es para dejarla trabajar. El gusto del dueño no es el del cliente que compra, y cuando decide la estrategia, los resultados bajan.',
+    excerpt: 'Qué hace una agencia de marketing digital y por qué hay que dejarla trabajar: el gusto del dueño no es el del cliente que compra, y cuando decide, los resultados bajan.',
     content: `
 # ¿Por qué todos creen que saben de marketing?
 
@@ -769,7 +769,7 @@ Los mejores resultados que hemos tenido no fueron con el cliente que más opinab
     id: 'doctores-del-mercado',
     slug: 'somos-los-doctores-del-mercado',
     title: 'Somos los doctores del mercado: primero diagnóstico, después receta',
-    excerpt: 'Ningún médico te mira dos segundos y te dice "tómese esto". Antes de tocar una campaña, preguntamos: "necesito vender más" es el síntoma, no el diagnóstico.',
+    excerpt: 'Ningún médico receta sin preguntar. Así hacemos el diagnóstico de marketing antes de tocar una campaña: "necesito vender más" es el síntoma, no el diagnóstico.',
     content: `
 # Somos los doctores del mercado: primero diagnóstico, después receta
 
