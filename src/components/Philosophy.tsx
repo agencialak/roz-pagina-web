@@ -55,10 +55,10 @@ const Philosophy = () => {
               lines={[<>¿Qué es <span className="accent-serif gradient-text-purple text-[1.15em]">ROZ?</span></>]}
             />
             <p className="text-lg text-ink-muted leading-relaxed mb-6">
-              Somos una agencia enfocada en construir marcas que dominan. No hacemos campañas genéricas ni tácticas de corto plazo.
+              Agencia Roz (también ROZ Social Media) es una agencia de publicidad y marketing digital en Pereira, enfocada en construir marcas que dominan. No hacemos campañas genéricas ni tácticas de corto plazo.
             </p>
             <p className="text-lg text-ink-muted leading-relaxed mb-8">
-              Trabajamos en estrategia profunda, posicionamiento sostenible y crecimiento escalable. Cada proyecto es una oportunidad para transformar una marca en lider de su industria.
+              Trabajamos en estrategia profunda, posicionamiento sostenible y crecimiento escalable. Cada proyecto es una oportunidad para transformar una marca en líder de su industria.
             </p>
 
             {/* Stats */}

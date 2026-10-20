@@ -50,14 +50,15 @@ const Hero = () => {
               <span className="absolute inline-flex h-full w-full rounded-full bg-primary-600 opacity-60 animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-600" />
             </span>
-            <span className="text-xs sm:text-sm font-medium text-ink-muted">
+            {/* El h1 es la frase que la gente busca; el lema grande va debajo como h2 */}
+            <h1 className="text-xs sm:text-sm font-medium text-ink-muted">
               Agencia de publicidad y marketing digital en Pereira
-            </span>
+            </h1>
           </div>
         </motion.div>
 
         <RevealHeading
-          as="h1"
+          as="h2"
           immediate
           delay={0.15}
           className="text-[2.1rem] leading-[1.05] sm:text-6xl lg:text-7xl font-semibold tracking-[-0.035em] text-ink mb-5 sm:mb-6"

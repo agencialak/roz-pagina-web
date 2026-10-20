@@ -27,7 +27,7 @@ export const services: ServicePageData[] = [
     slug: 'meta-ads',
     ogImage: '/og-meta-ads.jpg',
     name: 'Publicidad en Facebook e Instagram',
-    heading: ['Publicidad en Facebook e Instagram', 'para negocios que necesitan vender'],
+    heading: ['Publicidad en Facebook e Instagram en Pereira', 'para negocios que necesitan vender'],
     metaTitle: 'Publicidad en Facebook e Instagram en Pereira | Agencia Roz',
     metaDescription:
       'Agencia de Meta Ads en Pereira: anuncios en Facebook, Instagram y WhatsApp para clínicas, restaurantes, e-commerce y eventos. Más de $100M COP invertidos con resultados reales.',
@@ -70,7 +70,7 @@ export const services: ServicePageData[] = [
     slug: 'gestion-redes-sociales',
     ogImage: '/og-redes-sociales.jpg',
     name: 'Gestión de redes sociales',
-    heading: ['Manejo de redes sociales', 'con estrategia detrás'],
+    heading: ['Manejo de redes sociales en Pereira', 'con estrategia detrás'],
     metaTitle: 'Manejo y gestión de redes sociales en Pereira | Agencia Roz',
     metaDescription:
       'Estrategia de contenido, diseño, publicación y crecimiento de seguidores reales en Instagram y Facebook, conectado con la pauta. Medimos costo por seguidor real, no solo visitas.',
@@ -107,7 +107,7 @@ export const services: ServicePageData[] = [
     slug: 'produccion-audiovisual',
     ogImage: '/og-produccion-audiovisual.jpg',
     name: 'Producción audiovisual',
-    heading: ['Producción audiovisual', 'para redes y pauta'],
+    heading: ['Producción audiovisual en Pereira', 'para redes y pauta'],
     metaTitle: 'Producción audiovisual en Pereira para redes sociales | Agencia Roz',
     metaDescription:
       'Grabación y edición de reels, videos para anuncios, testimonios y cubrimiento de eventos con equipo propio de producción en Pereira. Más de 120M de visualizaciones generadas.',
