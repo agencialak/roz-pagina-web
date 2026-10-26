@@ -851,6 +851,83 @@ Y eso fue lo que más nos sorprendió: varias de las cosas que ganaron en Chile,
     readTime: 3,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'culpa-segmentacion',
+    slug: 'tu-campana-no-vende-no-es-la-segmentacion',
+    title: '¿Tu campaña no vende? Casi nunca es la segmentación',
+    excerpt: '"Cambie la segmentación" es lo primero que nos piden cuando una campaña de Meta Ads no vende. Casi nunca es el problema: la venta suele perderse después del clic, en el WhatsApp.',
+    content: `
+# ¿Tu campaña no vende? Casi nunca es la segmentación
+
+"Cambie la segmentación."
+
+Es lo primero que nos piden cuando una campaña no vende. Y casi nunca es el problema.
+
+## Importa, pero no es lo que más pesa
+
+En TikTok y YouTube todo el mundo habla de segmentación como si fuera lo único que importa. Es importante, sí. Pero no es lo que más pesa.
+
+Lo que más pesa es el anuncio que la persona ve. Ahí empieza el camino hacia la venta. Y ese camino no termina en Meta Ads: sigue en tu WhatsApp, en tu página web, en tu precio y en tu oferta.
+
+## Dónde se pierde la venta
+
+Puedes tener la segmentación perfecta y los mejores anuncios. La campaña puede estar trayendo gente interesada todos los días. Pero no vas a vender, con esa segmentación ni con ninguna otra, si:
+
+- Te escriben y les respondes al día siguiente.
+- La página no deja comprar fácil.
+- Tu oferta está muy por encima de la competencia sin una buena razón.
+
+## Culpar a lo que no se ve
+
+Muchas veces le mostramos la segmentación al dueño del negocio, está bien hecha, y aun así la respuesta es "cambiémosla". Es más fácil culpar a algo que no se ve que revisar cómo se está atendiendo a los clientes que ya llegaron.
+
+Antes de pedir que cambien la segmentación, revisa qué pasa después del clic. Muchas veces la venta no se pierde en el anuncio. Se pierde en tu WhatsApp.
+    `,
+    image: '/blog/post_culpa_segmentacion.jpg',
+    date: '2026-10-22',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
+  {
+    id: 'alerta-navegacion-productos',
+    slug: 'navegacion-de-productos-meta-como-desactivarla',
+    title: 'Navegación de productos de Meta: qué cambia y cómo desactivarla',
+    excerpt: 'Desde el 28 de octubre Meta activa por defecto la "navegación de productos" en los anuncios que ya tienes corriendo. Qué hace, por qué la desactivamos en nuestras cuentas y cómo hacerlo.',
+    content: `
+# Navegación de productos de Meta: qué cambia y cómo desactivarla
+
+El 28 de octubre Meta va a cambiar los anuncios que tienes corriendo. Si no haces nada, el cambio queda activado.
+
+## Qué es la navegación de productos
+
+Cuando alguien toca tu anuncio, en vez de llegar directo a tu página, Meta le puede mostrar primero, dentro de Facebook o Instagram, información del producto y sugerencias.
+
+Meta dice que esto sube las conversiones un 3%. Es un dato de su propio experimento. Puede ser cierto, pero lo dice el que gana si la gente se queda más tiempo dentro de su app.
+
+## El problema no es la función
+
+Es que la activen por defecto en campañas que ya estaban funcionando, sin que nadie la haya probado.
+
+Piensa en un negocio que tiene en su página el precio, la oferta, el formulario o el botón de WhatsApp bien puestos. Esa página se trabajó para vender. Si la persona ahora se queda viendo sugerencias dentro de Instagram, puede que nunca llegue ahí.
+
+## Qué vamos a hacer nosotros
+
+En las cuentas que manejamos la vamos a desactivar antes del 28. Si la queremos probar, la probamos en un solo anuncio y comparamos con los datos de antes. Así decidimos con números, no porque Meta la activó.
+
+## Cómo desactivarla
+
+- Desde el aviso que Meta está mostrando en el administrador de anuncios (botón "Opt out").
+- O anuncio por anuncio, en la configuración de Advantage+ Creative y del destino.
+
+Lo que funciona no se toca sin probar. Ni por nosotros, ni por Meta.
+    `,
+    image: '/blog/post_alerta_navegacion_productos.jpg',
+    date: '2026-10-23',
+    category: 'tendencia',
+    readTime: 2,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
