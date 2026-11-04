@@ -1102,6 +1102,65 @@ Revisar la competencia es una parte de la [investigación de mercado que hacemos
     readTime: 4,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'fechas-comerciales-colombia',
+    slug: 'fechas-comerciales-colombia-2026-2027',
+    title: 'Fechas comerciales en Colombia 2026 y 2027: calendario para pautar',
+    excerpt: 'Black Friday, Navidad, Día de la Madre, Amor y Amistad: las fechas comerciales de Colombia que quedan en 2026, todas las de 2027 y cuándo empezar a pautar.',
+    content: `
+# Fechas comerciales en Colombia 2026 y 2027: calendario para pautar
+
+Una fecha comercial no se gana el día de la fecha. Se gana en las semanas anteriores, cuando la gente empieza a buscar, comparar y decidir. Este es el calendario que usamos para planear las campañas de nuestros clientes en Colombia, con lo que queda de 2026 y todo 2027.
+
+## Lo que queda de 2026
+
+- **Black Friday: viernes 27 de noviembre.** Cyber Monday cae el lunes 30 de noviembre.
+- **Día de las velitas: lunes 7 de diciembre.** Arranca la temporada navideña en serio.
+- **Prima de diciembre: se paga a más tardar el 20 de diciembre.** Mucha gente compra justo después de recibirla.
+- **Novenas: del 16 al 24 de diciembre.**
+- **Navidad: 24 y 25 de diciembre.** Para regalos, la publicidad tiene que estar corriendo desde finales de noviembre.
+
+## Enero a junio de 2027
+
+- **Temporada escolar: enero y febrero.** Útiles, uniformes y matrículas para calendario A.
+- **San Valentín: domingo 14 de febrero.** En Colombia pesa menos que Amor y Amistad, pero cada vez más negocios lo trabajan.
+- **Día de la Mujer: lunes 8 de marzo.**
+- **Semana Santa: del 21 al 28 de marzo.** Jueves y viernes santo son el 25 y 26. Buena fecha para turismo y restaurantes; mala para casi todo lo demás.
+- **Día del Niño: sábado 24 de abril.**
+- **Día de la Madre: domingo 9 de mayo.** De las fechas más fuertes del año para comercio, restaurantes, estética y regalos.
+- **Día del Padre: domingo 20 de junio.**
+- **Prima de junio: se paga a más tardar el 30 de junio.**
+
+## Julio a diciembre de 2027
+
+- **Vacaciones de mitad de año: finales de junio y julio.**
+- **Amor y Amistad: sábado 18 de septiembre.** La fecha de regalos más importante del segundo semestre después de Navidad.
+- **Halloween: domingo 31 de octubre.**
+- **Black Friday: viernes 26 de noviembre.** Cyber Monday, lunes 29 de noviembre.
+- **Día de las velitas: martes 7 de diciembre.**
+- **Navidad: 24 y 25 de diciembre.**
+
+## Cuándo empezar la publicidad de cada fecha
+
+- **Entre 3 y 4 semanas antes** para fechas de regalos como el Día de la Madre, Amor y Amistad o Navidad. La gente no compra la primera vez que ve el anuncio: lo ve varias veces y decide días después.
+- **Una o dos semanas antes, con la oferta clara,** para fechas de descuento como Black Friday.
+- **Sin comprimir la campaña en pocos días.** En una repostería que manejamos, la misma inversión en menos días subió el costo por conversación. Lo contamos en [Fechas comerciales: misma campaña, resultados opuestos](/blog/misma-fecha-un-ano-despues-resultados-opuestos).
+
+## Antes de prender la campaña
+
+- **Varios anuncios, no uno.** Si la única pieza no conecta, se pierde la fecha completa.
+- **El WhatsApp listo.** En fechas comerciales llegan más mensajes que nunca; responder tarde es regalarle la venta a la competencia.
+- **La oferta definida desde antes.** Precio, envío, horarios y fecha límite para recibir el pedido a tiempo.
+- **Mira qué hizo la competencia el año pasado.** Puedes revisarlo en la [biblioteca de anuncios de Meta](/blog/biblioteca-de-anuncios-meta-ver-anuncios-competencia).
+
+Las fechas son las mismas para todos los negocios. La diferencia la hace quién empieza a prepararse primero.
+    `,
+    image: '/blog/fechas-comerciales-colombia.jpg',
+    date: '2026-11-03',
+    category: 'estrategia',
+    readTime: 4,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
