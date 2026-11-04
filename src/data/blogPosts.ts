@@ -928,6 +928,123 @@ Lo que funciona no se toca sin probar. Ni por nosotros, ni por Meta.
     readTime: 2,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'evento-b2b-mexico-publicos',
+    slug: 'publico-advantage-o-segmentacion-mexico',
+    title: '¿Público Advantage+ o segmentación? 48 ventas contra 12',
+    excerpt: 'En Chile ganó el público personalizado. En México, con el mismo presupuesto, Advantage+ vendió 48 entradas a $4,43 USD y el personalizado 12 a $17,72 USD. Por qué dejamos varios públicos encendidos.',
+    content: `
+# ¿Público Advantage+ o segmentación? 48 ventas contra 12
+
+En Chile ganó el público personalizado. En México perdió 4 a 1.
+
+## Lo que decía la campaña anterior
+
+En la [campaña de Chile](/blog/vender-entradas-evento-b2b-chile-meta-ads), el público que más vendió fue el personalizado: bases de datos, públicos similares e intereses. Advantage+ quedó de segundo.
+
+Con ese dato, lo lógico en México era apostarle todo al público personalizado. No lo hicimos. Dejamos los dos encendidos, con el mismo presupuesto cada uno.
+
+## Lo que pasó en México
+
+Pasó exactamente lo contrario:
+
+- **Advantage+:** 48 ventas, a $4,43 USD cada una, ROAS de 17x.
+- **Público personalizado:** 12 ventas, a $17,72 USD cada una, ROAS de 3x.
+
+Mismo presupuesto, cuatro veces más ventas.
+
+Si le hubiéramos puesto todo el presupuesto al público que ganó en Chile, a ese costo por venta habríamos vendido como mucho unas 24 entradas. Se vendieron 60.
+
+## Por qué dejamos varios públicos encendidos
+
+Siempre que el presupuesto lo permite, dejamos dos, tres o cuatro públicos encendidos al mismo tiempo. Los datos de una campaña anterior dan una guía, un punto de partida. Pero no garantizan que el siguiente mercado vaya a reaccionar igual.
+
+Un mercado no es una copia del otro. Y la única forma de saberlo es dejar que los datos de ese mercado hablen.
+
+---
+
+*Segunda parte de la serie. La primera: [Evento B2B en México con Meta Ads: 60 entradas y ROAS de 10x](/blog/evento-b2b-mexico-triple-de-ventas). Cifras en USD según el reporte de Meta Ads.*
+    `,
+    image: '/blog/post_evento_mexico_publicos.jpg',
+    date: '2026-10-27',
+    category: 'casos',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
+  {
+    id: 'prometer-resultados',
+    slug: 'agencia-puede-garantizar-resultados',
+    title: '¿Una agencia puede garantizar resultados? Por qué no prometemos ventas',
+    excerpt: '"Invierte esto con nosotros y vas a tener 200 clientes." Por qué no le prometemos a ningún cliente un número exacto de ventas, y qué mostramos en cambio: escenarios con datos reales.',
+    content: `
+# ¿Una agencia puede garantizar resultados? Por qué no prometemos ventas
+
+No le prometemos a ningún cliente una cantidad exacta de ventas. Nunca.
+
+"Invierte esto con nosotros y vas a tener 200 clientes." Esa frase la usan muchas agencias, traffickers y freelancers para cerrar un contrato. No estamos de acuerdo, y no es por falta de confianza en lo que hacemos.
+
+## Nadie controla el mercado
+
+Podemos hacer una campaña perfecta: buena segmentación, buenos anuncios, todo bien configurado. Y aun así pueden pasar cosas que no dependen de nadie. Lo vimos hace poco en Colombia con el terremoto: en momentos así, la gente simplemente no está pensando en comprar. O la competencia saca una oferta mejor. O el precio no convence.
+
+Prometer un número exacto es venderle a la empresa algo que nadie le puede asegurar.
+
+## La promesa daña el mercado
+
+Después esos clientes llegan desconfiados, a la defensiva, queriendo invertir mucho menos y comparando todo con lo que "les prometieron" en otro lado. Es muy difícil trabajar bien con alguien a quien ya le quemaron la confianza.
+
+## Lo que sí hacemos
+
+- Mostrar escenarios con datos reales.
+- Explicar qué esperamos y por qué.
+- Optimizar semana a semana para acercarnos al mejor resultado posible.
+
+Preferimos perder un cliente por no prometerle 200 resultados, que ganarlo con una promesa que no podemos cumplir.
+    `,
+    image: '/blog/post_prometer_resultados.jpg',
+    date: '2026-10-29',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
+  {
+    id: 'evento-b2b-mexico-creativos',
+    slug: 'no-apagues-anuncios-que-no-venden',
+    title: '¿Apagar los anuncios que no venden? Por qué los dejamos encendidos',
+    excerpt: 'Un reel de testimonios tuvo un ROAS de 65x con una sola venta. Meta le da la venta al último anuncio, pero los anteriores también trabajaron. Por qué no apagamos anuncios si no vamos a agregar nuevos.',
+    content: `
+# ¿Apagar los anuncios que no venden? Por qué los dejamos encendidos
+
+Un anuncio de una campaña que manejamos en México tuvo un ROAS de 65x.
+
+Antes de que alguien se emocione: fue una sola venta, con 3 dólares de gasto. No es un dato para sacar conclusiones. Pero sí confirma algo en lo que creemos hace rato.
+
+## El último anuncio se lleva el crédito
+
+Lo más probable es que esa persona ya hubiera visto otros anuncios de la campaña: el banner general, otra imagen, algún reel. Y no compró. Tal vez no estaba convencida, no sabía si podía asistir, o la razón que sea. Hasta que le apareció ese reel de testimonios, y ahí sí tomó la decisión.
+
+Meta le da la venta al último anuncio. Pero eso no quiere decir que los anteriores no hayan hecho su trabajo.
+
+## Por qué no apagamos anuncios
+
+No apagamos anuncios si no vamos a agregar nuevos. Si casi no están consumiendo presupuesto, ¿para qué apagarlos? Dejarlos encendidos le da más herramientas al algoritmo para mostrarle a cada persona el mensaje que le termina de convencer.
+
+## Lo que pasó entre Chile y México
+
+En esta campaña pasó algo que lo confirma todavía más: el anuncio que en Chile vendió una sola entrada, en México fue el mejor de toda la campaña, con 24 ventas. Y los reels, que en Chile no vendieron nada, en México trajeron 12.
+
+Los datos de una campaña anterior dan una luz, un camino para seguir. Pero cada mercado reacciona distinto, y la única forma de descubrirlo es darle variedad a la campaña.
+
+---
+
+*Tercera parte de la serie. Las anteriores: [60 entradas y ROAS de 10x](/blog/evento-b2b-mexico-triple-de-ventas) y [¿Público Advantage+ o segmentación?](/blog/publico-advantage-o-segmentacion-mexico).*
+    `,
+    image: '/blog/post_evento_mexico_creativos.jpg',
+    date: '2026-11-03',
+    category: 'casos',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
