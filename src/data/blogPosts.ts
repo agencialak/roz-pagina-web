@@ -1045,6 +1045,63 @@ Los datos de una campaña anterior dan una luz, un camino para seguir. Pero cada
     readTime: 3,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'biblioteca-de-anuncios-meta',
+    slug: 'biblioteca-de-anuncios-meta-ver-anuncios-competencia',
+    title: 'Biblioteca de anuncios de Meta: cómo ver los anuncios de tu competencia',
+    excerpt: 'Cómo usar la biblioteca de anuncios de Meta para ver gratis los anuncios de tu competencia en Facebook e Instagram: qué buscar, qué puedes ver y qué no.',
+    content: `
+# Biblioteca de anuncios de Meta: cómo ver los anuncios de tu competencia
+
+Antes de armar una campaña, una de las primeras cosas que hacemos es mirar qué está anunciando la competencia. No hace falta adivinar ni pagar herramientas: Meta lo muestra gratis en su biblioteca de anuncios.
+
+## Qué es la biblioteca de anuncios
+
+Es una herramienta pública de Meta donde aparecen los anuncios que están corriendo en Facebook, Instagram, Messenger y la red de audiencias de Meta. Cualquier persona puede entrar, sin cuenta publicitaria y sin que el anunciante se entere: está en facebook.com/ads/library.
+
+## Cómo buscar los anuncios de tu competencia
+
+- **Paso 1.** Entra a la biblioteca y elige el país, por ejemplo Colombia.
+- **Paso 2.** En la categoría deja "Todos los anuncios".
+- **Paso 3.** Busca por el nombre de la página del negocio o por una palabra clave. Buscar "odontología pereira", por ejemplo, muestra decenas de anuncios activos de clínicas de la ciudad.
+- **Paso 4.** Usa los filtros para quedarte con lo que te sirve: anuncios activos, plataforma, tipo de contenido (imagen o video) y fechas. También puedes cambiar el orden de los resultados y guardar la búsqueda para volver después.
+
+Otro camino: desde la página de Facebook de cualquier negocio, en la sección de transparencia, hay un acceso directo a sus anuncios en la biblioteca.
+
+## Qué puedes ver
+
+- El texto, la imagen o el video de cada anuncio.
+- El botón y a dónde lleva: WhatsApp, página web, formulario o perfil.
+- Desde cuándo está en circulación.
+- En qué plataformas aparece.
+- Cuántas versiones del mismo anuncio está usando el negocio.
+
+## Qué no puedes ver
+
+Para anuncios comerciales en Colombia, la biblioteca no muestra cuánto invierte la competencia, cuántas ventas le trae cada anuncio ni a quién lo está mostrando. Esos datos solo los tiene el anunciante. Por eso la biblioteca sirve para entender el mercado, no para copiar resultados.
+
+## Las señales que revisamos
+
+- **Anuncios que llevan meses activos.** Nadie paga durante meses un anuncio que no le deja nada. Si un anuncio lleva mucho tiempo en circulación, probablemente está funcionando.
+- **Cuántas piezas corren al mismo tiempo.** Un negocio con un solo anuncio y otro con quince están jugando partidos distintos.
+- **La oferta y el precio.** Qué prometen, si muestran precio, si usan descuentos o fechas comerciales.
+- **A dónde mandan a la gente.** WhatsApp, página web o formulario dicen mucho de cómo vende ese negocio.
+- **Los ángulos.** Testimonios, antes y después, precio, urgencia: qué tipo de mensaje se repite en el sector.
+
+## Los errores más comunes
+
+- **Copiar el anuncio tal cual.** Lo que le funciona a otro negocio depende de su marca, su oferta y su atención. Usa la biblioteca como referencia, no como plantilla.
+- **Asumir que activo es igual a rentable.** Un anuncio de hace seis días todavía no demuestra nada.
+- **Mirar a un solo competidor.** Revisa varios del mismo sector y ciudad para ver patrones, no casos aislados.
+
+Revisar la competencia es una parte de la [investigación de mercado que hacemos antes de pautar](/blog/investigacion-de-mercado-antes-de-pautar). La biblioteca te dice qué está haciendo el mercado. Lo que funcione para tu negocio lo deciden tus propios datos.
+    `,
+    image: '/blog/biblioteca-de-anuncios-meta.jpg',
+    date: '2026-11-03',
+    category: 'educativo',
+    readTime: 4,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
