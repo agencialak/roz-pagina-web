@@ -24,7 +24,7 @@ const SITE_URL = 'https://rozagencia.com'
 const DIST = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 
 const escapeHtml = (s: string) =>
-  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 const inline = (s: string) =>
   escapeHtml(s)
