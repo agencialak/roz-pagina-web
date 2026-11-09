@@ -1161,6 +1161,76 @@ Las fechas son las mismas para todos los negocios. La diferencia la hace quién 
     readTime: 4,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'cuanto-cobra-agencia-marketing',
+    slug: 'cuanto-cobra-agencia-marketing-digital-colombia',
+    title: '¿Cuánto cobra una agencia de marketing digital en Colombia?',
+    excerpt: 'Cómo cobran las agencias de marketing digital en Colombia: valor fijo o porcentaje de la pauta, cuánto invertir para empezar y señales de alerta antes de contratar.',
+    content: `
+# ¿Cuánto cobra una agencia de marketing digital en Colombia?
+
+Es de las primeras preguntas que nos hacen, y la respuesta honesta es que depende de lo que necesita tu negocio. Lo que sí podemos explicarte es cómo se arma ese precio, para que compares cotizaciones con criterio y no solo por el número más bajo.
+
+## Son dos costos distintos
+
+Cuando contratas publicidad en Facebook e Instagram pagas dos cosas:
+
+- **Lo que cobra la agencia:** el trabajo de investigar, armar la estrategia, crear o dirigir los anuncios, optimizar y reportar.
+- **La pauta:** el dinero que se invierte en los anuncios y que recibe Meta, no la agencia.
+
+Muchas cotizaciones parecen baratas porque solo muestran uno de los dos. Pregunta siempre por ambos.
+
+## Las formas de cobro más comunes
+
+- **Valor mensual fijo.** Pagas lo mismo cada mes por un alcance de trabajo definido. Es fácil de presupuestar.
+- **Porcentaje del presupuesto de pauta.** La agencia cobra una parte de lo que inviertes en anuncios. Si la pauta crece, el cobro crece con ella.
+- **Por proyecto.** Común en producción audiovisual o en campañas puntuales, como una fecha comercial.
+
+En ROZ trabajamos con valor mensual fijo o con porcentaje de la pauta, y si tu negocio necesita otra forma de trabajo, nos adaptamos.
+
+## Cuánto invertir en pauta para empezar
+
+Para arrancar recomendamos un presupuesto mínimo de $600.000 COP en pauta. Con menos, la campaña no alcanza a juntar datos para optimizar.
+
+Como referencia de lo que cuesta cada resultado, estos son costos reales de campañas que hemos manejado:
+
+- **Conversación de WhatsApp:** entre $375 y casi $20.000 COP, según el sector. Lo explicamos en [qué es un buen costo por conversación](/blog/costo-por-conversacion-whatsapp).
+- **Seguidor nuevo en Instagram:** entre $264 y $3.552 COP. Detalle en [cuánto cuesta un seguidor en Instagram](/blog/costo-por-seguidor-real).
+- **Visita al perfil de Instagram:** alrededor de $143 COP.
+
+## Qué hace que el precio cambie
+
+- Cuántas campañas, productos o servicios se van a pautar.
+- Si incluye creación de contenido: diseño, copies, grabación y edición de video.
+- Si además de la pauta incluye el manejo de las redes sociales.
+- Cada cuánto quieres reportes y reuniones.
+- Si hay temporadas fuertes que exigen más trabajo, como Navidad o Día de la Madre.
+
+## Qué debería incluir
+
+- Investigación del cliente y de la competencia antes de lanzar.
+- Varios anuncios y públicos corriendo al mismo tiempo, no uno solo.
+- Optimización semana a semana.
+- Reportes con costo por resultado, no solo alcance y "me gusta".
+- Acceso a los datos de tu cuenta publicitaria, no solo a un resumen.
+
+## Señales de alerta
+
+- **Te prometen un número exacto de ventas.** Nadie controla el mercado. Lo contamos en [¿Una agencia puede garantizar resultados?](/blog/agencia-puede-garantizar-resultados).
+- **No te dan acceso a tu cuenta publicitaria.** Los datos y el historial son de tu negocio.
+- **Solo te reportan alcance e impresiones.** Lo que importa es cuánto te cuesta cada cliente potencial y qué pasa después.
+- **El precio es tan bajo que no alcanza para optimizar.** Una campaña que nadie revisa cuesta más a largo plazo.
+
+## Cómo pedir una cotización
+
+Lleva claro qué vendes, a quién, cuánto vale para ti un cliente nuevo y qué has probado antes. Con eso cualquier agencia seria te puede dar una propuesta con escenarios reales, no una promesa. Si quieres la nuestra, escríbenos por WhatsApp.
+    `,
+    image: '/blog/cuanto-cobra-agencia-marketing.jpg',
+    date: '2026-11-09',
+    category: 'educativo',
+    readTime: 4,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
