@@ -281,7 +281,7 @@ const Team = () => {
                   <ChevronLeft size={24} className="text-primary-400" />
                 </motion.button>
 
-                <div className="flex gap-2">
+                <div className="flex">
                   {teamMembers.map((_, idx) => (
                     <button
                       key={idx}
@@ -291,7 +291,7 @@ const Team = () => {
                       }}
                       aria-label={`Ver integrante ${idx + 1}`}
                       aria-current={idx === currentIndex ? 'true' : undefined}
-                      className="p-2 -m-1.5"
+                      className="p-2"
                     >
                       <span
                         className={`block h-2 rounded-full transition-all ${
@@ -402,7 +402,7 @@ const Team = () => {
                   <ChevronLeft size={24} className="text-primary-400" />
                 </motion.button>
 
-                <div className="flex gap-2">
+                <div className="flex">
                   {teamMembers.map((_, idx) => (
                     <button
                       key={idx}
@@ -412,7 +412,7 @@ const Team = () => {
                       }}
                       aria-label={`Ver integrante ${idx + 1}`}
                       aria-current={idx === currentIndex ? 'true' : undefined}
-                      className="p-2 -m-1.5"
+                      className="p-2"
                     >
                       <span
                         className={`block h-2 rounded-full transition-all ${

@@ -235,14 +235,14 @@ const Testimonials = () => {
               <ChevronLeft size={24} className="text-primary-400" />
             </motion.button>
 
-            <div className="flex gap-2">
+            <div className="flex">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   aria-label={`Ver testimonio ${idx + 1}`}
                   aria-current={idx === currentIndex ? 'true' : undefined}
-                  className="p-2 -m-1.5"
+                  className="p-2"
                 >
                   <span
                     className={`block h-2 rounded-full transition-all ${
