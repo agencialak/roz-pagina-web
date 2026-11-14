@@ -1,42 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @font-face {
   font-family: 'Sora';
-  src: url('/fonts/Sora-Light.ttf') format('truetype');
+  src: url('/fonts/Sora-Light.woff2') format('woff2');
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Sora';
-  src: url('/fonts/Sora-Regular.ttf') format('truetype');
+  src: url('/fonts/Sora-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Sora';
-  src: url('/fonts/Sora-Medium.ttf') format('truetype');
+  src: url('/fonts/Sora-Medium.woff2') format('woff2');
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Sora';
-  src: url('/fonts/Sora-SemiBold.ttf') format('truetype');
+  src: url('/fonts/Sora-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Sora';
-  src: url('/fonts/Sora-Bold.ttf') format('truetype');
+  src: url('/fonts/Sora-Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Sora';
-  src: url('/fonts/Sora-ExtraBold.ttf') format('truetype');
+  src: url('/fonts/Sora-ExtraBold.woff2') format('woff2');
   font-weight: 800;
   font-display: swap;
 }
@@ -58,7 +57,7 @@ html {
 body {
   background: #FAF9FD;
   color: #181422;
-  font-family: 'Sora', 'Inter', 'Satoshi', sans-serif;
+  font-family: 'Sora', sans-serif;
   overflow-x: hidden;
 }
 

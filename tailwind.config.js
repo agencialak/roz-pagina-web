@@ -33,8 +33,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Sora', 'Inter', 'Satoshi', 'sans-serif'],
-        display: ['Sora', 'Inter', 'Satoshi', 'sans-serif'],
+        sans: ['Sora', 'sans-serif'],
+        display: ['Sora', 'sans-serif'],
         serif: ['"Instrument Serif"', 'Georgia', 'serif'],
       },
       fontSize: {

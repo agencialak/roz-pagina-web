@@ -30,7 +30,7 @@ const Team = () => {
       id: 1,
       name: 'Santiago Rosales C.',
       role: 'CEO - Estrategia y Productor',
-      image: '/team/rosa.png',
+      image: '/team/rosa.webp',
       bio: 'Fundador y líder estratégico de ROZ Social Media',
       social: {
         email: 'santiago@rozsocial.com',
@@ -41,7 +41,7 @@ const Team = () => {
       id: 2,
       name: 'Laura Rosales C.',
       role: 'Administradora & Directora de Producción Audiovisual',
-      image: '/team/Laura rosales c.png',
+      image: '/team/Laura rosales c.webp',
       bio: 'Experta en gestión operativa y creación de contenido visual de alto impacto',
       social: {
         email: 'laura@rozsocial.com',
@@ -52,7 +52,7 @@ const Team = () => {
       id: 3,
       name: 'Nikolas Garcia',
       role: 'Co-Fundador & Estratega Digital de Campañas Publicitarias',
-      image: '/team/NIko.png',
+      image: '/team/NIko.webp',
       bio: 'Especialista en estrategia digital y ejecución de campañas publicitarias de alto rendimiento',
       social: {
         email: 'nikolas@rozsocial.com',
@@ -63,7 +63,7 @@ const Team = () => {
       id: 4,
       name: 'Kevin Ríos',
       role: 'Camarógrafo / Filmmaker',
-      image: '/team/Kevin.png',
+      image: '/team/Kevin.webp',
       bio: 'Especialista en captura de contenido audiovisual de alta calidad con visión cinematográfica',
       social: {
         email: 'kevin@rozsocial.com',
@@ -74,7 +74,7 @@ const Team = () => {
       id: 5,
       name: 'Paulina Villegas',
       role: 'Especialista en Edición de Video',
-      image: '/team/Paulina.png',
+      image: '/team/Paulina.webp',
       bio: 'Experta en postproducción y edición de video con narrativa visual impactante',
       social: {
         email: 'paulina@rozsocial.com',
@@ -85,7 +85,7 @@ const Team = () => {
       id: 6,
       name: 'Erika Valencia',
       role: 'Diseñadora Gráfica - Especialista en Redes Sociales',
-      image: '/team/Erika.png',
+      image: '/team/Erika.webp',
       bio: 'Creadora de diseños visuales estratégicos que conectan con audiencias en redes sociales',
       social: {
         email: 'erika@rozsocial.com',
@@ -96,7 +96,7 @@ const Team = () => {
       id: 7,
       name: 'Juan Herrera',
       role: 'Asistente de Producción',
-      image: '/team/Herrera.png',
+      image: '/team/Herrera.webp',
       bio: 'Profesional en logística y coordinación de procesos de producción audiovisual',
       social: {
         email: 'juan@rozsocial.com',
@@ -107,7 +107,7 @@ const Team = () => {
       id: 8,
       name: 'Camila Echeverri',
       role: 'Directora Creativa & Gestora de Negocio',
-      image: '/team/Camila.png',
+      image: '/team/Camila.webp',
       bio: 'Líder creativa que impulsa la estrategia comercial y establece relaciones clave',
       social: {
         email: 'camila@rozsocial.com',
@@ -118,7 +118,7 @@ const Team = () => {
       id: 9,
       name: 'Lina Gómez',
       role: 'Socia Co-Fundadora - Operaciones USA',
-      image: '/team/Lina.png',
+      image: '/team/Lina.webp',
       bio: 'Líder estratégica en expansión internacional y operaciones de la agencia en Estados Unidos',
       social: {
         email: 'lina@rozsocial.com',
@@ -129,7 +129,7 @@ const Team = () => {
       id: 10,
       name: 'Valentina Correa',
       role: 'Asistente Administrativo',
-      image: '/team/Valen.png',
+      image: '/team/Valen.webp',
       bio: 'Coordinadora de procesos administrativos que garantiza eficiencia operativa',
       social: {
         email: 'valentina@rozsocial.com',
@@ -229,6 +229,10 @@ const Team = () => {
                               <div className="relative w-full h-64 overflow-hidden">
                                 <img
                                   src={member.image}
+                                  width={720}
+                                  height={900}
+                                  loading="lazy"
+                                  decoding="async"
                                   alt={`${member.name} - ${member.role} en ROZ Social Media`}
                                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
                                   onError={(e) => {
@@ -338,6 +342,10 @@ const Team = () => {
                       <div className="relative w-full h-64 overflow-hidden">
                         <img
                           src={teamMembers[currentIndex].image}
+                          width={720}
+                          height={900}
+                          loading="lazy"
+                          decoding="async"
                           alt={`${teamMembers[currentIndex].name} - ${teamMembers[currentIndex].role} en ROZ Social Media`}
                           className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                           onError={(e) => {

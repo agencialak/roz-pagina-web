@@ -3,8 +3,7 @@ import RevealHeading from './RevealHeading'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { Star, Send } from 'lucide-react'
 import { useState } from 'react'
-import { database } from '../config/firebase'
-import { ref, push } from 'firebase/database'
+import { loadDatabase } from '../config/firebase'
 
 const TestimonialForm = () => {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -38,8 +37,8 @@ const TestimonialForm = () => {
     setIsSubmitting(true)
 
     try {
-      const testimonialsRef = ref(database, 'testimonials')
-      await push(testimonialsRef, {
+      const { database, fb } = await loadDatabase()
+      await fb.push(fb.ref(database, 'testimonials'), {
         name: formData.name,
         business: formData.business,
         email: formData.email,

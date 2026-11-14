@@ -3,8 +3,7 @@ import RevealHeading from './RevealHeading'
 import { containerVariants, itemVariants } from '../utils/animations'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
-import { database } from '../config/firebase'
-import { ref, onValue } from 'firebase/database'
+import { loadDatabase } from '../config/firebase'
 
 interface Testimonial {
   id: string
@@ -60,8 +59,11 @@ const Testimonials = () => {
   ]
 
   useEffect(() => {
-    const testimonialsRef = ref(database, 'testimonials')
-    const unsubscribe = onValue(testimonialsRef, (snapshot) => {
+    let unsubscribe: (() => void) | undefined
+    let cancelled = false
+    loadDatabase().then(({ database, fb }) => {
+      if (cancelled) return
+      unsubscribe = fb.onValue(fb.ref(database, 'testimonials'), (snapshot) => {
       const data = snapshot.val()
       if (data) {
         const newTestimonials: Testimonial[] = Object.entries(data).map(([key, value]: [string, any]) => ({
@@ -74,9 +76,13 @@ const Testimonials = () => {
         }))
         setFirebaseTestimonials(newTestimonials)
       }
+      })
     })
 
-    return () => unsubscribe()
+    return () => {
+      cancelled = true
+      unsubscribe?.()
+    }
   }, [])
 
   const testimonials = [...staticTestimonials, ...firebaseTestimonials]

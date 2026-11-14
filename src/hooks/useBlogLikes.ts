@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { database } from '../config/firebase'
-import { ref, onValue, update, increment } from 'firebase/database'
+import { loadDatabase } from '../config/firebase'
 
 const LIKED_POSTS_KEY = 'roz_liked_posts'
 
@@ -19,27 +18,37 @@ export function useBlogLikes(postId: string) {
   useEffect(() => {
     setLiked(getLikedPosts().includes(postId))
 
-    const likesRef = ref(database, `blogLikes/${postId}/count`)
-    const unsubscribe = onValue(likesRef, (snapshot) => {
-      setCount(snapshot.val() || 0)
+    let unsubscribe: (() => void) | undefined
+    let cancelled = false
+    loadDatabase().then(({ database, fb }) => {
+      if (cancelled) return
+      unsubscribe = fb.onValue(fb.ref(database, `blogLikes/${postId}/count`), (snapshot) => {
+        setCount(snapshot.val() || 0)
+      })
     })
 
-    return () => unsubscribe()
+    return () => {
+      cancelled = true
+      unsubscribe?.()
+    }
   }, [postId])
 
   const toggleLike = () => {
-    const likesRef = ref(database, `blogLikes/${postId}`)
     const likedPosts = getLikedPosts()
+    const change = (delta: number) =>
+      loadDatabase().then(({ database, fb }) =>
+        fb.update(fb.ref(database, `blogLikes/${postId}`), { count: fb.increment(delta) })
+      )
 
     if (liked) {
-      update(likesRef, { count: increment(-1) })
+      change(-1)
       localStorage.setItem(
         LIKED_POSTS_KEY,
         JSON.stringify(likedPosts.filter((id) => id !== postId))
       )
       setLiked(false)
     } else {
-      update(likesRef, { count: increment(1) })
+      change(1)
       localStorage.setItem(LIKED_POSTS_KEY, JSON.stringify([...likedPosts, postId]))
       setLiked(true)
     }

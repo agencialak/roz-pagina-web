@@ -1,5 +1,3 @@
-import { initializeApp } from 'firebase/app'
-import { getDatabase } from 'firebase/database'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyC857hb9j3pZXzGE32t2rxBQUGFjpksLgk',
@@ -12,5 +10,16 @@ const firebaseConfig = {
   measurementId: 'G-1E6RTW52N6',
 }
 
-const app = initializeApp(firebaseConfig)
-export const database = getDatabase(app)
+// Firebase se descarga aparte y solo cuando un componente lo necesita (me gusta del blog,
+// testimonios): así no pesa en la carga inicial de la página.
+let dbPromise: Promise<{ database: import('firebase/database').Database; fb: typeof import('firebase/database') }> | null = null
+
+export function loadDatabase() {
+  if (!dbPromise) {
+    dbPromise = Promise.all([import('firebase/app'), import('firebase/database')]).then(([appMod, fb]) => ({
+      database: fb.getDatabase(appMod.initializeApp(firebaseConfig)),
+      fb,
+    }))
+  }
+  return dbPromise
+}
