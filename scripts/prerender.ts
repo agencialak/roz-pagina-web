@@ -26,6 +26,36 @@ const DIST = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
+// Ancho y alto reales de una imagen de public/ (JPG o PNG) para declarar width/height
+// en el HTML y evitar saltos de diseño mientras carga (CLS).
+function imageSize(publicPath: string): { width: number; height: number } | null {
+  try {
+    const buf = readFileSync(join(DIST, publicPath.replace(/^\//, '')))
+    if (buf.readUInt32BE(0) === 0x89504e47) return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) }
+    let i = 2
+    while (i < buf.length) {
+      if (buf[i] !== 0xff) return null
+      const marker = buf[i + 1]
+      const len = buf.readUInt16BE(i + 2)
+      if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker))
+        return { height: buf.readUInt16BE(i + 5), width: buf.readUInt16BE(i + 7) }
+      i += 2 + len
+    }
+  } catch {
+    // sin dimensiones si la imagen no existe o no se puede leer
+  }
+  return null
+}
+
+const sizeAttrs = (src: string) => {
+  const d = imageSize(src)
+  return d ? ` width="${d.width}" height="${d.height}"` : ''
+}
+
+// Menú del sitio en el HTML que leen los rastreadores: enlaces internos a las páginas principales
+const siteNav = () =>
+  `<nav><a href="/">Inicio</a> · ${services.map((sv) => `<a href="/servicios/${sv.slug}">${escapeHtml(sv.name)}</a>`).join(' · ')} · <a href="/blog">Blog</a></nav>`
+
 const inline = (s: string) =>
   escapeHtml(s)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
@@ -245,6 +275,7 @@ console.log('prerender: index.html')
 
 // --- Página /blog (lista de artículos) ---
 const listBody = `
+${siteNav()}
 <main>
   <h1>Blog de publicidad en Facebook e Instagram — Agencia Roz</h1>
   <p>Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads), estrategias que funcionan y aprendizajes de más de 300 proyectos en Colombia.</p>
@@ -263,7 +294,7 @@ const listBody = `
 let listHtml = applyMeta(template, {
   title: 'Blog de publicidad en Facebook e Instagram | Agencia Roz',
   description:
-    'Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads): costos por seguidor y por conversación, y estrategias que funcionan. Aprendizajes de más de 300 proyectos en Colombia.',
+    'Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads): costos por seguidor, por conversación y estrategias que funcionan en Colombia.',
   path: '/blog',
   image: '/og-blog.jpg',
 })
@@ -293,11 +324,14 @@ for (const post of blogPosts) {
   const galleryHtml = galleryImages
     .map(
       (src, i) =>
-        `<img src="${src}" alt="${escapeHtml(post.title)} - lámina ${i + 1} de ${galleryImages.length}" />`
+        `<img src="${src}" alt="${escapeHtml(post.title)} - lámina ${i + 1} de ${galleryImages.length}"${sizeAttrs(src)} />`
     )
     .join('\n    ')
 
+  const morePosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 4)
+
   const articleBody = `
+${siteNav()}
 <main>
   <article>
     <p><a href="/blog">Blog</a></p>
@@ -307,6 +341,11 @@ for (const post of blogPosts) {
     ${contentToHtml(post.content)}
     <p><a href="${SITE_URL}">ROZ Social Media — Agencia digital en Pereira, Colombia</a></p>
   </article>
+  <section>
+    <h2>Sigue leyendo</h2>
+    <ul>${morePosts.map((p) => `<li><a href="/blog/${p.slug}">${escapeHtml(p.title)}</a></li>`).join('')}</ul>
+    <p>Servicios: ${services.map((sv) => `<a href="/servicios/${sv.slug}">${escapeHtml(sv.name)}</a>`).join(' · ')}</p>
+  </section>
 </main>`
 
   let html = applyMeta(template, {
@@ -380,3 +419,50 @@ for (const sv of services) {
   writeFileSync(join(DIST, 'servicios', sv.slug, 'index.html'), html)
   console.log(`prerender: servicios/${sv.slug}/index.html`)
 }
+
+// --- /privacidad ---
+// Contenido corto para rastreadores; el navegador carga la versión completa con React.
+let privacyHtml = applyMeta(template, {
+  title: 'Política de Privacidad | Agencia Roz',
+  description:
+    'Cómo Agencia Roz (ROZ Social Media) recopila y usa datos a través de Microsoft Clarity, Google Analytics y Meta Pixel.',
+  path: '/privacidad',
+  image: '/og-image.jpg',
+})
+privacyHtml = injectRootContent(
+  privacyHtml,
+  `
+${siteNav()}
+<main>
+  <h1>Política de Privacidad</h1>
+  <p>Cómo Agencia Roz (ROZ Social Media) recopila y usa datos a través de Microsoft Clarity, Google Analytics y Meta Pixel.</p>
+</main>`
+)
+mkdirSync(join(DIST, 'privacidad'), { recursive: true })
+writeFileSync(join(DIST, 'privacidad', 'index.html'), privacyHtml)
+console.log('prerender: privacidad/index.html')
+
+// --- 404.html ---
+// Vercel lo sirve con estado 404 para cualquier dirección que no exista (sin el
+// reenvío general a index.html, que hacía que toda dirección respondiera 200).
+let notFoundHtml = applyMeta(template, {
+  title: 'Página no encontrada | Agencia Roz',
+  description: 'La página que buscas no existe. Vuelve al inicio de Agencia Roz.',
+  path: '/404',
+  image: '/og-image.jpg',
+})
+notFoundHtml = notFoundHtml
+  .replace(/<meta name="robots"[^>]*>/, '<meta name="robots" content="noindex" />')
+  .replace(/<meta name="googlebot"[^>]*>/, '<meta name="googlebot" content="noindex" />')
+notFoundHtml = notFoundHtml.replace(/<link rel="canonical"[^>]*>\s*/, '')
+notFoundHtml = injectRootContent(
+  notFoundHtml,
+  `
+${siteNav()}
+<main>
+  <h1>Página no encontrada</h1>
+  <p>La página que buscas no existe o cambió de dirección. <a href="/">Vuelve al inicio</a> o mira <a href="/blog">el blog</a>.</p>
+</main>`
+)
+writeFileSync(join(DIST, '404.html'), notFoundHtml)
+console.log('prerender: 404.html')

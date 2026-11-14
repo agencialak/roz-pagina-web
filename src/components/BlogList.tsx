@@ -131,7 +131,7 @@ const BlogList = () => {
         ? `${label} | Blog de Agencia Roz`
         : 'Blog de publicidad en Facebook e Instagram | Agencia Roz',
       description:
-        'Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads): costos por seguidor y por conversación, y estrategias que funcionan. Aprendizajes de más de 300 proyectos en Colombia.',
+        'Datos reales de campañas de publicidad en Facebook e Instagram (Meta Ads): costos por seguidor, por conversación y estrategias que funcionan en Colombia.',
       // Todas las vistas filtradas canonicalizan a /blog: es la misma lista,
       // solo reordenada, para no crear contenido duplicado a ojos de Google.
       path: '/blog',

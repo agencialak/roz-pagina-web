@@ -10,9 +10,9 @@ const PrivacyPolicy = () => {
 
   useEffect(() => {
     setPageSeo({
-      title: 'Política de Privacidad | ROZ Social Media',
+      title: 'Política de Privacidad | Agencia Roz',
       description:
-        'Cómo ROZ Social Media recopila y usa datos a través de Microsoft Clarity, Google Analytics y Meta Pixel.',
+        'Cómo Agencia Roz (ROZ Social Media) recopila y usa datos a través de Microsoft Clarity, Google Analytics y Meta Pixel.',
       path: '/privacidad',
     })
   }, [])
