@@ -168,10 +168,10 @@ const Testimonials = () => {
 
                 {/* Author */}
                 <div className="border-t border-ink/10 pt-6">
-                  <h4 className="text-ink font-bold">
+                  <h3 className="text-ink font-bold">
                     {testimonial.name}
-                  </h4>
-                  <p className="text-primary-600 text-sm">
+                  </h3>
+                  <p className="text-primary-700 text-sm">
                     {testimonial.role || testimonial.business}
                   </p>
                 </div>
@@ -213,10 +213,10 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="border-t border-ink/10 pt-6">
-                <h4 className="text-ink font-bold">
+                <h3 className="text-ink font-bold">
                   {testimonials[currentIndex].name}
-                </h4>
-                <p className="text-primary-600 text-sm">
+                </h3>
+                <p className="text-primary-700 text-sm">
                   {testimonials[currentIndex].role || testimonials[currentIndex].business}
                 </p>
               </div>
@@ -229,6 +229,7 @@ const Testimonials = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
+              aria-label="Testimonio anterior"
               className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 transition-all"
             >
               <ChevronLeft size={24} className="text-primary-400" />
@@ -239,10 +240,16 @@ const Testimonials = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20'
-                  }`}
-                />
+                  aria-label={`Ver testimonio ${idx + 1}`}
+                  aria-current={idx === currentIndex ? 'true' : undefined}
+                  className="p-2 -m-1.5"
+                >
+                  <span
+                    className={`block h-2 rounded-full transition-all ${
+                      idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20 w-2'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
 
@@ -250,6 +257,7 @@ const Testimonials = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
+              aria-label="Testimonio siguiente"
               className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 transition-all"
             >
               <ChevronRight size={24} className="text-primary-400" />

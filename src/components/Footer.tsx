@@ -86,9 +86,9 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-sm font-bold text-ink mb-6 uppercase tracking-wider">
+              <h3 className="text-sm font-bold text-ink mb-6 uppercase tracking-wider">
                 {column.title}
-              </h4>
+              </h3>
               <ul className="space-y-3">
                 {column.links.map((link) => (
                   <li key={link.label}>
@@ -129,9 +129,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-sm font-bold text-ink mb-6 uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-ink mb-6 uppercase tracking-wider">
               Contacto
-            </h4>
+            </h3>
             <div className="space-y-4">
               <motion.a
                 href="mailto:rozagencia23@gmail.com"

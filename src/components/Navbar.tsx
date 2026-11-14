@@ -123,6 +123,8 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={isOpen}
             className="xl:hidden p-2 text-ink"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}

@@ -13,7 +13,7 @@ const GoogleMark = ({ className = '' }: { className?: string }) => (
 )
 
 const Stars = () => (
-  <div className="flex gap-0.5" aria-label="5 de 5 estrellas">
+  <div className="flex gap-0.5" role="img" aria-label="5 de 5 estrellas">
     {Array.from({ length: 5 }).map((_, i) => (
       <Star key={i} size={15} className="fill-[#FBBC04] text-[#FBBC04]" />
     ))}

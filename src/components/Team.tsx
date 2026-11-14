@@ -275,6 +275,7 @@ const Team = () => {
                     setDirection('left')
                     setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))
                   }}
+                  aria-label="Integrante anterior"
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronLeft size={24} className="text-primary-400" />
@@ -288,10 +289,16 @@ const Team = () => {
                         setDirection(idx > currentIndex ? 'right' : 'left')
                         setCurrentIndex(idx)
                       }}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20'
-                      }`}
-                    />
+                      aria-label={`Ver integrante ${idx + 1}`}
+                      aria-current={idx === currentIndex ? 'true' : undefined}
+                      className="p-2 -m-1.5"
+                    >
+                      <span
+                        className={`block h-2 rounded-full transition-all ${
+                          idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20 w-2'
+                        }`}
+                      />
+                    </button>
                   ))}
                 </div>
 
@@ -302,6 +309,7 @@ const Team = () => {
                     setDirection('right')
                     setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))
                   }}
+                  aria-label="Integrante siguiente"
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronRight size={24} className="text-primary-400" />
@@ -388,6 +396,7 @@ const Team = () => {
                     setDirection('left')
                     setCurrentIndex((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1))
                   }}
+                  aria-label="Integrante anterior"
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronLeft size={24} className="text-primary-400" />
@@ -401,10 +410,16 @@ const Team = () => {
                         setDirection(idx > currentIndex ? 'right' : 'left')
                         setCurrentIndex(idx)
                       }}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20'
-                      }`}
-                    />
+                      aria-label={`Ver integrante ${idx + 1}`}
+                      aria-current={idx === currentIndex ? 'true' : undefined}
+                      className="p-2 -m-1.5"
+                    >
+                      <span
+                        className={`block h-2 rounded-full transition-all ${
+                          idx === currentIndex ? 'bg-primary-600 w-8' : 'bg-ink/20 w-2'
+                        }`}
+                      />
+                    </button>
                   ))}
                 </div>
 
@@ -415,6 +430,7 @@ const Team = () => {
                     setDirection('right')
                     setCurrentIndex((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1))
                   }}
+                  aria-label="Integrante siguiente"
                   className="p-3 glass rounded-lg border border-primary-600/30 hover:border-primary-600/60 hover:bg-white/90 transition-all"
                 >
                   <ChevronRight size={24} className="text-primary-400" />

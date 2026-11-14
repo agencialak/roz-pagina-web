@@ -29,7 +29,7 @@ export default {
         ink: {
           DEFAULT: '#181422', // texto principal
           muted: '#5B5568',   // texto secundario
-          subtle: '#8B8698',  // labels, metadatos
+          subtle: '#6B6579',  // labels, metadatos
         },
       },
       fontFamily: {

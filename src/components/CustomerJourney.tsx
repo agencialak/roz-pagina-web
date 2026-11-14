@@ -192,7 +192,7 @@ const CustomerJourney = () => {
         >
           <p className="text-sm sm:text-base font-semibold uppercase tracking-wider text-ink-muted text-center mb-5">
             Lo que muchas marcas{' '}
-            <span className="text-red-500 underline decoration-2 underline-offset-4">
+            <span className="text-red-600 underline decoration-2 underline-offset-4">
               creen
             </span>{' '}
             que pasa
