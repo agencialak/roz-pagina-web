@@ -56,7 +56,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <img src="/logo-dark.png" alt="ROZ" className="h-10 w-auto mb-4" />
+            <img src="/logo-dark.webp" width={237} height={96} loading="lazy" alt="ROZ" className="h-10 w-auto mb-4" />
             <p className="text-sm text-ink-muted leading-relaxed">
               Estrategia digital para marcas que dominan.
             </p>

@@ -68,7 +68,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2 shrink-0 cursor-pointer bg-none border-none p-0"
           >
-            <img src="/logo-dark.png" alt="ROZ" className="h-10 w-auto" />
+            <img src="/logo-dark.webp" width={237} height={96} alt="ROZ" className="h-10 w-auto" />
           </motion.button>
 
           {/* Desktop Menu */}

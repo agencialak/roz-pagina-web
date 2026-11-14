@@ -61,6 +61,11 @@ const Testimonials = () => {
   useEffect(() => {
     let unsubscribe: (() => void) | undefined
     let cancelled = false
+    let timer: ReturnType<typeof setTimeout> | undefined
+    // Los testimonios guardados en Firebase están más abajo en la página: se piden cuando
+    // la carga inicial terminó, para no competir con lo que se ve primero.
+    const start = () => {
+      timer = setTimeout(() => {
     loadDatabase().then(({ database, fb }) => {
       if (cancelled) return
       unsubscribe = fb.onValue(fb.ref(database, 'testimonials'), (snapshot) => {
@@ -78,9 +83,15 @@ const Testimonials = () => {
       }
       })
     })
+      }, 1500)
+    }
+    if (document.readyState === 'complete') start()
+    else window.addEventListener('load', start, { once: true })
 
     return () => {
       cancelled = true
+      window.removeEventListener('load', start)
+      if (timer) clearTimeout(timer)
       unsubscribe?.()
     }
   }, [])
