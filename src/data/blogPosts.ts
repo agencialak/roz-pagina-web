@@ -1231,6 +1231,81 @@ Lleva claro qué vendes, a quién, cuánto vale para ti un cliente nuevo y qué 
     readTime: 4,
     author: 'Nikolas Garcia - ROZ Social Media',
   },
+  {
+    id: 'clientes-dejan-trabajar',
+    slug: 'trabajar-con-una-agencia-de-publicidad-que-aporta-el-cliente',
+    title: 'Trabajar con una agencia de publicidad: lo que sí necesitamos del cliente',
+    excerpt: 'Casi todos nuestros clientes nos dejan trabajar. Lo que aportan no es el color del anuncio, sino el contexto del negocio: qué vende más, quién compra y qué ya probaron.',
+    content: `
+# Trabajar con una agencia de publicidad: lo que sí necesitamos del cliente
+
+Casi todos nuestros clientes nos dejan trabajar.
+
+Lo decimos porque hace un mes escribimos sobre los que no, en [¿Por qué todos creen que saben de marketing?](/blog/por-que-todos-creen-que-saben-de-marketing), y ese texto tuvo más de 43 mil impresiones en LinkedIn. Quedó la idea de que trabajar con clientes es una pelea constante. No lo es.
+
+## Lo que hace la mayoría
+
+Nos cuenta cómo funciona su negocio, qué vende más, quién le compra y qué ha probado antes. Después nos deja decidir el anuncio, el público y el presupuesto.
+
+Ese contexto vale más que cualquier segmentación. Nosotros sabemos de publicidad en Facebook e Instagram, pero el que sabe del negocio es el dueño.
+
+## Opinar no es el problema
+
+El problema es cuando la opinión viene del gusto personal y no de lo que el dueño sabe de sus compradores.
+
+- **"Ese color no me gusta"** no nos sirve: es gusto personal.
+- **"Mis clientes siempre preguntan primero por el precio"** sí nos cambia la campaña: es contexto del negocio.
+
+## Por qué parece que fueran todos
+
+Los pocos clientes que quieren dictar cada anuncio hacen mucho ruido, y por eso parece que fueran la mayoría. En nuestra experiencia, la relación que funciona es la que divide bien el trabajo: el cliente aporta lo que sabe de su negocio y la agencia decide cómo convertirlo en campañas.
+
+Si estás por contratar a alguien para manejar tu publicidad, la mejor forma de ayudarle es contarle todo lo que sabes de tus clientes, no diseñarle los anuncios.
+    `,
+    image: '/blog/clientes-dejan-trabajar.jpg',
+    date: '2026-11-12',
+    category: 'estrategia',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
+  {
+    id: 'informe-mensajes-o-ventas',
+    slug: 'informe-de-agencia-mensajes-o-ventas',
+    title: 'Informe de tu agencia de marketing: ¿te reporta mensajes o ventas?',
+    excerpt: '"Este mes llegaron 300 mensajes." Con ese dato solo no sabes si la campaña sirvió. Las tres preguntas que debe responder un informe de publicidad en Facebook e Instagram.',
+    content: `
+# Informe de tu agencia de marketing: ¿te reporta mensajes o ventas?
+
+"Este mes llegaron 300 mensajes." Con ese dato solo, no sabes si la campaña sirvió.
+
+Un informe lleno de alcance, clics y mensajes se ve bien, pero no responde lo que al dueño del negocio le importa: si la plata que puso volvió.
+
+## Las tres preguntas de cada informe
+
+Cada informe que entregamos responde tres preguntas:
+
+- **Qué pasó:** los números, con contexto.
+- **Por qué pasó:** qué anuncio funcionó, cuál no y qué cambió.
+- **Qué vamos a hacer:** qué apagamos, qué probamos y qué dejamos quieto.
+
+## Lo que la campaña no puede medir sola
+
+Hay un dato que Meta no tiene: cuántos de esos mensajes terminaron en venta. Ese dato lo tiene el negocio.
+
+Cuando el cliente nos lo comparte, podemos optimizar para ventas. Cuando no, optimizamos para mensajes, y un mensaje barato no siempre es un buen cliente. Lo explicamos con números en [cuánto cuesta una conversación de WhatsApp](/blog/costo-por-conversacion-whatsapp).
+
+## La prueba de un buen informe
+
+Si el informe no te dice qué se va a hacer distinto el próximo mes, es un pantallazo con logo.
+
+¿Sabes cuántos de los mensajes que te llegan por publicidad terminan comprando? Si la respuesta es no, ese es el primer número que vale la pena empezar a contar.
+    `,
+    image: '/blog/informe-mensajes-o-ventas.jpg',
+    date: '2026-11-17',
+    category: 'educativo',
+    readTime: 3,
+    author: 'Nikolas Garcia - ROZ Social Media',
+  },
 ]
 
 // Más recientes primero, sin importar el orden en que se agregaron arriba
