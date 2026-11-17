@@ -1105,10 +1105,10 @@ Revisar la competencia es una parte de la [investigación de mercado que hacemos
   {
     id: 'fechas-comerciales-colombia',
     slug: 'fechas-comerciales-colombia-2026-2027',
-    title: 'Fechas comerciales en Colombia 2026 y 2027: calendario para pautar',
-    excerpt: 'Black Friday, Navidad, Día de la Madre, Amor y Amistad: las fechas comerciales de Colombia que quedan en 2026, todas las de 2027 y cuándo empezar a pautar.',
+    title: 'Fechas comerciales en Colombia 2027 y Black Friday',
+    excerpt: 'Calendario comercial de Colombia 2027: cuándo es Black Friday, Día de la Madre, Amor y Amistad y Navidad, cuándo empezar a pautar y lo que queda de 2026.',
     content: `
-# Fechas comerciales en Colombia 2026 y 2027: calendario para pautar
+# Fechas comerciales en Colombia 2027 y Black Friday
 
 Una fecha comercial no se gana el día de la fecha. Se gana en las semanas anteriores, cuando la gente empieza a buscar, comparar y decidir. Este es el calendario que usamos para planear las campañas de nuestros clientes en Colombia, con lo que queda de 2026 y todo 2027.
 
